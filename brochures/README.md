@@ -1,6 +1,6 @@
 # Origen Coco brochures
 
-Six company profile and product brochure designs, built from the same content. Open
+Eight company profile and product brochure designs, built from the same content. Open
 `brochures/index.html` to browse them like the homepage templates: each card opens the
 brochure in the browser (with previous/next and a PDF download link at the bottom) or
 downloads the print-ready PDF. Products on every cover, and in the range pages, link to
@@ -14,6 +14,8 @@ their product pages, in the browser and in the PDF.
 | 04 | Angle | A4 portrait, 14 pages | Funnel Display, Funnel Sans | Diagonal green panels, angled photo frames |
 | 05 | Folio | A5 landscape, 24 pages | Onest | Light type, white space, large photographs |
 | 06 | Orbit | A4 portrait, 14 pages | DM Serif Display, DM Sans | Round photo frames, green arcs and bars |
+| 07 | Harvest | A4 portrait, 16 pages | Young Serif, Manrope | Earlier design on the Harvest website template |
+| 08 | Flagship | A4 portrait, 15 pages | Archivo | Earlier design on the Flagship website template |
 
 Files are `html/<nn>-<design>.html` and `pdf/<nn>-<design>.pdf`; `thumbs/` holds the cover
 images used by the gallery.

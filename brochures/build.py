@@ -30,6 +30,10 @@ DESIGNS = [
      "desc": "Light type, white space and large photographs"},
     {"id": "orbit", "name": "Orbit", "format": "A4 portrait",
      "desc": "Round photo frames, green arcs and a serif display face"},
+    {"id": "harvest", "name": "Harvest", "format": "A4 portrait",
+     "desc": "Earlier design on the Harvest website template: serif headings, coir-brown accents"},
+    {"id": "flagship", "name": "Flagship", "format": "A4 portrait",
+     "desc": "Earlier design on the Flagship website template: Archivo, solid green sections"},
 ]
 
 
