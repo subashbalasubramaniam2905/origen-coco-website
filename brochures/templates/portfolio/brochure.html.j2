@@ -1,0 +1,179 @@
+{% import "_shared/macros.html.j2" as m %}
+{% set L = c.labels %}{% set P = c.products %}{% set H = c.howto %}
+{% macro chrome(label, dark=false) -%}
+<header class="hd"><span class="lbl">{{ label }}</span><img src="{{ logo }}{{ 'logo-white.svg' if dark else 'logo.svg' }}" alt="{{ c.company.name }}"></header>
+<footer class="ft"><span>{{ c.company.name }} &middot; {{ c.company.doc_title }}</span><span class="pgno"></span></footer>
+{%- endmacro %}
+{{ m.head(c, c.company.doc_title, own, shared, tpl) }}
+<body class="pf">
+
+{# 1 Cover #}
+<section class="page cover">
+  <div class="cv-left">
+    <img class="cv-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+    <p class="eyebrow">{{ c.company.doc_title }}</p>
+    <h1>{{ c.company.tagline }}</h1>
+    <p class="cv-pos">{{ c.company.positioning }}</p>
+    {{ m.showcase(P, img) }}
+  </div>
+  <div class="cv-mosaic">
+    <figure class="a"><img class="fill" src="{{ img }}peathand.jpg" alt=""></figure>
+    <figure class="b"><img class="fill" src="{{ img }}seedlings.jpg" alt=""></figure>
+    <figure class="c"><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure>
+    <figure class="d"><img class="fill" src="{{ img }}tomato.jpg" alt=""></figure>
+  </div>
+</section>
+
+{# 2 Who we are #}
+<section class="page green">
+  {{ chrome(c.intro.label, true) }}
+  <div class="body two-col">
+    <div>
+      <p class="eyebrow">{{ c.intro.label }}</p>
+      <h2>{{ c.company.positioning }}</h2>
+      <ol class="numbered">{% for para in c.intro.paragraphs %}<li><b>{{ '%02d' % loop.index }}</b><p>{{ para }}</p></li>{% endfor %}</ol>
+    </div>
+    <div class="col-right">
+      <figure class="ph tall"><img class="fill" src="{{ img }}husked.jpg" alt=""></figure>
+      <p class="quote">{{ c.company.summary }}</p>
+    </div>
+  </div>
+</section>
+
+{# 3 Story #}
+<section class="page stone">
+  {{ chrome(c.story.label) }}
+  <div class="body">
+    <p class="eyebrow">{{ c.story.label }}</p>
+    <h2>{{ c.story.heading }}</h2>
+    <div class="story">
+      <p class="lead">{{ c.intro.narrative }}</p>
+      <div><h3>{{ c.about.title }}</h3><div class="cols2">{% for para in c.about.paragraphs %}<p>{{ para }}</p>{% endfor %}</div></div>
+    </div>
+    <div class="strip"><figure><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure><figure><img class="fill" src="{{ img }}fibre.jpg" alt=""></figure><figure><img class="fill" src="{{ img }}seedlings.jpg" alt=""></figure></div>
+  </div>
+</section>
+
+{# 4 Vision, mission, principles #}
+<section class="page green">
+  {{ chrome(c.vision.title ~ " & " ~ c.mission.title|lower, true) }}
+  <div class="body">
+    <div class="vm">
+      <div><span class="ic">{{ m.icon("target") }}</span><h2>{{ c.vision.title }}</h2><p>{{ c.vision.text }}</p></div>
+      <div><span class="ic">{{ m.icon("compass") }}</span><h2>{{ c.mission.title }}</h2><p>{{ c.mission.text }}</p></div>
+      <div><span class="ic">{{ m.icon("sprout") }}</span><h2>{{ c.about.farmers_title }}</h2><p>{{ c.about.farmers }}</p></div>
+    </div>
+    <p class="eyebrow pr-h">{{ c.principles.intro }}</p>
+    <ol class="principles">{% for pr in c.principles.points %}<li>{{ m.icon(pr.icon) }}<p>{{ pr.text }}</p></li>{% endfor %}</ol>
+  </div>
+</section>
+
+{# 5 Why choose #}
+<section class="page stone">
+  {{ chrome(c.why.title) }}
+  <div class="body">
+    <div class="why-top">
+      <div><p class="eyebrow">{{ c.why.title }}</p><h2 class="sm">{{ c.why.intro }}</h2></div>
+      <div class="stats">{% for n in c.numbers.points %}<div><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>{% endfor %}</div>
+    </div>
+    <div class="why">
+      {% for w in c.why.points %}<div class="card"><span class="ic">{{ m.icon(w.icon) }}</span><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div>{% endfor %}
+      <div class="card green-card">{{ m.icon("recycle", "ico big") }}<p>{{ c.why.utilisation }}</p></div>
+    </div>
+  </div>
+</section>
+
+{# 6 Range #}
+<section class="page green">
+  {{ chrome(c.range.title, true) }}
+  <div class="body">
+    <div class="range-top"><div><p class="eyebrow">{{ c.story.title }}</p><h2>{{ c.range.title }}</h2></div><p>{{ c.range.intro }}</p></div>
+    <div class="range">
+      {% for p in P %}
+      <a class="rcard" href="#product-{{ p.id }}">
+        <img src="{{ img }}{{ p.image }}" alt="">
+        <span class="rg">{{ p.group }}</span>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.short }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="whole">{{ m.icon("coconut") }}{{ c.why.whole }}</p>
+  </div>
+</section>
+
+{# 7-11 Products #}
+{% for p in P %}
+<section id="product-{{ p.id }}" class="page stone product">
+  {{ chrome(p.group) }}
+  <div class="body prod">
+    <div class="p-left">
+      <p class="eyebrow">{{ p.group }} &middot; {{ '%02d' % loop.index }}</p>
+      <h2>{{ p.name }}</h2>
+      <p class="p-short">{{ p.short }}</p>
+      {% for para in p.overview %}<p>{{ para }}</p>{% endfor %}
+      <h4>{{ L.benefits }}</h4>
+      {{ m.benefits(p) }}
+    </div>
+    <div class="p-right">
+      <div class="p-media">
+        <figure><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
+        <div class="p-apps"><h4>{{ L.applications }}</h4>{{ m.apps(p) }}{{ m.crops(p) }}</div>
+      </div>
+      {{ m.tables(p, L) }}
+      <div class="cta"><b>{{ p.cta_title }}</b><span>{{ p.cta_text }}</span></div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{# 12 Process 1 #}
+{% set f1 = c.process.flows[0] %}
+<section class="page green">
+  {{ chrome(c.process.label, true) }}
+  <div class="body">
+    <div class="range-top"><div><p class="eyebrow">{{ c.process.label }}</p><h2>{{ c.process.title }}</h2></div><p>{{ c.process.intro }}</p></div>
+    <h3 class="flow-t">1. {{ f1.title }}</h3>
+    {{ m.steps(f1, img, "steps h7") }}
+    <div class="strip"><figure><img class="fill" src="{{ img }}husked.jpg" alt=""></figure><figure><img class="fill" src="{{ img }}peathand.jpg" alt=""></figure><figure><img class="fill" src="{{ img }}tomato.jpg" alt=""></figure></div>
+  </div>
+</section>
+
+{# 13 Process 2 #}
+<section class="page stone">
+  {{ chrome(c.process.label) }}
+  <div class="body flows2">
+    {% for f in c.process.flows[1:] %}
+    <div><h3 class="flow-t">{{ loop.index + 1 }}. {{ f.title }}</h3><p class="flow-i">{{ f.intro }}</p>{{ m.steps(f, img, "steps v") }}</div>
+    {% endfor %}
+  </div>
+</section>
+
+{# 14 How to use #}
+<section class="page stone">
+  {{ chrome(H.title) }}
+  <div class="body">
+    <h2 class="sm">{{ H.title }}</h2>
+    <div class="howto">
+      {% for g in H.guides %}{{ m.guide(g) }}{% endfor %}
+      <div class="faq-col"><h3>{{ H.faq_title }}</h3>{{ m.faqs(H) }}</div>
+    </div>
+  </div>
+</section>
+
+{# 15 Contact #}
+<section class="page green back">
+  <div class="back-l">
+    <img class="back-logo" src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}">
+    <h2>{{ c.contact.title }}</h2>
+    <p>{{ c.contact.text }}</p>
+    <p class="back-cta">{{ c.contact.cta }}</p>
+    {{ m.contact_list(c.contact) }}
+  </div>
+  <figure class="back-ph"><img class="fill" src="{{ img }}plant.jpg" alt=""></figure>
+  <footer class="ft"><span>{{ c.company.tagline }}</span><span>{{ L.copyright }}</span></footer>
+</section>
+
+{{ m.viewer(nav) }}
+</body>
+</html>

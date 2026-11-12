@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Origen Coco brochure templates</title>
+<link rel="icon" href="../assets/logo/logo.svg">
+<style>
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F2A23;background:#fff}
+.wrap{max-width:1240px;margin:0 auto;padding:48px 24px 80px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;margin-bottom:40px}
+h1{margin:0;font-size:28px;line-height:1.2} p{margin:0;color:#5C665F;max-width:62ch}
+.back{display:inline-block;margin-top:8px;color:#1D7B33;font-weight:600;text-decoration:none}
+.back:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:36px 24px}
+.card{display:flex;flex-direction:column;gap:6px}
+.card a.cover{min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;background:#F1F3F0;border:1px solid #DCE3DE;transition:border-color .2s}
+.card a.cover:hover{border-color:#1D7B33} .card a:focus-visible{outline:2px solid #1D7B33;outline-offset:4px}
+.card img{max-width:84%;max-height:84%;display:block;box-shadow:0 8px 22px -10px rgba(0,0,0,.35)}
+.t{font-weight:700;font-size:18px;margin-top:6px} .d{color:#5C665F;font-size:15px}
+.meta{font-size:13px;color:#5C665F}
+.links{display:flex;gap:16px;font-size:14px;font-weight:600}
+.links a{color:#1D7B33;text-decoration:none} .links a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<img src="../assets/logo/logo.svg" alt="{{ c.company.name }}" style="height:36px">
+<div>
+<h1>Brochure templates</h1>
+<p>{{ designs|length }} company profile and product brochure designs with the same content. Open one to page through it in the browser, or download the print-ready PDF. Products on each cover link to their pages.</p>
+<a class="back" href="../index.html">&larr; Homepage templates</a>
+</div>
+</header>
+<div class="grid">
+{% for d in designs %}
+<div class="card">
+<a class="cover" href="html/{{ d.file }}.html"><img src="thumbs/{{ d.file }}.jpg" alt="Cover of the {{ d.name }} brochure" loading="lazy"></a>
+<span class="t">{{ d.num }} {{ d.name }}</span>
+<span class="d">{{ d.desc }}</span>
+<span class="meta">{{ d.format }}</span>
+<span class="links"><a href="html/{{ d.file }}.html">View in browser</a><a href="pdf/{{ d.file }}.pdf" download>Download PDF</a></span>
+</div>
+{% endfor %}
+</div>
+</div>
+</body>
+</html>

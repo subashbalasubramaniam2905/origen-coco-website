@@ -75,5 +75,64 @@
 <link rel="stylesheet" href="{{ own }}fonts/fonts.css">
 <link rel="stylesheet" href="{{ shared }}base.css">
 <link rel="stylesheet" href="{{ tpl }}style.css">
+<link rel="icon" href="../../assets/logo/logo.svg">
 </head>
+{%- endmacro %}
+
+{# ---------- Reusable content blocks. Each design styles these classes. ---------- #}
+
+{% macro benefits(p) -%}
+<ul class="benefits">{% for b in p.benefits %}<li>{{ icon("check") }}<span>{{ b }}</span></li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro apps(p) -%}
+<ul class="apps">{% for a in p.applications %}<li>{{ a }}</li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro crops(p) -%}
+{% if p.crops is defined %}<div class="crops"><p class="crops-label">{{ p.crops_label }}</p><ul>{% for cr in p.crops %}<li>{{ cr }}</li>{% endfor %}</ul></div>{% endif %}
+{%- endmacro %}
+
+{% macro tables(p, L, cls="tbl") -%}
+<div class="tables">
+  <div class="t-block"><h4>{{ L.variants }}</h4>{{ variants_table(p, L, cls) }}</div>
+  <div class="t-block"><h4>{{ L.specs }}</h4>{{ specs_table(p, L, cls) }}</div>
+</div>
+{%- endmacro %}
+
+{% macro step_media(s, img) -%}
+{% if s.image %}<img class="fill" src="{{ img }}{{ s.image }}" alt="">{% else %}<span class="step-ico">{{ icon(s.icon, "ico", "1.4") }}</span>{% endif %}
+{%- endmacro %}
+
+{% macro steps(f, img, cls="steps") -%}
+<ol class="{{ cls }}">
+  {% for s in f.steps %}
+  <li><figure>{{ step_media(s, img) }}<b>{{ '%02d' % loop.index }}</b></figure><div><h4>{{ s.title }}</h4><p>{{ s.text }}</p></div></li>
+  {% endfor %}
+</ol>
+{%- endmacro %}
+
+{% macro guide(g, cls="guide") -%}
+<div class="{{ cls }}"><h3>{{ g.title }}</h3><ol>{% for st in g.steps %}<li><b>{{ loop.index }}</b><span>{{ st }}</span></li>{% endfor %}</ol></div>
+{%- endmacro %}
+
+{% macro faqs(H, idx=None) -%}
+<dl class="faqs">{% for f in H.faqs %}{% if idx is none or loop.index0 in idx %}<div><dt>{{ f.q }}</dt><dd>{{ f.a }}</dd></div>{% endif %}{% endfor %}</dl>
+{%- endmacro %}
+
+{# Cover product showcase: every product links to its page in the PDF. #}
+{% macro showcase(P, img, cls="showcase") -%}
+<ul class="{{ cls }}">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="sc-img"><img class="fill" src="{{ img }}{{ p.image }}" alt=""></span><span class="sc-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro plink(p) -%}<a href="#product-{{ p.id }}">{{ p.name }}</a>{%- endmacro %}
+
+{# Screen-only bar to move between brochure templates, like the website templates. #}
+{% macro viewer(nav) -%}
+<nav class="viewer" aria-label="Brochure templates">
+  <a href="../index.html">All brochures</a>
+  {% if nav.prev %}<a href="{{ nav.prev.file }}.html">&lsaquo; {{ nav.prev.name }}</a>{% endif %}
+  {% if nav.next %}<a href="{{ nav.next.file }}.html">{{ nav.next.name }} &rsaquo;</a>{% endif %}
+  <a class="dl" href="../pdf/{{ nav.self.file }}.pdf" download>Download PDF</a>
+</nav>
 {%- endmacro %}

@@ -5,6 +5,7 @@
      - no two blocks of text overlapping,
      - no broken images,
      - one PDF page per <section class="page"> (no blank or spilled pages).
+   Also saves a cover thumbnail per design to brochures/thumbs/ for the gallery.
    Usage: node brochures/render-pdf.js [--previews <dir>] [name-filter]
    Exits non-zero if any check fails. */
 const path = require('path');
@@ -80,7 +81,7 @@ async function checkPage(page) {
   const browser = await chromium.launch();
   let failed = false;
   for (const f of files) {
-    const page = await browser.newPage({ viewport: { width: 794, height: 1123 } });
+    const page = await browser.newPage({ viewport: { width: 1400, height: 1123 } });
     await page.emulateMedia({ media: 'print' });
     await page.goto('file://' + path.join(htmlDir, f), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
@@ -88,6 +89,10 @@ async function checkPage(page) {
     const qc = await checkPage(page);
     const out = path.join(pdfDir, f.replace(/\.html$/, '.pdf'));
     await page.pdf({ path: out, preferCSSPageSize: true, printBackground: true });
+    // gallery thumbnail of the cover
+    fs.mkdirSync(path.join(ROOT, 'thumbs'), { recursive: true });
+    const cover = await page.$('.page');
+    await cover.screenshot({ path: path.join(ROOT, 'thumbs', f.replace(/\.html$/, '.jpg')), type: 'jpeg', quality: 82 });
     if (previews) {
       fs.mkdirSync(previews, { recursive: true });
       const els = await page.$$('.page');

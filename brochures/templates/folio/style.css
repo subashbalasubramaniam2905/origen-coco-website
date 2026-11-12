@@ -1,0 +1,161 @@
+/* 05 Folio - A5 landscape. Light type, generous white space and large
+   photographs, one idea per page. Onest. */
+@page { size: 210mm 148mm; margin: 0; }
+:root { --page-w: 210mm; --page-h: 148mm; }
+.fo {
+  --ink: #1F2620; --muted: #646B65; --tint: #F4F5F1; --line: #DDE1DA; --deep: #14532A;
+  --m: 12mm;
+  font-family: 'Onest', system-ui, sans-serif; font-size: 7.6pt; line-height: 1.6; color: var(--ink); font-weight: 400;
+}
+.fo .page { background: #fff; }
+.fo .page.tint { background: var(--tint); }
+.fo h1, .fo h2 { font-weight: 300; letter-spacing: -.02em; line-height: 1.08; color: var(--deep); }
+.fo h2 { font-size: 21pt; margin-bottom: 4mm; }
+.fo h2.wide { font-size: 19pt; margin-bottom: 3mm; }
+.fo h3 { font-size: 9pt; font-weight: 600; margin-bottom: 1.4mm; line-height: 1.3; color: var(--deep); }
+.fo h4 { font-size: 6.4pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin-bottom: 1.6mm; }
+.fo h4.mt { margin-top: 4mm; }
+.fo p + p { margin-top: 2mm; }
+.fo .eyebrow { font-size: 6.4pt; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--green); margin-bottom: 2.4mm; }
+.fo .eyebrow.mt { margin-top: 6mm; }
+.fo .lead { font-size: 8.6pt; font-weight: 300; color: var(--muted); max-width: 150mm; margin-bottom: 5mm; }
+.fo .body { position: absolute; top: 12mm; left: var(--m); right: var(--m); bottom: 13mm; display: flex; flex-direction: column; }
+.fo .ft { position: absolute; bottom: 6mm; left: var(--m); right: var(--m); display: flex; gap: 3mm; font-size: 6pt; color: var(--muted); }
+.fo .ft .pgno { font-weight: 600; color: var(--green); }
+.fo .ft.dark { color: rgba(255,255,255,.75); }
+.fo .ft.dark .pgno { color: #fff; }
+
+/* half photo / half text spreads */
+.fo .half-ph { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; }
+.fo .half-ph.right { left: auto; right: 0; }
+.fo .half-txt { position: absolute; top: 14mm; bottom: 14mm; left: calc(50% + 10mm); right: var(--m); display: flex; flex-direction: column; justify-content: center; }
+.fo .half-txt.left { left: var(--m); right: calc(50% + 10mm); }
+.fo .half-ph ~ .ft { left: calc(50% + 10mm); }
+.fo .half-ph.right ~ .ft { left: var(--m); }
+
+/* cover */
+.fo .cv-l { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; padding: 12mm var(--m) 10mm; display: flex; flex-direction: column; }
+.fo .cv-logo { height: 11mm; width: auto; align-self: flex-start; }
+.fo .cv-t { margin: auto 0; }
+.fo .cover h1 { font-size: 27pt; }
+.fo .cv-pos { margin-top: 3mm; font-size: 8.4pt; font-weight: 300; color: var(--muted); }
+.fo .cv-ph { position: absolute; top: 0; bottom: 0; right: 0; width: 50%; }
+.fo .showcase { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; }
+.fo .showcase a { display: flex; flex-direction: column; gap: 1.2mm; }
+.fo .sc-img { display: block; height: 13mm; border-radius: 1mm; overflow: hidden; }
+.fo .sc-name { font-size: 5.8pt; font-weight: 500; line-height: 1.25; color: var(--deep); }
+
+/* contents */
+.fo .toc li a { display: flex; align-items: baseline; gap: 2mm; padding: 1.3mm 0; font-size: 8.2pt; font-weight: 400; }
+.fo .toc li.sub a { padding: .6mm 0 .6mm 5mm; font-size: 7.4pt; color: var(--muted); }
+.fo .toc i { flex: 1; border-bottom: .25mm dotted var(--line); }
+.fo .toc b { font-weight: 600; color: var(--green); font-size: 7pt; }
+
+/* about */
+.fo .half-txt p { font-weight: 300; font-size: 7.8pt; }
+.fo .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; margin-top: 6mm; border-top: .25mm solid var(--line); padding-top: 3mm; }
+.fo .nums strong { display: block; font-size: 18pt; font-weight: 300; color: var(--green); line-height: 1; }
+.fo .nums span { display: block; font-size: 5.8pt; color: var(--muted); line-height: 1.3; margin-top: 1mm; }
+.fo .story { justify-content: center; }
+.fo .story .cols2 { column-count: 2; column-gap: 9mm; font-weight: 300; font-size: 8pt; }
+
+/* vision */
+.fo .statement { font-size: 9.6pt !important; line-height: 1.5; color: var(--ink); }
+.fo .statement.sm { font-size: 8.6pt !important; }
+.fo .split { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; align-content: center; }
+.fo .farm-ph { height: 48mm; border-radius: 1.4mm; overflow: hidden; margin-bottom: 4mm; }
+.fo .split p { font-weight: 300; }
+.fo .principles li { display: flex; gap: 3mm; padding: 2.6mm 0; border-bottom: .25mm solid var(--line); }
+.fo .principles span { font-size: 7pt; font-weight: 600; color: var(--green); }
+.fo .principles p { font-size: 8.2pt; }
+
+/* why */
+.fo .why { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; align-content: center; }
+.fo .why div { border-top: .4mm solid var(--green); padding-top: 3mm; }
+.fo .why i { display: block; color: var(--green); margin-bottom: 2.4mm; }
+.fo .why .ico { width: 6mm; height: 6mm; }
+.fo .why h3 { font-size: 8.2pt; }
+.fo .why p { font-size: 7pt; color: var(--muted); font-weight: 300; line-height: 1.5; }
+
+/* full bleed */
+.fo .full .bg { position: absolute; inset: 0; }
+.fo .full-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,30,16,.86) 0%, rgba(10,30,16,.6) 45%, rgba(10,30,16,0) 75%); }
+.fo .full-txt { position: absolute; left: var(--m); bottom: 22mm; width: 92mm; color: #fff; }
+.fo .full-txt h2 { color: #fff; font-size: 24pt; }
+.fo .full-txt p { font-weight: 300; font-size: 8.6pt; color: rgba(255,255,255,.9); }
+.fo .full-txt .util { margin-top: 4mm; padding-top: 3mm; border-top: .25mm solid rgba(255,255,255,.4); font-size: 7.6pt; }
+
+/* range */
+.fo .range { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; min-height: 0; }
+.fo .range a { display: flex; flex-direction: column; }
+.fo .range figure { flex: 1; border-radius: 1.4mm; overflow: hidden; margin-bottom: 2.4mm; position: relative; }
+.fo .range figure img { position: absolute; inset: 0; }
+.fo .grp { font-size: 5.8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+.fo .range b { font-size: 9pt; font-weight: 500; color: var(--deep); }
+
+/* product */
+.fo .short { font-size: 9pt !important; font-weight: 400 !important; color: var(--muted); margin-bottom: 3mm; }
+.fo .ov { font-size: 7.5pt !important; }
+.fo .pd { display: grid; grid-template-columns: 70mm 1fr; gap: 9mm; align-content: center; }
+.fo .benefits li { display: flex; gap: 1.6mm; padding: .5mm 0; font-size: 7.6pt; }
+.fo .benefits .ico { width: 3mm; height: 3mm; color: var(--green); stroke-width: 3; margin-top: .6mm; }
+.fo .apps li { padding: .5mm 0; font-size: 7.6pt; border-bottom: .25mm solid var(--line); font-weight: 300; }
+.fo .crops-label { font-size: 6.4pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin: 3.4mm 0 1.4mm; }
+.fo .crops ul { display: flex; flex-wrap: wrap; gap: 1mm; }
+.fo .crops li { font-size: 6.2pt; border: .25mm solid var(--green); color: var(--deep); padding: 0 1.6mm; border-radius: 3mm; }
+.fo .tables { display: grid; gap: 4mm; }
+.fo .tbl { font-size: 7pt; }
+.fo .tbl th { text-align: left; font-size: 5.8pt; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; padding: 1mm 1.6mm; color: var(--green); border-bottom: .4mm solid var(--green); }
+.fo .tbl td { padding: .9mm 1.6mm; border-bottom: .25mm solid var(--line); }
+.fo .tbl td:first-child { width: 50%; font-weight: 500; }
+.fo .tbl td.tbc { color: #9AA19B; font-weight: 300; }
+.fo .cta { margin-top: 5mm; background: var(--tint); border-left: .8mm solid var(--green); padding: 3mm 4mm; display: flex; flex-direction: column; }
+.fo .cta b { font-weight: 600; font-size: 8pt; color: var(--deep); }
+.fo .cta span { font-weight: 300; font-size: 7.2pt; }
+.fo .long .tables { gap: 3mm; }
+.fo .long .tbl td { padding: .6mm 1.6mm; }
+
+/* process */
+.fo .steps figure { position: relative; border-radius: 1.2mm; overflow: hidden; background: var(--tint); }
+.fo .steps figure b { position: absolute; left: 1.4mm; top: 1.4mm; font-size: 6pt; font-weight: 600; background: #fff; color: var(--green); padding: 0 1.4mm; border-radius: .8mm; }
+.fo .step-ico { position: absolute; inset: 0; display: grid; place-items: center; color: var(--green); }
+.fo .step-ico .ico { width: 7mm; height: 7mm; }
+.fo .steps h4 { font-size: 7.6pt; text-transform: none; letter-spacing: 0; color: var(--deep); margin: 1.6mm 0 .4mm; }
+.fo .steps p { font-size: 6.4pt; color: var(--muted); line-height: 1.45; font-weight: 300; }
+.fo .steps.seven { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 3mm; min-height: 0; }
+.fo .steps.seven figure { height: 26mm; }
+.fo .flows { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+.fo .fi { font-size: 7.2pt; font-weight: 300; color: var(--muted); margin-bottom: 3mm; }
+.fo .steps.three li { display: grid; grid-template-columns: 26mm 1fr; gap: 3mm; margin-bottom: 3mm; }
+.fo .steps.three figure { height: 22mm; }
+.fo .steps.three h4 { margin-top: 0; }
+.fo .tint .steps figure { background: #E7EBE3; }
+
+/* how to */
+.fo .guides { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.fo .g { display: grid; grid-template-columns: 30mm 1fr; gap: 4mm; }
+.fo .g figure { border-radius: 1.4mm; overflow: hidden; position: relative; }
+.fo .g figure img { position: absolute; inset: 0; }
+.fo .guide li { display: flex; gap: 2mm; padding: .7mm 0; font-size: 7.2pt; font-weight: 300; line-height: 1.45; }
+.fo .guide li b { flex: none; font-weight: 600; color: var(--green); width: 3mm; }
+.fo .faqs { flex: 1; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 9mm; align-content: center; }
+.fo .faqs dt { font-weight: 600; font-size: 8pt; color: var(--deep); }
+.fo .faqs dd { margin: .6mm 0 0; font-size: 7.4pt; font-weight: 300; color: var(--muted); }
+
+/* back */
+.fo .bk-logo { height: 11mm; width: auto; align-self: flex-start; margin-bottom: 7mm; }
+.fo .back h2 { font-size: 17pt; }
+.fo .bk-cta { font-weight: 500 !important; color: var(--green); margin: 3mm 0 4mm; }
+.fo .reach li { display: flex; gap: 2.4mm; align-items: center; padding: 1.6mm 0; border-top: .25mm solid var(--line); font-size: 7.8pt; font-weight: 500; }
+.fo .reach .ico { width: 4mm; height: 4mm; color: var(--green); }
+.fo .reach small { display: block; font-size: 5.6pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.fo .copy { margin-top: 6mm; font-size: 6pt !important; color: var(--muted); }
+.fo .pd-ph { height: 34mm; border-radius: 1.4mm; overflow: hidden; margin-top: 5mm; }
+.fo .sc-img { height: 17mm; }
+.fo .sc-name { font-size: 6.2pt; }
+.fo .steps.three li { grid-template-columns: 34mm 1fr; margin-bottom: 4mm; }
+.fo .steps.three figure { height: 28mm; }
+.fo .steps.three p { font-size: 6.8pt; }
+.fo .flows { align-content: center; }
+.fo .why h3 { font-size: 8.8pt; }
+.fo .why p { font-size: 7.4pt; }
