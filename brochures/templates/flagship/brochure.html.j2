@@ -8,20 +8,24 @@
 <footer class="ft"><span>{{ c.company.name }} &middot; {{ c.company.doc_title }}</span><span class="pgno"></span></footer>
 {%- endmacro %}
 {{ m.head(c, c.company.doc_title, own, shared, tpl) }}
-<body class="corp">
+<body class="flag">
 
 {# ---------- 1 Cover ---------- #}
 <section class="page cover">
-  <div class="cover-photo"><img class="fill" src="{{ img }}coconuts.jpg" alt=""></div>
-  <img class="cover-logo" src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}">
-  <div class="cover-body">
-    <p class="kicker">{{ c.company.doc_title }}</p>
-    <h1>{{ c.company.tagline }}</h1>
+  <header class="cover-top">
+    <img class="cover-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+    <span>{{ c.company.doc_title }}</span>
+  </header>
+  <div class="cover-head">
+    {% set w = c.company.tagline.split(' ') %}
+    <h1>{{ w[:2]|join(' ') }}<br>{{ w[2:]|join(' ') }}</h1>
     <p class="cover-pos">{{ c.company.positioning }}</p>
+  </div>
+  <figure class="cover-photo"><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure>
+  <div class="cover-foot">
     <p class="cover-sum">{{ c.company.summary }}</p>
     <ul class="cover-products">{% for p in P %}<li>{{ p.name }}</li>{% endfor %}</ul>
   </div>
-  <div class="cover-band"></div>
 </section>
 
 {# ---------- 2 Contents + who we are ---------- #}
@@ -66,13 +70,7 @@
     <div class="cols2">
       {% for para in c.about.paragraphs %}<p>{{ para }}</p>{% endfor %}
     </div>
-    <div class="origen">
-      <figure><img class="fill" src="{{ img }}husked.jpg" alt=""></figure>
-      <div>
-        <h3>{{ c.about.origen_title }}</h3>
-        <p>{{ c.about.origen }}</p>
-      </div>
-    </div>
+    <figure class="story-photo"><img class="fill" src="{{ img }}husked.jpg" alt=""></figure>
   </div>
 </section>
 

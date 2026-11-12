@@ -16,9 +16,8 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DESIGNS = {
-    "corporate": "01-corporate-professional",
-    "catalogue": "02-modern-product-catalogue",
-    "premium": "03-premium-company-brochure",
+    "harvest": "origen-coco-brochure-harvest",
+    "flagship": "origen-coco-brochure-flagship",
 }
 
 

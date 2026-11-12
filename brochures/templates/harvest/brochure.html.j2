@@ -25,19 +25,18 @@
 {%- endmacro %}
 
 {{ m.head(c, c.company.doc_title, own, shared, tpl) }}
-<body class="prem">
+<body class="harv">
 
 {# ---------- 1 Cover ---------- #}
 <section class="page cover">
-  <img class="fill" src="{{ img }}husked.jpg" alt="">
-  <div class="cover-shade"></div>
-  <img class="cover-logo" src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}">
+  <img class="cover-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
   <div class="cover-text">
     <p class="eyebrow">{{ c.company.doc_title }}</p>
-    <h1>{{ c.company.tagline | replace("Greener", "\x00") | e | replace("\x00", "<em>Greener</em>"|safe) }}</h1>
+    <h1>{{ c.company.tagline }}</h1>
     <span class="rule"></span>
     <p class="cover-pos">{{ c.company.positioning }}</p>
   </div>
+  <figure class="cover-photo"><img class="fill" src="{{ img }}plant.jpg" alt=""></figure>
   <ul class="cover-products">{% for p in P %}<li>{{ p.name }}</li>{% endfor %}</ul>
 </section>
 
@@ -71,10 +70,6 @@
     <p class="eyebrow">{{ c.story.title }}</p>
     <h2 class="display">{{ c.about.title }}</h2>
     <div class="cols2">{% for para in c.about.paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
-    <blockquote class="origen">
-      <p class="eyebrow">{{ c.about.origen_title }}</p>
-      <p>{{ c.about.origen }}</p>
-    </blockquote>
     <figure class="about-photo"><img class="fill" src="{{ img }}seedlings.jpg" alt=""></figure>
   </div>
 </section>

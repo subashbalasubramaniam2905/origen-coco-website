@@ -1,0 +1,211 @@
+/* Flagship brochure (matches the confirmed Flagship website template)
+   White pages, structured two-column grid, Archivo (the Flagship template's
+   typeface), green for structure and coir brown for small accents. */
+.flag {
+  --ink: #1F2A23;
+  --muted: #5C665F;
+  --line: #DCE3DE;
+  --tint: #F1F6F2;
+  --m: 16mm;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: 9.2pt;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.flag .page { background: #fff; }
+
+/* type */
+.flag h1, .flag h2, .flag h3, .flag h4 { font-stretch: 92%; color: var(--ink); }
+.flag h2 { font-size: 23pt; line-height: 1.12; font-weight: 650; letter-spacing: -.01em; margin-bottom: 5mm; color: var(--green); }
+.flag h2.wide { font-size: 18pt; line-height: 1.22; max-width: 160mm; }
+.flag h3 { font-size: 12pt; line-height: 1.25; font-weight: 650; margin-bottom: 2.2mm; }
+.flag h3.sec { margin: 6mm 0 3.5mm; }
+.flag h4 { font-size: 7.4pt; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--brown); margin-bottom: 2mm; }
+.flag p + p { margin-top: 2.6mm; }
+.flag .kicker { font-size: 7.4pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--brown); margin-bottom: 3mm; }
+.flag .kicker.light { color: rgba(255,255,255,.75); }
+.flag .lead { font-size: 11pt; line-height: 1.5; color: var(--ink); margin-bottom: 4mm; }
+.flag .lead.big { font-size: 12.5pt; line-height: 1.5; font-weight: 400; }
+.flag .rule { height: .4mm; width: 22mm; background: var(--green); margin: 2mm 0 6mm; }
+.flag .cols2 { column-count: 2; column-gap: 8mm; }
+.flag .cols2 p { break-inside: avoid; }
+.flag .cols2.overview p { break-inside: auto; }
+
+/* running header / footer */
+.flag .hd { position: absolute; top: 0; left: var(--m); right: var(--m); height: 17mm; display: flex; align-items: center; justify-content: space-between; border-bottom: .3mm solid var(--line); }
+.flag .hd img { height: 5.6mm; width: auto; }
+.flag .hd span { font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.flag .ft { position: absolute; bottom: 7mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; align-items: center; font-size: 7pt; color: var(--muted); border-top: .3mm solid var(--line); padding-top: 2.5mm; }
+.flag .pgno { font-weight: 700; color: var(--green); font-size: 8pt; }
+.flag .body { position: absolute; top: 26mm; left: var(--m); right: var(--m); bottom: 19mm; display: flex; flex-direction: column; }
+
+/* 1 cover: white, colour logo, one strong photograph, quiet type */
+.flag .cover-top { position: absolute; top: 16mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; align-items: center; }
+.flag .cover-logo { height: 12mm; width: auto; }
+.flag .cover-top span { font-size: 7.2pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.flag .cover-head { position: absolute; top: 50mm; left: var(--m); right: var(--m); }
+.flag .cover h1 { font-size: 44pt; line-height: 1; font-weight: 700; letter-spacing: -.025em; color: var(--ink); font-stretch: 88%; max-width: 128mm; margin-bottom: 6mm; }
+.flag .cover-pos { font-size: 12.5pt; font-weight: 500; color: var(--green); padding-top: 5mm; border-top: .5mm solid var(--green); display: inline-block; }
+.flag .cover-photo { position: absolute; top: 118mm; left: 0; right: 0; height: 128mm; }
+.flag .cover-foot { position: absolute; left: var(--m); right: var(--m); bottom: 14mm; display: flex; justify-content: space-between; align-items: flex-end; gap: 12mm; }
+.flag .cover-sum { font-size: 8.6pt; color: var(--muted); max-width: 92mm; line-height: 1.5; }
+.flag .cover-products { display: flex; flex-direction: column; align-items: flex-end; gap: .8mm; font-size: 7.4pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+
+/* 2 contents + intro */
+.flag .intro-grid { position: absolute; top: 17mm; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: 62mm 1fr; }
+.flag .toc { background: var(--green); color: #fff; padding: 12mm 8mm 0 var(--m); margin-left: calc(var(--m) * -1); padding-left: calc(var(--m) * 2); width: calc(62mm + var(--m)); }
+.flag .toc ol { counter-reset: none; }
+.flag .toc li { display: flex; justify-content: space-between; gap: 3mm; padding: 2.1mm 0; border-bottom: .25mm solid rgba(255,255,255,.18); font-size: 8.6pt; font-weight: 500; }
+.flag .toc li.sub { padding-left: 4mm; font-weight: 400; color: rgba(255,255,255,.82); font-size: 8pt; }
+.flag .toc b { font-weight: 600; color: rgba(255,255,255,.7); font-variant-numeric: tabular-nums; }
+.flag .intro-main { padding: 12mm var(--m) 22mm 12mm; display: flex; flex-direction: column; }
+.flag .intro-main h2 { font-size: 20pt; }
+.flag .intro-photo { height: 52mm; margin: 6mm 0 6mm; }
+.flag .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 6mm; }
+.flag .stats div { border-top: .5mm solid var(--green); padding-top: 2.5mm; }
+.flag .stats strong { display: block; font-size: 26pt; line-height: 1; font-weight: 700; color: var(--green); font-stretch: 85%; margin-bottom: 1.5mm; }
+.flag .stats span { font-size: 8pt; color: var(--muted); line-height: 1.35; display: block; }
+.flag .intro-page .ft { left: calc(62mm + 12mm); }
+
+/* 3 story */
+.flag .story-photo { margin-top: 8mm; flex: 1; min-height: 50mm; }
+
+/* 4 vision & mission */
+.flag .vm { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.flag .vm-card { background: var(--green); color: #fff; padding: 8mm 7mm 8mm; }
+.flag .vm-card.alt { background: var(--tint); color: var(--ink); }
+.flag .vm-card h3 { color: inherit; font-size: 15pt; margin: 3mm 0 3mm; }
+.flag .vm-ico { width: 10mm; height: 10mm; color: inherit; opacity: .9; }
+.flag .vm-card.alt .vm-ico { color: var(--green); }
+.flag .farmers { display: grid; grid-template-columns: 70mm 1fr; gap: 8mm; margin-top: 8mm; align-items: center; }
+.flag .farmers figure { height: 46mm; }
+.flag .principles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.flag .principles li { border-top: .5mm solid var(--green); padding-top: 3mm; display: flex; flex-direction: column; gap: 2mm; }
+.flag .principles .num { font-size: 8pt; font-weight: 700; color: var(--brown); letter-spacing: .1em; }
+.flag .pr-ico { width: 8mm; height: 8mm; color: var(--green); }
+.flag .principles p { font-size: 8.4pt; line-height: 1.4; font-weight: 500; }
+
+/* 5 why */
+.flag .why { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm 9mm; margin-top: 3mm; }
+.flag .why-item { border-top: .3mm solid var(--line); padding-top: 5mm; }
+.flag .why-ico { width: 11mm; height: 11mm; border-radius: 50%; background: var(--tint); color: var(--green); display: grid; place-items: center; margin-bottom: 3mm; }
+.flag .why-ico .ico { width: 5.6mm; height: 5.6mm; }
+.flag .why-item p { color: var(--muted); }
+.flag .why-item.note { background: var(--green); color: #fff; border: 0; padding: 7mm; }
+.flag .why-item.note h3 { color: #fff; }
+.flag .why-item.note p { color: rgba(255,255,255,.88); font-size: 10.5pt; line-height: 1.45; }
+.flag .note-ico { width: 9mm; height: 9mm; margin-bottom: 3mm; }
+
+/* 6 range */
+.flag .tree { margin: 2mm 0 7mm; }
+.flag .tree-root { display: flex; align-items: center; gap: 3mm; justify-content: center; background: var(--green); color: #fff; font-weight: 600; font-size: 10pt; padding: 3mm; width: 72mm; margin: 0 auto; border-radius: 10mm; }
+.flag .tree-root .ico { width: 6mm; height: 6mm; }
+.flag .tree-parts { display: grid; grid-template-columns: 3fr 1fr 1fr; gap: 4mm; margin-top: 7mm; position: relative; }
+.flag .tree-parts::before { content: ""; position: absolute; top: -7mm; left: 50%; height: 3.5mm; border-left: .4mm solid var(--green); }
+.flag .tree-parts::after { content: ""; position: absolute; top: -3.5mm; left: 30%; right: 10%; border-top: .4mm solid var(--green); }
+.flag .tree-part { position: relative; }
+.flag .tree-part::before { content: ""; position: absolute; top: -3.5mm; left: 50%; height: 3.5mm; border-left: .4mm solid var(--green); }
+.flag .tree-label { text-align: center; font-size: 7.4pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--brown); border: .3mm solid var(--brown); padding: 1.6mm; margin-bottom: 3mm; }
+.flag .tree-prods { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 4mm; }
+.flag .tree-prod img { width: 100%; height: 40mm; object-fit: cover; }
+.flag .tree-prod span { display: block; font-weight: 600; font-size: 8.6pt; margin-top: 2mm; text-align: center; }
+.flag .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.flag .group { background: var(--tint); padding: 6mm; }
+.flag .group h3 { color: var(--green); }
+.flag .group p { color: var(--muted); font-size: 8.6pt; }
+.flag .group ul { margin-top: 3mm; }
+.flag .group li { display: flex; align-items: center; gap: 2mm; padding: 1.6mm 0; border-top: .25mm solid var(--line); font-weight: 600; }
+.flag .group li .ico { color: var(--green); width: 3.6mm; height: 3.6mm; }
+.flag .group li b { margin-left: auto; color: var(--brown); font-weight: 600; font-size: 8pt; }
+.flag .story-strip { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; border-top: .3mm solid var(--line); padding-top: 5mm; }
+.flag .story-strip p { margin: 0; color: var(--muted); font-size: 8.8pt; }
+
+/* 7-11 products */
+.flag .prod-top { display: grid; grid-template-columns: 1fr 98mm; gap: 8mm; margin-bottom: 5mm; align-items: stretch; }
+.flag .prod-title { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1mm; }
+.flag .prod-title h2 { font-size: 26pt; margin-bottom: 3mm; }
+.flag .prod-title .lead { margin: 0; color: var(--muted); font-size: 10.5pt; }
+.flag .prod-photo { height: 58mm; }
+.flag .overview { margin-bottom: 4mm; }
+.flag .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; padding: 4mm 0; border-top: .3mm solid var(--line); border-bottom: .3mm solid var(--line); }
+.flag .checks li { display: flex; gap: 2mm; padding: .8mm 0; }
+.flag .checks .ico { color: var(--green); width: 3.8mm; height: 3.8mm; margin-top: .6mm; stroke-width: 2.4; }
+.flag .dots li { position: relative; padding: .8mm 0 .8mm 4.5mm; }
+.flag .dots li::before { content: ""; position: absolute; left: 0; top: 2.6mm; width: 1.6mm; height: 1.6mm; background: var(--brown); border-radius: 50%; }
+.flag .crops-label { margin-top: 3mm; font-weight: 600; font-size: 8pt; }
+.flag .chips { display: flex; flex-wrap: wrap; gap: 1.5mm; margin-top: 1.6mm; }
+.flag .chips li { font-size: 7.4pt; background: var(--tint); color: var(--green); padding: .5mm 2.4mm; border-radius: 5mm; font-weight: 600; }
+.flag .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin: 4mm 0 5mm; }
+.flag .tbl { font-size: 8.2pt; }
+.flag .tbl th { text-align: left; background: var(--green); color: #fff; font-weight: 600; padding: 1.8mm 2.6mm; font-size: 7.4pt; letter-spacing: .06em; text-transform: uppercase; }
+.flag .tbl td { padding: 1.45mm 2.6mm; border-bottom: .25mm solid var(--line); vertical-align: top; }
+.flag .tbl tr:nth-child(even) td { background: #FAFBFA; }
+.flag .tbl td:first-child { font-weight: 600; width: 52%; }
+.flag .tbl td.tbc { color: #9AA39D; font-style: italic; }
+.flag .cta { margin-top: auto; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 8mm; padding: 5mm 7mm; }
+.flag .cta h3 { color: #fff; margin-bottom: 1mm; }
+.flag .cta p { color: rgba(255,255,255,.86); font-size: 8.8pt; }
+.flag .cta-go { flex: none; display: flex; align-items: center; gap: 2mm; font-weight: 600; font-size: 8.6pt; white-space: nowrap; }
+.flag .cta-go .ico { width: 4mm; height: 4mm; }
+
+/* 12-13 process */
+.flag .flow-title { display: flex; align-items: center; gap: 3mm; font-size: 13pt; margin: 2mm 0 4mm; }
+.flag .flow-title span { width: 8mm; height: 8mm; border-radius: 50%; background: var(--brown); color: #fff; display: grid; place-items: center; font-size: 9pt; }
+.flag .flowbar { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 7mm; position: relative; }
+.flag .flowbar::before { content: ""; position: absolute; top: 6mm; left: 7%; right: 7%; border-top: .4mm dashed var(--green); }
+.flag .flowbar li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2mm; position: relative; padding: 0 1mm; }
+.flag .flowbar i { width: 12mm; height: 12mm; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; }
+.flag .flowbar i .ico { width: 5.5mm; height: 5.5mm; }
+.flag .flowbar span { font-size: 7.4pt; font-weight: 600; line-height: 1.25; }
+.flag .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 8mm; }
+.flag .step { display: grid; grid-template-columns: 36mm 1fr; gap: 4mm; align-items: start; }
+.flag .step figure, .flag .trio-step figure { position: relative; height: 30mm; background: var(--tint); }
+.flag .step figure b, .flag .trio-step figure b { position: absolute; left: 0; bottom: 0; background: var(--brown); color: #fff; font-size: 7.4pt; padding: .6mm 1.8mm; }
+.flag .step-ico { width: 100%; height: 100%; display: grid; place-items: center; color: var(--green); }
+.flag .step-ico .ico { width: 11mm; height: 11mm; }
+.flag .step h4, .flag .trio-step h4 { font-size: 9.6pt; text-transform: none; letter-spacing: 0; color: var(--ink); margin-bottom: 1mm; }
+.flag .step p { font-size: 8.2pt; line-height: 1.45; color: var(--muted); }
+.flag .flow-intro { color: var(--muted); margin: -2mm 0 5mm; }
+.flag .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; margin-bottom: 12mm; position: relative; }
+.flag .trio-step figure { height: 52mm; margin-bottom: 3.5mm; }
+.flag .trio-step p { font-size: 8.4pt; color: var(--muted); }
+.flag .trio-step + .trio-step figure::before { content: ""; position: absolute; left: -5.6mm; top: 50%; width: 4mm; height: 4mm; border-top: .5mm solid var(--green); border-right: .5mm solid var(--green); transform: translateY(-50%) rotate(45deg); }
+
+/* 14 how to use */
+.flag .guides { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+.flag .guide { background: var(--tint); padding: 6mm; }
+.flag .guide h3 { color: var(--green); font-size: 11pt; }
+.flag .guide li { display: flex; gap: 2.5mm; padding: 1.2mm 0; font-size: 8.6pt; line-height: 1.45; }
+.flag .guide li b { flex: none; width: 5mm; height: 5mm; border-radius: 50%; background: var(--green); color: #fff; font-size: 7pt; display: grid; place-items: center; margin-top: .3mm; }
+.flag .faqs { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 8mm; margin: 0; }
+.flag .faqs div { border-top: .3mm solid var(--line); padding-top: 3mm; }
+.flag .faqs dt { font-weight: 650; margin-bottom: 1.2mm; font-size: 9.2pt; }
+.flag .faqs dd { margin: 0; color: var(--muted); font-size: 8.4pt; line-height: 1.5; }
+
+/* 15 back cover */
+.flag .back { background: var(--green); color: #fff; }
+.flag .back-photo { position: absolute; inset: 0 0 auto 0; height: 92mm; }
+.flag .back-body { position: absolute; top: 92mm; left: 0; right: 0; padding: 14mm var(--m) 0; }
+.flag .back-logo { height: 10mm; width: auto; margin-bottom: 10mm; }
+.flag .back h2 { color: #fff; font-size: 24pt; max-width: 150mm; }
+.flag .back-body > p { color: rgba(255,255,255,.88); max-width: 150mm; font-size: 10pt; }
+.flag .back-cta { font-weight: 600; color: #fff !important; margin: 5mm 0 10mm !important; font-size: 10.5pt !important; border-left: 1mm solid var(--brown); padding-left: 4mm; }
+.flag .reach { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; border-top: .3mm solid rgba(255,255,255,.3); padding-top: 6mm; }
+.flag .reach li { display: flex; gap: 3mm; align-items: flex-start; font-size: 10pt; font-weight: 600; }
+.flag .reach .ico { width: 6mm; height: 6mm; color: #fff; opacity: .85; }
+.flag .reach small { display: block; font-size: 7pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: .8mm; }
+.flag .back-ft { position: absolute; bottom: 9mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; font-size: 7.6pt; color: rgba(255,255,255,.7); border-top: .3mm solid rgba(255,255,255,.25); padding-top: 3mm; }
+
+/* the product with the most content (coco peat) gets a tighter top block */
+.flag .long .prod-top { grid-template-columns: 1fr 86mm; margin-bottom: 4mm; }
+.flag .long .prod-photo { height: 50mm; }
+.flag .long .prod-title h2 { font-size: 22pt; margin-bottom: 2mm; }
+.flag .long .prod-title .lead { font-size: 9.6pt; }
+.flag .long .crops-label { margin-top: 2mm; }
+.flag .long .ba { padding: 3mm 0; }
+.flag .long .checks li, .flag .long .dots li { padding: .5mm 0; }
+.flag .long .dots li { padding-left: 4.5mm; }
+.flag .long .dots li::before { top: 2.2mm; }
+.flag .long .tbl td { padding: 1.1mm 2.6mm; }
+.flag .long .tables { margin: 3mm 0 4mm; }
+.flag .cover::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3mm; background: var(--green); }

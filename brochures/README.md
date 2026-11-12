@@ -1,12 +1,12 @@
 # Origen Coco brochures
 
-Three A4 company profile and product brochure designs, built from the same content.
+Two A4 company profile and product brochure designs, styled on the two confirmed website
+templates and built from the same content.
 
 | Design | PDF | HTML |
 | --- | --- | --- |
-| 1. Corporate Professional (15 pages) | `pdf/01-corporate-professional.pdf` | `html/01-corporate-professional.html` |
-| 2. Modern Product Catalogue (16 pages) | `pdf/02-modern-product-catalogue.pdf` | `html/02-modern-product-catalogue.html` |
-| 3. Premium Company Brochure (16 pages) | `pdf/03-premium-company-brochure.pdf` | `html/03-premium-company-brochure.html` |
+| Harvest (16 pages, Young Serif + Manrope) | `pdf/origen-coco-brochure-harvest.pdf` | `html/origen-coco-brochure-harvest.html` |
+| Flagship (15 pages, Archivo) | `pdf/origen-coco-brochure-flagship.pdf` | `html/origen-coco-brochure-flagship.html` |
 
 ## How it fits together
 
@@ -16,7 +16,7 @@ brochures/
   build.py                     content.json + templates  ->  html/*.html   (Python 3, Jinja2)
   render-pdf.js                html/*.html  ->  pdf/*.pdf + page checks     (Node, Playwright)
   templates/_shared/           macros (icons, spec tables, contact block) and base print CSS
-  templates/<design>/          brochure.html.j2 + style.css for each design
+  templates/<design>/          brochure.html.j2 + style.css for each design (harvest, flagship)
   assets/fonts/                the fonts, stored locally so PDFs render the same everywhere
 ```
 
