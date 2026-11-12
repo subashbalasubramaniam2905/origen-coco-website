@@ -1,0 +1,200 @@
+/* 03 Showcase - A4 portrait. Bold condensed uppercase product names on dark
+   olive bands with light grey cards. Big Shoulders Display + Public Sans. */
+.sc {
+  --olive: #37432F; --olive-2: #46543C; --ink: #1E241C; --muted: #5B6157; --grey: #EEF0EC; --line: #DADFD6; --lime: #A8D08D;
+  --m: 15mm;
+  font-family: 'Public Sans', system-ui, sans-serif; font-size: 8.5pt; line-height: 1.55; color: var(--ink);
+}
+.sc .page { background: #fff; }
+.sc .page.olive { background: var(--olive); color: #E8ECE4; }
+.sc .page.grey { background: var(--grey); }
+.sc h1, .sc h2, .sc .huge, .sc .flow-t, .sc .n, .sc .p-num { font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; font-weight: 800; letter-spacing: .01em; line-height: .95; }
+.sc .huge { font-size: 34pt; color: var(--olive); margin-bottom: 5mm; }
+.sc .huge::after { content: ""; display: inline-block; width: 22mm; height: .8mm; background: var(--green); margin-left: 4mm; vertical-align: middle; }
+.sc .huge.light { color: #fff; font-size: 28pt; margin-bottom: 3mm; }
+.sc .huge.light::after { background: var(--lime); }
+.sc h3 { font-size: 10.5pt; font-weight: 700; margin-bottom: 1.4mm; line-height: 1.25; }
+.sc h4 { font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 2mm; }
+.sc p + p { margin-top: 2.2mm; }
+.sc .intro { font-size: 9.6pt; color: var(--muted); margin-bottom: 5mm; max-width: 165mm; }
+.sc .cols2 { column-count: 2; column-gap: 7mm; }
+.sc .ft { position: absolute; bottom: 7mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; font-size: 6.8pt; color: var(--muted); }
+.sc .ft.dark { color: rgba(255,255,255,.6); }
+.sc .pgno { font-weight: 700; }
+.sc .body { position: absolute; top: 16mm; left: var(--m); right: var(--m); bottom: 16mm; display: flex; flex-direction: column; }
+
+/* cover */
+.sc .cover .bg { position: absolute; inset: 0; }
+.sc .cv-fade { position: absolute; inset: 0; background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,.92) 16%, rgba(255,255,255,0) 34%, rgba(255,255,255,0) 52%, rgba(255,255,255,.95) 78%, #fff 100%); }
+.sc .cv-logo { position: absolute; top: 16mm; left: var(--m); height: 13mm; width: auto; }
+.sc .cv-title { position: absolute; left: var(--m); bottom: 20mm; width: 110mm; }
+.sc .cv-pos { font-size: 9.4pt; font-weight: 600; color: var(--olive); margin-bottom: 3mm; }
+.sc .cover h1 { font-size: 52pt; color: var(--olive); }
+.sc .cv-doc { margin-top: 4mm; font-size: 7.4pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--green); padding-left: 14mm; position: relative; }
+.sc .cv-doc::before { content: ""; position: absolute; left: 0; top: 50%; width: 10mm; height: .5mm; background: var(--green); }
+.sc .cv-list { position: absolute; right: var(--m); bottom: 20mm; width: 58mm; }
+.sc .showcase { display: flex; flex-direction: column; gap: 2mm; }
+.sc .showcase a { display: grid; grid-template-columns: 16mm 1fr; align-items: center; gap: 3mm; background: var(--olive); color: #fff; border-radius: 1.5mm; overflow: hidden; padding-right: 3mm; }
+.sc .sc-img { display: block; height: 12mm; }
+.sc .sc-name { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 10pt; text-transform: uppercase; letter-spacing: .03em; }
+
+/* about */
+.sc .about-top { display: grid; grid-template-columns: 1.15fr 1fr; gap: 7mm; }
+.sc .about-top figure { border-radius: 2mm; overflow: hidden; }
+.sc .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 6mm 0; }
+.sc .nums div { background: var(--grey); border-radius: 2mm; padding: 4mm; }
+.sc .nums strong { font-family: 'Big Shoulders Display', sans-serif; display: block; font-size: 30pt; line-height: 1; color: var(--green); font-weight: 800; }
+.sc .nums span { display: block; font-size: 7.2pt; line-height: 1.35; color: var(--muted); margin-top: 1mm; }
+.sc .olive-box { margin-top: auto; background: var(--olive); color: #E8ECE4; border-radius: 2mm; padding: 6mm; }
+.sc .olive-box h3 { color: #fff; font-size: 12pt; margin-bottom: 3mm; }
+.sc .olive-box p { font-size: 8pt; }
+
+/* vision */
+.sc .big { font-size: 9.8pt; line-height: 1.55; color: rgba(255,255,255,.88); margin-bottom: 7mm; }
+.sc .farm { display: grid; grid-template-columns: 60mm 1fr; gap: 6mm; align-items: center; background: var(--olive-2); border-radius: 2mm; overflow: hidden; }
+.sc .farm figure { height: 42mm; }
+.sc .farm h3 { color: #fff; }
+.sc .farm div { padding-right: 6mm; font-size: 8pt; }
+.sc .pr-h { color: var(--lime); margin: 7mm 0 3mm; font-size: 10pt; }
+.sc .principles li { display: flex; gap: 3mm; padding: 2mm 0; border-bottom: .3mm solid rgba(255,255,255,.15); font-size: 9pt; color: #fff; }
+.sc .principles .ico { width: 4.6mm; height: 4.6mm; color: var(--lime); stroke-width: 2.6; }
+
+/* why */
+.sc .why li { display: grid; grid-template-columns: 18mm 1fr; gap: 4mm; padding: 3.6mm 0; border-top: .3mm solid var(--line); }
+.sc .n { font-size: 26pt; color: var(--green); }
+.sc .why p { color: var(--muted); }
+.sc .whole { margin-top: auto; display: grid; grid-template-columns: 1fr 1.2fr; background: var(--grey); border-radius: 2mm; overflow: hidden; }
+.sc .whole figure { height: 40mm; }
+.sc .whole div { padding: 5mm; align-self: center; }
+
+/* range */
+.sc .range { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr); gap: 3mm; min-height: 0; }
+.sc .range a { position: relative; border-radius: 2mm; overflow: hidden; color: #fff; }
+.sc .range .r1 { grid-column: 1 / 3; }
+.sc .range a span { position: absolute; left: 0; right: 0; bottom: 0; padding: 4mm 5mm; background: linear-gradient(0deg, rgba(30,36,28,.88), rgba(30,36,28,0)); display: flex; flex-direction: column; }
+.sc .range b { font-family: 'Big Shoulders Display', sans-serif; font-size: 20pt; text-transform: uppercase; line-height: 1; }
+.sc .range i { font-style: normal; font-size: 7.4pt; color: var(--lime); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+
+/* products */
+.sc .p-top { position: absolute; top: 0; left: 0; right: 0; height: 150mm; background: var(--grey); padding: 14mm var(--m) 0; }
+.sc .p-name { display: grid; grid-template-columns: auto 1fr; column-gap: 4mm; align-items: end; }
+.sc .p-num { grid-row: 1 / 3; font-size: 48pt; color: var(--green); }
+.sc .p-name h2 { font-size: 36pt; color: var(--olive); margin-bottom: 2.5mm; line-height: 1.05; }
+.sc .p-name p { font-size: 9.4pt; color: var(--muted); }
+.sc .p-grid { display: grid; grid-template-columns: 1fr 96mm; gap: 6mm; margin-top: 7mm; }
+.sc .p-grid figure { height: 84mm; border-radius: 2mm; overflow: hidden; }
+.sc .p-feat { position: relative; padding-left: 7mm; }
+.sc .vlabel { position: absolute; left: 0; top: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 6.6pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green); }
+.sc .benefits li { display: flex; gap: 2mm; padding: .8mm 0; font-size: 8.2pt; }
+.sc .benefits .ico { width: 3.6mm; height: 3.6mm; color: var(--green); stroke-width: 3; margin-top: .6mm; }
+.sc .crops-label { font-weight: 700; font-size: 7.2pt; margin: 2.4mm 0 1mm; }
+.sc .crops ul { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+.sc .crops li { font-size: 6.6pt; font-weight: 600; background: var(--olive); color: #fff; padding: .2mm 2mm; border-radius: 1mm; }
+.sc .p-bot { position: absolute; top: 150mm; left: 0; right: 0; bottom: 0; background: var(--olive); color: #E8ECE4; padding: 8mm var(--m) 16mm; display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: auto auto 1fr; column-gap: 7mm; }
+.sc .p-ov { font-size: 7.9pt; line-height: 1.5; }
+.sc .p-apps h4 { color: var(--lime); }
+.sc .apps li { padding: .7mm 0 .7mm 3.6mm; position: relative; font-size: 8pt; border-bottom: .25mm solid rgba(255,255,255,.14); }
+.sc .apps li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 1.4mm; height: 1.4mm; background: var(--lime); }
+.sc .tables { grid-column: 1 / 3; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 4mm; }
+.sc .t-block h4 { color: var(--lime); }
+.sc .tbl { font-size: 7.4pt; }
+.sc .tbl th { text-align: left; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .08em; padding: 1mm 2mm; background: rgba(255,255,255,.12); color: #fff; }
+.sc .tbl td { padding: 1mm 2mm; border-bottom: .25mm solid rgba(255,255,255,.14); }
+.sc .tbl td:first-child { width: 55%; font-weight: 600; color: #fff; }
+.sc .tbl td.tbc { color: rgba(255,255,255,.5); }
+.sc .cta { grid-column: 1 / 3; align-self: end; font-size: 8pt; color: rgba(255,255,255,.82); border-top: .3mm solid rgba(255,255,255,.2); padding-top: 3mm; }
+.sc .cta b { color: #fff; font-size: 9pt; }
+
+/* spec overview (body table style) */
+.sc .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.sc .spec-card { background: var(--grey); border-radius: 2mm; padding: 4.5mm; }
+.sc .spec-card h3 { font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; font-size: 15pt; color: var(--olive); margin-bottom: 2mm; }
+.sc .spec-card .tbl th { background: var(--olive); color: #fff; }
+.sc .spec-card .tbl td { border-bottom-color: var(--line); color: var(--ink); }
+.sc .spec-card .tbl td:first-child { color: var(--ink); }
+.sc .spec-card .tbl td.tbc { color: #9AA096; }
+.sc .spec-card.note { background: var(--green); color: #fff; display: flex; align-items: center; font-size: 9pt; font-weight: 500; }
+
+/* process */
+.sc .flow-t { font-size: 18pt; color: var(--olive); margin: 2mm 0 4mm; }
+.sc .flow-t.light { color: #fff; }
+.sc .fi { color: rgba(255,255,255,.8); margin: -2mm 0 4mm; }
+.sc .steps.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 6mm; }
+.sc .steps figure { position: relative; height: 30mm; border-radius: 2mm; overflow: hidden; background: var(--grey); margin-bottom: 2.4mm; }
+.sc .steps figure b { position: absolute; left: 0; top: 0; font-family: 'Big Shoulders Display', sans-serif; font-size: 14pt; background: var(--green); color: #fff; padding: .6mm 2.4mm; }
+.sc .step-ico { position: absolute; inset: 0; display: grid; place-items: center; color: var(--green); }
+.sc .step-ico .ico { width: 11mm; height: 11mm; }
+.sc .steps.grid li { display: grid; grid-template-columns: 38mm 1fr; gap: 4mm; }
+.sc .steps.grid figure { height: 26mm; margin: 0; }
+.sc .steps h4 { font-size: 9.4pt; text-transform: none; letter-spacing: 0; margin-bottom: .6mm; }
+.sc .steps p { font-size: 7.8pt; color: var(--muted); line-height: 1.45; }
+.sc .steps.row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-bottom: 9mm; }
+.sc .olive .steps figure { height: 44mm; background: var(--olive-2); }
+.sc .olive .step-ico { color: var(--lime); }
+.sc .olive .steps h4 { color: #fff; }
+.sc .olive .steps p { color: rgba(255,255,255,.78); }
+
+/* how to */
+.sc .guides { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.sc .guide { background: var(--grey); border-radius: 2mm; padding: 5mm; }
+.sc .guide h3 { color: var(--olive); margin-bottom: 2.4mm; }
+.sc .guide li { display: flex; gap: 2.4mm; padding: .8mm 0; font-size: 8pt; line-height: 1.42; }
+.sc .guide li b { flex: none; font-family: 'Big Shoulders Display', sans-serif; font-size: 12pt; color: var(--green); width: 5mm; line-height: 1.1; }
+.sc .faqs { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
+.sc .faqs dt { font-weight: 700; font-size: 8.6pt; }
+.sc .faqs dd { margin: .6mm 0 0; font-size: 7.8pt; color: var(--muted); line-height: 1.45; }
+
+/* back */
+.sc .back-logo { height: 13mm; width: auto; align-self: flex-start; margin: 4mm 0 12mm; }
+.sc .back .huge { font-size: 32pt; }
+.sc .back-cta { font-weight: 700; color: var(--green); font-size: 10pt; margin-bottom: 7mm; }
+.sc .reach { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+.sc .reach li { display: flex; gap: 2.4mm; background: var(--olive); color: #fff; border-radius: 2mm; padding: 4.5mm; font-weight: 600; font-size: 8.6pt; }
+.sc .reach .ico { width: 5mm; height: 5mm; color: var(--lime); }
+.sc .reach small { display: block; font-size: 6.4pt; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.65); }
+.sc .back-ph { margin-top: 8mm; flex: 1; border-radius: 2mm; overflow: hidden; }
+
+/* fill tuning */
+.sc .about-top p { font-size: 9.4pt; }
+.sc .about-top figure { min-height: 95mm; }
+.sc .nums div { padding: 6mm 5mm; }
+.sc .nums strong { font-size: 38pt; }
+.sc .nums span { font-size: 8pt; }
+.sc .olive-box p { font-size: 8.8pt; }
+.sc .why li { padding: 5.6mm 0; }
+.sc .why h3 { font-size: 12.5pt; }
+.sc .why p { font-size: 9.2pt; }
+.sc .n { font-size: 32pt; }
+.sc .whole figure { height: 62mm; }
+.sc .whole p { font-size: 9pt; }
+.sc .spec-grid { flex: 1; grid-auto-rows: 1fr; min-height: 0; }
+.sc .spec-card .tbl { font-size: 8.2pt; }
+.sc .spec-card .tbl td, .sc .spec-card .tbl th { padding: 1.5mm 2mm; }
+.sc .spec-card h3 { font-size: 18pt; margin-bottom: 3mm; }
+.sc .spec-card.note { font-size: 11pt; line-height: 1.5; padding: 7mm; }
+.sc .steps.grid { flex: 1; grid-template-rows: repeat(4, minmax(0, 1fr)); min-height: 0; }
+.sc .steps.grid li { grid-template-columns: 46mm 1fr; align-items: stretch; }
+.sc .steps.grid figure { height: 100%; }
+.sc .steps.grid p { font-size: 8.6pt; }
+.sc .steps.grid h4 { font-size: 10.5pt; }
+.sc .olive .steps figure { height: 62mm; }
+.sc .olive .steps p { font-size: 8.6pt; }
+.sc .olive .flow-t { font-size: 24pt; margin-top: 4mm; }
+.sc .olive .fi { font-size: 9.2pt; }
+.sc .guide li { font-size: 8.8pt; }
+.sc .faqs dt { font-size: 9.6pt; }
+.sc .faqs dd { font-size: 8.6pt; }
+.sc .faqs { gap: 5mm 7mm; }
+.sc .big { font-size: 11pt; margin-bottom: 9mm; }
+.sc .huge.light { font-size: 34pt; margin-bottom: 4mm; }
+.sc .farm figure { height: 62mm; }
+.sc .farm div { font-size: 9pt; }
+.sc .farm h3 { font-size: 12pt; }
+.sc .pr-h { font-size: 12pt; margin-top: 10mm; }
+.sc .principles li { padding: 3.6mm 0; font-size: 10pt; }
+.sc .guide { padding: 6.5mm; }
+.sc .guide h3 { font-size: 12pt; }
+.sc .guide li { font-size: 9.4pt; padding: 1.2mm 0; }
+.sc .faqs dt { font-size: 10.4pt; }
+.sc .faqs dd { font-size: 9.2pt; }
+.sc .faqs { gap: 6mm 8mm; }

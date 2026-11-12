@@ -1,0 +1,374 @@
+{
+  "_source": "All copy is from 'Origen Coco - Website Content BR.docx' (body text, client comments C1/C7/C11/C38 and the 'Suggested addition' wording) as already used on the website templates. Do not add copy that is not in that document. Spec values left as null print as 'To be confirmed'.",
+
+  "company": {
+    "name": "Origen Coco",
+    "tagline": "Growing a Greener Future",
+    "positioning": "Your Reliable Partner for Coconut-Based Products",
+    "hero": "Natural coconut products, from local farms to growers worldwide.",
+    "summary": "Coco peat, husk chips, copra, coconut fibre and coconuts, sourced directly from local farmers, supplied across India for 10 years, and now exported worldwide.",
+    "doc_title": "Company Profile & Products"
+  },
+
+  "intro": {
+    "label": "Who we are",
+    "paragraphs": [
+      "Origen Coco supplies a comprehensive range of coconut-based products to growers, importers, distributors and industrial buyers. Backed by approximately 10 years of experience supplying the Indian market, we combine farmer-direct sourcing, careful product preparation and a customer-focused approach to serving domestic and international markets.",
+      "We understand that successful supply partnerships depend on more than the product itself. Consistent specifications, competitive commercial terms, clear communication and dependable shipment planning are central to the way we aim to do business."
+    ],
+    "narrative": "Origen Coco is a coconut-products supplier from India, serving customers across domestic and international markets. With approximately a decade of experience in the Indian market, we focus on responsible sourcing, product quality, competitive commercial terms and dependable customer service. We aim to build long-term partnerships through clear communication, consistent supply practices and a practical understanding of our customers’ requirements."
+  },
+
+  "story": {
+    "label": "Our Story",
+    "title": "From Every Coconut, Something Useful",
+    "heading": "Built on a decade of customer relationships and product experience",
+    "paragraphs": [
+      "What began with customers across India now reaches buyers around the world.",
+      "A greener future starts with the coconut itself. It is a renewable crop, and every part of it can become a product people need, from peat-free growing media to everyday fibre.",
+      "We buy directly from local farmers and share honest product details, so you always know what you are getting."
+    ]
+  },
+
+  "about": {
+    "title": "From one idea to a global supplier",
+    "paragraphs": [
+      "Origen Coco began with a simple thought: there should be a use for every part of a coconut.",
+      "There is much more to a coconut than the part we eat. The husk gives us fibre, pith, and chips, while the kernel can be dried to make copra. For years, some of these parts were discarded or sold for very little. We saw an opportunity to use them better, create useful products, and give local farmers a more dependable market for what they grow.",
+      "Around ten years ago, we began supplying coco peat blocks, coco husk chips, copra, coconut fibre, and coconuts across India. The business grew gradually, one order and one customer at a time. Many came back because they knew they could expect consistent products, reliable supply, and someone to speak to when they had a question.",
+      "Today, we supply growers, nurseries, and industries in overseas markets too. We carefully manage sourcing and processing, test our products, and align product preparation and quality checks with agreed buyer specifications. As the business has grown, the things that matter to us have stayed much the same: clear product information, straightforward communication, and reliable delivery."
+    ],
+    "farmers_title": "Buying directly from farmers",
+    "farmers": "Our coconuts are sourced directly from local farmers, and this means that the process is completely free of intermediaries. This one-on-one relationship with growers allows us to check quality on site, provide a fair price, and ensure reliable supply. The farmers also benefit because they take a share of the value we build from what they grow."
+  },
+
+  "vision": {
+    "title": "Our vision",
+    "text": "Our aim is to become an internationally recognised brand in the coconut product industry. To us, this means being able to provide high-quality products that are consistent, professional services that simplify the process of international trade, and a greener future where natural products and renewable resources rule the industry."
+  },
+  "mission": {
+    "title": "Our mission",
+    "text": "Our mission is to provide high-quality coco peat and coco husk chips, quality copra, coconut fibre, and coconuts according to international standards. To achieve this goal, we make efforts to source products responsibly by procuring them from local farmers and applying a tested system of farming and production to guarantee timely deliveries to our clients."
+  },
+  "principles": {
+    "intro": "Our approach is built around five principles:",
+    "points": [
+      {"icon": "award", "text": "Quality aligned with agreed specifications."},
+      {"icon": "tag", "text": "Competitive pricing and transparent commercial discussions."},
+      {"icon": "calendar", "text": "Reliable order planning and shipment coordination."},
+      {"icon": "chat", "text": "Professional communication and customer service."},
+      {"icon": "users", "text": "Long-term relationships built on trust and consistent performance."}
+    ]
+  },
+
+  "numbers": {
+    "title": "Our numbers",
+    "points": [
+      {"value": "10", "label": "years supplying coconut products"},
+      {"value": "5", "label": "products made from one whole coconut"},
+      {"value": "2", "label": "product groups: growing media and coconut products"},
+      {"value": "7", "label": "steps from local farm to container for our coco peat and husk chips"}
+    ]
+  },
+
+  "why": {
+    "title": "Why choose Origen Coco",
+    "intro": "We connect responsible sourcing and practical product expertise with the commercial needs of growers, distributors, importers and industrial buyers.",
+    "points": [
+      {"icon": "award", "title": "Quality built around your specifications", "text": "We focus on product preparation, grading and quality checks appropriate to each product. Our aim is to supply products that meet agreed specifications and support consistent results for your operation."},
+      {"icon": "sprout", "title": "Direct sourcing and supply relationships", "text": "Our farmer-direct sourcing model connects us with local growers and provides greater visibility over our raw materials. These relationships help us coordinate sourcing and support continuity of supply."},
+      {"icon": "tag", "title": "Competitive and transparent commercial terms", "text": "We work with buyers to understand their volume, grade, packaging and destination requirements so that quotations reflect the actual needs of each order. Our focus is on delivering strong overall value, not price alone."},
+      {"icon": "calendar", "title": "Planned production and dependable shipments", "text": "We recognise the importance of meeting agreed timelines. We aim to coordinate sourcing, processing, packing and dispatch carefully, with clear communication throughout the order cycle."},
+      {"icon": "chat", "title": "Responsive, professional customer service", "text": "From initial enquiry to shipment coordination, we aim to provide timely responses, clear product information and practical support so buyers can plan and manage their orders with confidence."}
+    ],
+    "whole_title": "We use the whole coconut",
+    "whole": "We use every part of the coconut. The husk is used for making coco peat, husk chips, and fibre, the kernel is processed into copra, and mature coconuts are sold whole.",
+    "utilisation": "We maximise the value of the coconut through responsible utilisation of its different components."
+  },
+
+  "range": {
+    "title": "Our range",
+    "intro": "Our range has two groups. Growing media, which includes coco peat blocks and coco husk chips, for growers, nurseries and potting mix makers. We have coconut products, like Coconut fibre, copra and coconuts, for industry, processors and retail.",
+    "groups": [
+      {"name": "Growing media", "text": "Growing media, which includes coco peat blocks and coco husk chips, for growers, nurseries and potting mix makers.", "products": ["peat", "chips"]},
+      {"name": "Coconut products", "text": "We have coconut products, like Coconut fibre, copra and coconuts, for industry, processors and retail.", "products": ["fibre", "copra", "coconuts"]}
+    ],
+    "parts": [
+      {"part": "Husk", "products": ["peat", "chips", "fibre"]},
+      {"part": "Kernel", "products": ["copra"]},
+      {"part": "Mature coconuts", "products": ["coconuts"]}
+    ]
+  },
+
+  "products": [
+    {
+      "id": "peat", "name": "Coco Peat Blocks", "group": "Growing media", "image": "peathand.jpg", "image2": "plant.jpg", "icon": "layers",
+      "short": "Washed, dried, and compressed coir pith that expands into a light, moisture-holding growing medium.",
+      "overview": [
+        "Coco peat is the fine, spongy pith left when coconut husk is separated into fibre. It is a natural, renewable alternative to peat moss that holds plenty of water without turning heavy or waterlogged.",
+        "At Origen Coco, we wash the pith to lower its salt content, dry it to the right moisture level, and press it into compact blocks that are easy to store, stack, and ship. Add water, and the block expands into a light, fluffy growing medium for bags, pots, trays and nursery mixes. Its compact form also makes it easier and more cost-effective to transport than loose coco peat."
+      ],
+      "benefits": [
+        "Holds water well while draining freely",
+        "Renewable and moss-free",
+        "Compact blocks save on storage and freight space",
+        "Grows rapidly in wet conditions",
+        "Washed to reduce salt, with EC and pH kept in range",
+        "Can be reused across crops with proper care"
+      ],
+      "applications": [
+        "Growing medium for vegetables, flowers and soft fruit in greenhouse and open fields",
+        "Seed starting and rooting of cuttings",
+        "Base in nursery and potting mixes",
+        "Soil conditioner for garden beds and containers"
+      ],
+      "crops_label": "Suitable crops",
+      "crops": ["Tomato", "Cucumber", "Pepper", "Eggplant", "Strawberry", "Raspberry", "Blueberry", "Roses and other flowers"],
+      "variants": [
+        {"item": "Block types", "details": null},
+        {"item": "Grades", "details": null},
+        {"item": "Packing", "details": null},
+        {"item": "Container loading", "details": null},
+        {"item": "Custom options", "details": null}
+      ],
+      "specs": [
+        {"parameter": "Electrical conductivity (EC)", "value": null},
+        {"parameter": "pH", "value": null},
+        {"parameter": "Moisture content", "value": null},
+        {"parameter": "Block weight", "value": null},
+        {"parameter": "Compressed dimensions", "value": null},
+        {"parameter": "Expansion volume", "value": null},
+        {"parameter": "Sand/fibre/impurities", "value": null}
+      ],
+      "cta_title": "Need Coco Peat for Your Growing Operation?",
+      "cta_text": "Tell us your required grade, block type, and quantity, and we can discuss supply and pricing."
+    },
+    {
+      "id": "chips", "name": "Coco Husk Chips", "group": "Growing media", "image": "chips.jpg", "image2": "seedlings.jpg", "icon": "wind",
+      "short": "Diced husk pieces that keep roots well aerated and drain freely.",
+      "overview": [
+        "Coco husk chips are small pieces of coconut husk. They differ from coco peat, as they create a different planting medium that has more air pockets and drains excess water more effectively. This makes them a suitable choice for those plants that do best if their roots have air circulating around them.",
+        "Typically, growers use coco husk chips for growing orchids or combine them with coco peat. A grower can select the size of the chips, depending on the plant and container."
+      ],
+      "benefits": [
+        "High air space around roots",
+        "Fast, even drainage",
+        "Breaks down slowly, so the mix stays open longer",
+        "Natural and renewable",
+        "Suits plants that dislike wet roots"
+      ],
+      "applications": [
+        "Orchid cultivation",
+        "Blending with coco peat to improve aeration",
+        "Potting mixes for large containers and nurseries",
+        "Mulch for garden beds"
+      ],
+      "variants": [
+        {"item": "Chip sizes", "details": null},
+        {"item": "Forms", "details": null},
+        {"item": "Packing", "details": null},
+        {"item": "Container loading", "details": null}
+      ],
+      "specs": [
+        {"parameter": "Chip size", "value": null},
+        {"parameter": "EC", "value": null},
+        {"parameter": "pH", "value": null},
+        {"parameter": "Moisture content", "value": null},
+        {"parameter": "Weight per unit", "value": null}
+      ],
+      "cta_title": "Looking for Coco Husk Chips?",
+      "cta_text": "Share your preferred chip size, packing requirements, and quantity with our team."
+    },
+    {
+      "id": "fibre", "name": "Coconut Fibre", "group": "Coconut products", "image": "fibre.jpg", "image2": "husked.jpg", "icon": "fibre",
+      "short": "Strong, natural fibre from the husk for industrial use.",
+      "overview": [
+        "Coconut fibre is the long, strong strand found inside the husk. It is tough, resistant to wear and fully natural. We take the same husk that gives us coco peat, separate the fibre from the pith, clean it, and press it into bales that are simple to handle and ship.",
+        "Buyers turn it into mats, rope and brushes, erosion-control nets, garden products and upholstery filling, often in place of synthetic fibres. If you need a particular length, grade, or bale size, we can discuss what is possible for your order."
+      ],
+      "benefits": [
+        "Strong and long-lasting",
+        "Natural and biodegradable",
+        "Made from the same husk that gives us coco peat",
+        "Suits many industrial uses"
+      ],
+      "applications": [
+        "Mats, rope and brushes",
+        "Erosion-control nets and garden products",
+        "Upholstery and stuffing"
+      ],
+      "variants": [
+        {"item": "Grades", "details": null},
+        {"item": "Packing", "details": null},
+        {"item": "Container loading", "details": null}
+      ],
+      "specs": [
+        {"parameter": "Fibre length", "value": null},
+        {"parameter": "Moisture content", "value": null},
+        {"parameter": "Impurities", "value": null}
+      ],
+      "cta_title": "Discuss Your Fibre Requirements",
+      "cta_text": "Share your grade, fibre length, bale size, and quantity with our team."
+    },
+    {
+      "id": "copra", "name": "Copra", "group": "Coconut products", "image": "copra.jpg", "image2": "coconuts.jpg", "icon": "drop",
+      "short": "Dried coconut kernel, sorted and packed for processing.",
+      "overview": [
+        "Copra is the dried kernel of the coconut and the main raw material for coconut oil. Its quality depends on the coconuts and proper drying of copra, which we closely monitor.",
+        "We buy mature coconuts from local farmers, extract and dry the copra, and then sort and pack it for dispatch. Oil mills and food manufacturers require clean, well-dried copra with consistent qualities from batch to batch. Since we procure directly from the growers, we are able to trace back every batch of copra to its source."
+      ],
+      "benefits": [
+        "Sourced directly from local farms",
+        "Dried and sorted before packing",
+        "Suits oil mills and food processors",
+        "Consistent grading"
+      ],
+      "applications": [
+        "Coconut oil production",
+        "Ingredient for coconut-based food and cosmetic products",
+        "Other processing uses"
+      ],
+      "variants": [
+        {"item": "Grades", "details": null},
+        {"item": "Packing", "details": null},
+        {"item": "Container loading", "details": null}
+      ],
+      "specs": [
+        {"parameter": "Moisture content", "value": null},
+        {"parameter": "Oil content", "value": null},
+        {"parameter": "Free fatty acid", "value": null},
+        {"parameter": "Impurities", "value": null}
+      ],
+      "cta_title": "Plan Your Copra Supply",
+      "cta_text": "Send us your grade and quantity requirements for pricing and availability."
+    },
+    {
+      "id": "coconuts", "name": "Coconuts", "group": "Coconut products", "image": "coconuts.jpg", "image2": "husked.jpg", "icon": "coconut",
+      "short": "Mature coconuts from local farms, graded and packed for shipping.",
+      "overview": [
+        "Our coconuts are mature nuts from local farms, bought directly from the growers. At our unit, we grade them by size and quality so that each lot is even and easy to sell, which matters to buyers because it affects pricing, processing, and presentation. We pack the nuts to travel well over long distances.",
+        "Customers use them for wholesale and retail sales, food processing, and cooking in homes and restaurants. If you have a size range or packing method in mind, let us know."
+      ],
+      "benefits": [
+        "Bought directly from local farmers",
+        "Graded for size and quality",
+        "Packed to limit damage in transit",
+        "Supplied from the source"
+      ],
+      "applications": [
+        "Wholesale and retail",
+        "Food processing",
+        "Home and restaurant cooking",
+        "Religious and cultural use"
+      ],
+      "variants": [
+        {"item": "Types", "details": null},
+        {"item": "Sizes", "details": null},
+        {"item": "Packing", "details": null},
+        {"item": "Container loading", "details": null}
+      ],
+      "specs": [
+        {"parameter": "Size grading", "value": null},
+        {"parameter": "Average weight", "value": null},
+        {"parameter": "Shelf life", "value": null}
+      ],
+      "cta_title": "Order Coconuts in Bulk",
+      "cta_text": "Tell us your preferred size, grade, quantity, and packing requirements."
+    }
+  ],
+
+  "process": {
+    "label": "From Farm to Final Shipment",
+    "title": "How We Prepare Our Products",
+    "subtitle": "From raw coconut to ready-to-ship product",
+    "intro": "A structured process from sourcing and production to quality checks and shipment. The steps vary by product, but the focus remains on consistent quality and careful handling at every stage.",
+    "flows": [
+      {
+        "title": "Coco peat blocks and husk chips",
+        "intro": "We control quality at every step, from the farm to the container. Here is how we make coco peat blocks and husk chips.",
+        "steps": [
+          {"title": "Sourcing from local farmers", "icon": "sprout", "image": "coconuts.jpg", "text": "We buy coconuts and husks directly from local growers. Each lot is checked for quality when it arrives, and anything that does not meet our standards is set aside."},
+          {"title": "Separating and sieving", "icon": "filter", "image": "husked.jpg", "text": "The husk is separated into fibre, pith, and chips. The pith and chips are then sieved to the required size, while oversized pieces and unwanted material are removed."},
+          {"title": "Washing", "icon": "drop", "image": "peathand.jpg", "text": "The pith is washed with clean water to reduce its salt content. We check the EC and pH before it moves on to make sure it is suitable for growing applications."},
+          {"title": "Drying", "icon": "sun", "image": null, "text": "The washed material is dried to the required moisture level and turned during the process so it dries evenly. Moisture is checked before the material moves to the next stage."},
+          {"title": "Compressing and packing", "icon": "compress", "image": "chips.jpg", "text": "The dried peat is pressed into blocks according to the required size and weight. The blocks are then packed, stacked, and secured on pallets for storage and transport."},
+          {"title": "Quality check", "icon": "clipboard", "image": "plant.jpg", "text": "Samples are checked against the product specifications, including EC, pH, moisture, and block weight. Only batches that meet the requirements are cleared for dispatch, with records kept for traceability."},
+          {"title": "Shipping", "icon": "ship", "image": null, "text": "The finished pallets are loaded into containers and secured for transport. Shipments travel by road and sea, and customers are kept informed about dispatch and delivery."}
+        ]
+      },
+      {
+        "title": "Copra",
+        "intro": "Copra follows its own process, from the coconut on the farm to the bag in the container. Here is how we prepare it.",
+        "steps": [
+          {"title": "Collect", "icon": "sprout", "image": "coconuts.jpg", "text": "We source mature coconuts directly from local growers and check them for quality when they arrive. Buying from farmers also allows us to trace each lot back to its source."},
+          {"title": "Dry", "icon": "sun", "image": "copra.jpg", "text": "The kernel is removed from the shell and dried to the required moisture level. Careful drying helps prevent mould and spoilage, and the moisture is checked before the copra moves on."},
+          {"title": "Sort and pack", "icon": "package", "image": null, "text": "The dried copra is checked and graded, with pieces that do not meet our standards removed. It is then packed in bags to protect it from moisture before being prepared for shipment."}
+        ]
+      },
+      {
+        "title": "Coconuts",
+        "intro": "Whole coconuts are graded and packed with the same care. Here is how we handle them from the farm to the container.",
+        "steps": [
+          {"title": "Collect", "icon": "sprout", "image": "husked.jpg", "text": "We source mature coconuts directly from local growers and check them when they arrive. Damaged or immature nuts are set aside before the coconuts move to grading."},
+          {"title": "Grade", "icon": "clipboard", "image": "coconuts.jpg", "text": "The coconuts are sorted by size and quality to keep each lot consistent. Buyers can specify the size range that best suits their market, and the graded nuts are checked again before packing."},
+          {"title": "Pack and ship", "icon": "ship", "image": null, "text": "The coconuts are packed to help prevent damage during transit and checked before leaving our unit. They are then loaded securely for transport by road and sea."}
+        ]
+      }
+    ]
+  },
+
+  "howto": {
+    "title": "How to Use Coco Peat and Husk Chips",
+    "intro": "Find practical help here on expanding coco peat blocks, using husk chips for orchids and looking after your growing media.",
+    "guides": [
+      {"title": "How to expand a coco peat block?", "image": "peathand.jpg", "steps": [
+        "Place the block in a clean bucket, tub, or tray large enough for it to swell.",
+        "Pour in clean water slowly.",
+        "Wait 15 to 20 minutes while the block absorbs the water and softens.",
+        "Break up the block with your hands or a fork until it is loose and fluffy.",
+        "If the peat is unwashed, or you grow salt-sensitive crops, rinse it and check EC before use.",
+        "Fill pots, bags or trays and plant."
+      ]},
+      {"title": "How to use husk chips for orchids?", "image": "chips.jpg", "steps": [
+        "Pick a chip size that suits your orchid's roots. Larger chips suit larger plants.",
+        "Soak the chips in clean water for a few hours, then drain.",
+        "Add a layer of chips to the pot, set the orchid in, and fill around the roots.",
+        "Water when the chips feel dry. Let extra water drain out fully.",
+        "Replace the chips every one to two years, or when they start to break down."
+      ]}
+    ],
+    "faq_title": "FAQs",
+    "faqs": [
+      {"q": "Can I reuse coco peat?", "a": "In many cases, yes. Remove old roots and debris, rinse out built-up salts and add fresh nutrients before replanting. If the last crop had a disease problem, start with new material."},
+      {"q": "Does coco peat need feeding?", "a": "Yes. Coco peat holds very few nutrients on its own, so use a balanced fertiliser programme that includes calcium and magnesium. Check the EC and pH of your feed regularly."},
+      {"q": "How much growing medium does one block make?", "a": "It varies by the block’s dimensions and quality. A dried block expands considerably when it soaks up the moisture, and the expansion capacity can be checked on the specification table. Tell us the dimensions of your blocks, and we can assist you with the calculation of the number of blocks you will require."},
+      {"q": "Can I mix husk chips with coco peat?", "a": "Yes. Coco peat holds moisture, while husk chips add air space and fast drainage. Use more chips for plants that dislike wet roots, and more peat for crops that need steady moisture."},
+      {"q": "How should I store blocks?", "a": "Store them in a dry place, away from the floor and direct sunlight, and keep the packaging intact until you are ready to use them."}
+    ]
+  },
+
+  "contact": {
+    "title": "Let's discuss your supply requirements",
+    "text": "Whether you are sourcing coconut-based growing media, raw materials or bulk coconut products, our team is ready to discuss your specifications, volumes, packaging and destination requirements. Contact us for product information and a tailored quotation.",
+    "cta": "Share your specifications, volume and destination for a tailored supply proposal.",
+    "reach_title": "Reach us",
+    "address_label": "Address", "address": "Pollachi, Tamil Nadu, India",
+    "phone_label": "Phone and WhatsApp", "phone": "+91 80724 38128",
+    "email_label": "Email", "email": "info@origencoco.com",
+    "website": null,
+    "social": []
+  },
+
+  "labels": {
+    "overview": "Overview",
+    "benefits": "Key benefits",
+    "applications": "Applications",
+    "variants": "Variants and packing",
+    "specs": "Standard specifications",
+    "item": "Item", "details": "Details",
+    "parameter": "Parameter", "value": "Value",
+    "tbc": "To be confirmed",
+    "contents": "Contents",
+    "copyright": "© 2026 Origen Coco"
+  }
+}

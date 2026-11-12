@@ -1,0 +1,172 @@
+/* 01 Portfolio - A4 landscape. Deep green and light stone pages, photo mosaic
+   cover, landscape product spec sheets. Schibsted Grotesk. */
+@page { size: 297mm 210mm; margin: 0; }
+:root { --page-w: 297mm; --page-h: 210mm; }
+.pf {
+  --deep: #0E4D24; --ink: #1B241E; --muted: #5A645D; --stone: #F1F2EE; --line: #D9DDD6;
+  --m: 16mm;
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-size: 8.6pt; line-height: 1.5; color: var(--ink);
+}
+.pf .page { background: #fff; }
+.pf .page.stone { background: var(--stone); }
+.pf .page.green { background: var(--deep); color: #E9F0EA; }
+.pf h1, .pf h2, .pf h3, .pf h4 { line-height: 1.12; letter-spacing: -.01em; }
+.pf h2 { font-size: 21pt; font-weight: 700; margin-bottom: 5mm; color: var(--deep); }
+.pf h2.sm { font-size: 15pt; line-height: 1.25; }
+.pf .green h2, .pf .green h3 { color: #fff; }
+.pf h3 { font-size: 11pt; font-weight: 700; margin-bottom: 1.6mm; }
+.pf h4 { font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin: 4mm 0 2mm; }
+.pf p + p { margin-top: 2.2mm; }
+.pf .eyebrow { font-size: 7pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--brown); margin-bottom: 2.5mm; }
+.pf .green .eyebrow { color: #9FD0A9; }
+.pf .cols2 { column-count: 2; column-gap: 8mm; }
+
+.pf .hd { position: absolute; top: 9mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; align-items: center; }
+.pf .hd img { height: 5mm; width: auto; }
+.pf .hd .lbl { font-size: 6.6pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.pf .green .hd .lbl, .pf .green .ft { color: rgba(255,255,255,.65); }
+.pf .ft { position: absolute; bottom: 7mm; left: var(--m); right: var(--m); display: flex; justify-content: space-between; font-size: 6.6pt; color: var(--muted); }
+.pf .pgno { font-weight: 700; }
+.pf .body { position: absolute; top: 22mm; left: var(--m); right: var(--m); bottom: 16mm; display: flex; flex-direction: column; }
+.pf .ic { display: inline-grid; place-items: center; width: 9mm; height: 9mm; border-radius: 2mm; background: rgba(29,123,51,.12); color: var(--green); margin-bottom: 3mm; }
+.pf .green .ic { background: rgba(255,255,255,.12); color: #fff; }
+.pf .ic .ico { width: 5mm; height: 5mm; }
+.pf .ph { overflow: hidden; }
+
+/* cover */
+.pf .cover { display: grid; grid-template-columns: 118mm 1fr; }
+.pf .cv-left { position: relative; padding: 16mm 12mm 12mm var(--m); display: flex; flex-direction: column; border-bottom: 3mm solid var(--green); }
+.pf .cv-logo { height: 11mm; width: auto; align-self: flex-start; margin-bottom: auto; }
+.pf .cover h1 { font-size: 34pt; line-height: 1; font-weight: 800; letter-spacing: -.025em; color: var(--deep); margin: 2mm 0 4mm; }
+.pf .cv-pos { font-size: 10.5pt; color: var(--muted); margin-bottom: 9mm; }
+.pf .showcase { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4mm; }
+.pf .showcase a { display: block; }
+.pf .sc-img { display: block; height: 17mm; border-radius: 1.5mm; overflow: hidden; }
+.pf .sc-name { display: block; font-size: 6.6pt; font-weight: 700; line-height: 1.2; margin-top: 1.4mm; color: var(--deep); }
+.pf .cv-mosaic { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 2mm; padding: 0; }
+.pf .cv-mosaic .a { grid-row: 1 / 3; }
+.pf .cv-mosaic .c { grid-row: 2 / 4; grid-column: 2; }
+.pf .cv-mosaic .b { grid-column: 2; grid-row: 1; }
+.pf .cv-mosaic .d { grid-column: 1; grid-row: 3; }
+.pf .cv-mosaic figure { overflow: hidden; }
+
+/* who we are */
+.pf .two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 12mm; }
+.pf .numbered li { display: grid; grid-template-columns: 10mm 1fr; gap: 3mm; padding: 3.5mm 0; border-top: .3mm solid rgba(255,255,255,.18); font-size: 9.2pt; }
+.pf .numbered b { font-size: 12pt; color: #9FD0A9; }
+.pf .col-right { display: flex; flex-direction: column; gap: 5mm; }
+.pf .ph.tall { flex: 1; border-radius: 2mm; }
+.pf .quote { font-size: 10.5pt; line-height: 1.45; font-weight: 500; color: #fff; border-left: 1mm solid #9FD0A9; padding-left: 4mm; }
+
+/* story */
+.pf .story { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; }
+.pf .story .lead { font-size: 11.5pt; line-height: 1.5; font-weight: 500; color: var(--deep); }
+
+/* vision */
+.pf .vm { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9mm; }
+.pf .vm h2 { font-size: 15pt; margin-bottom: 3mm; }
+.pf .vm p { color: rgba(255,255,255,.85); }
+.pf .pr-h { margin-top: auto; }
+.pf .principles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.pf .principles li { border-top: .4mm solid #9FD0A9; padding-top: 3mm; }
+.pf .principles .ico { width: 6mm; height: 6mm; color: #9FD0A9; margin-bottom: 2mm; }
+.pf .principles p { font-size: 8.4pt; font-weight: 600; color: #fff; line-height: 1.35; }
+
+/* why */
+.pf .why-top { display: grid; grid-template-columns: 1fr 1.05fr; gap: 10mm; align-items: end; margin-bottom: 6mm; }
+.pf .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+.pf .stats div { background: #fff; border-radius: 2mm; padding: 3mm; border-top: 1mm solid var(--green); }
+.pf .stats strong { display: block; font-size: 20pt; line-height: 1; color: var(--green); font-weight: 800; margin-bottom: 1.4mm; }
+.pf .stats span { display: block; font-size: 6.8pt; line-height: 1.3; color: var(--muted); }
+.pf .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; flex: 1; }
+.pf .card { background: #fff; border-radius: 2mm; padding: 5mm; }
+.pf .card p { color: var(--muted); font-size: 8.2pt; }
+.pf .green-card { background: var(--green); color: #fff; display: flex; flex-direction: column; justify-content: flex-end; }
+.pf .green-card p { color: #fff; font-size: 10pt; font-weight: 600; line-height: 1.4; }
+.pf .ico.big { width: 10mm; height: 10mm; margin-bottom: auto; }
+
+/* range */
+.pf .range-top { display: grid; grid-template-columns: 1fr 1.25fr; gap: 12mm; align-items: end; margin-bottom: 6mm; }
+.pf .range-top > p { color: rgba(255,255,255,.82); font-size: 9pt; }
+.pf .stone .range-top > p { color: var(--muted); }
+.pf .range { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.pf .rcard { background: #fff; color: var(--ink); border-radius: 2mm; overflow: hidden; display: flex; flex-direction: column; }
+.pf .rcard img { width: 100%; height: 72mm; object-fit: cover; }
+.pf .rcard .rg { font-size: 6.4pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brown); padding: 3.5mm 4mm 0; }
+.pf .rcard h3 { color: var(--deep) !important; padding: 1mm 4mm 0; }
+.pf .rcard p { font-size: 7.8pt; color: var(--muted); padding: 0 4mm 4mm; }
+.pf .whole { margin-top: auto; display: flex; gap: 3mm; align-items: center; font-size: 9pt; color: rgba(255,255,255,.9); }
+.pf .whole .ico { width: 7mm; height: 7mm; color: #9FD0A9; }
+
+/* products */
+.pf .prod { display: grid; grid-template-columns: 96mm 1fr; gap: 9mm; }
+.pf .p-left { display: flex; flex-direction: column; }
+.pf .p-left h2 { font-size: 24pt; margin-bottom: 2mm; }
+.pf .p-short { font-size: 10pt; font-weight: 500; color: var(--deep); margin-bottom: 3mm; }
+.pf .benefits li { display: flex; gap: 2mm; padding: .6mm 0; }
+.pf .benefits .ico { width: 3.6mm; height: 3.6mm; color: #fff; background: var(--green); border-radius: 50%; padding: .5mm; stroke-width: 3; margin-top: .5mm; }
+.pf .p-right { display: flex; flex-direction: column; }
+.pf .p-media { display: grid; grid-template-columns: 1.15fr 1fr; gap: 5mm; }
+.pf .p-media figure { height: 62mm; border-radius: 2mm; overflow: hidden; }
+.pf .p-apps h4 { margin-top: 0; }
+.pf .apps li { position: relative; padding: .6mm 0 .6mm 3.6mm; }
+.pf .apps li::before { content: ""; position: absolute; left: 0; top: 2.2mm; width: 1.4mm; height: 1.4mm; background: var(--brown); border-radius: 50%; }
+.pf .crops-label { font-weight: 700; font-size: 7pt; margin: 2.4mm 0 1.2mm; }
+.pf .crops ul { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+.pf .crops li { font-size: 6.8pt; font-weight: 600; background: #E3EEE5; color: var(--deep); padding: .4mm 2mm; border-radius: 4mm; }
+.pf .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 4mm; }
+.pf .t-block h4 { margin-top: 0; }
+.pf .tbl { font-size: 7.6pt; background: #fff; }
+.pf .tbl th { text-align: left; background: var(--green); color: #fff; font-weight: 600; padding: 1.4mm 2.4mm; font-size: 6.8pt; letter-spacing: .06em; text-transform: uppercase; }
+.pf .tbl td { padding: 1.2mm 2.4mm; border-bottom: .25mm solid var(--line); }
+.pf .tbl td:first-child { font-weight: 600; width: 55%; }
+.pf .tbl td.tbc { color: #9AA39D; }
+.pf .cta { margin-top: auto; background: var(--deep); color: #fff; border-radius: 2mm; padding: 4mm 5mm; display: flex; flex-direction: column; gap: .6mm; }
+.pf .cta b { font-size: 10pt; }
+.pf .cta span { font-size: 8pt; color: rgba(255,255,255,.82); }
+
+/* process */
+.pf .flow-t { font-size: 11.5pt; margin-bottom: 4mm; }
+.pf .steps.h7 { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4mm; }
+.pf .steps figure { position: relative; width: 26mm; height: 26mm; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,.1); margin-bottom: 3mm; }
+.pf .steps figure b { position: absolute; left: 50%; bottom: 1mm; transform: translateX(-50%); font-size: 6.8pt; background: var(--green); color: #fff; padding: .3mm 1.6mm; border-radius: 3mm; }
+.pf .step-ico { position: absolute; inset: 0; display: grid; place-items: center; color: #9FD0A9; }
+.pf .step-ico .ico { width: 10mm; height: 10mm; }
+.pf .steps h4 { font-size: 9pt; text-transform: none; letter-spacing: 0; color: inherit; margin: 0 0 1mm; }
+.pf .green .steps h4 { color: #fff; }
+.pf .steps p { font-size: 7.6pt; line-height: 1.42; }
+.pf .green .steps p { color: rgba(255,255,255,.78); }
+.pf .flows2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.pf .flow-i { color: var(--muted); margin: -2mm 0 4mm; }
+.pf .steps.v li { display: grid; grid-template-columns: 30mm 1fr; gap: 5mm; align-items: center; margin-bottom: 4mm; }
+.pf .steps.v figure { width: 30mm; height: 30mm; margin: 0; background: #E3EEE5; }
+.pf .stone .step-ico { color: var(--green); }
+.pf .stone .steps p { color: var(--muted); }
+
+/* how to */
+.pf .howto { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 6mm; flex: 1; }
+.pf .guide { background: #fff; border-radius: 2mm; padding: 5mm; }
+.pf .guide h3 { color: var(--deep); font-size: 10pt; margin-bottom: 3mm; }
+.pf .guide li { display: flex; gap: 2.2mm; padding: .9mm 0; font-size: 8pt; line-height: 1.4; }
+.pf .guide li b { flex: none; width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--green); color: #fff; font-size: 6.6pt; display: grid; place-items: center; }
+.pf .faq-col h3 { color: var(--deep); }
+.pf .faqs { margin: 0; }
+.pf .faqs div { padding: 1.8mm 0; border-top: .25mm solid var(--line); }
+.pf .faqs dt { font-weight: 700; font-size: 8.4pt; }
+.pf .faqs dd { margin: .5mm 0 0; font-size: 7.6pt; color: var(--muted); line-height: 1.42; }
+
+/* back */
+.pf .back { display: grid; grid-template-columns: 1.15fr 1fr; }
+.pf .back-l { padding: 18mm 14mm 20mm var(--m); display: flex; flex-direction: column; }
+.pf .back-logo { height: 10mm; width: auto; align-self: flex-start; margin-bottom: auto; }
+.pf .back h2 { font-size: 22pt; margin-top: 8mm; }
+.pf .back-l > p { color: rgba(255,255,255,.85); font-size: 9pt; }
+.pf .back-cta { font-weight: 700; color: #fff !important; border-left: 1mm solid #9FD0A9; padding-left: 3mm; margin: 4mm 0 7mm !important; }
+.pf .reach { display: grid; grid-template-columns: repeat(3, auto); gap: 6mm; }
+.pf .reach li { display: flex; gap: 2mm; font-weight: 600; font-size: 8.6pt; }
+.pf .reach .ico { width: 5mm; height: 5mm; color: #9FD0A9; }
+.pf .reach small { display: block; font-size: 6.4pt; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.pf .back-ph { overflow: hidden; }
+.pf .back .ft { right: auto; width: calc(1.15 / 2.15 * 297mm - 2 * var(--m)); color: rgba(255,255,255,.6); }
+.pf .strip { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; height: 44mm; }
+.pf .strip figure { overflow: hidden; border-radius: 2mm; }

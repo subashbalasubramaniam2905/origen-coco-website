@@ -1,0 +1,158 @@
+{% import "_shared/macros.html.j2" as m %}
+{% set L = c.labels %}{% set P = c.products %}{% set H = c.howto %}
+{% macro band(title, sub) -%}
+<header class="band"><img src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}"><h2>{{ title }}</h2>{% if sub %}<p>{{ sub }}</p>{% endif %}</header>
+{%- endmacro %}
+{% macro foot() -%}
+<footer class="ft"><span class="pgno"></span><span>{{ c.company.name }}</span><span>{{ c.contact.email }}</span></footer>
+{%- endmacro %}
+{{ m.head(c, c.company.doc_title, own, shared, tpl) }}
+<body class="sb">
+
+{# 1 Cover #}
+<section class="page cover">
+  <div class="cv-top"><img src="{{ logo }}logo.svg" alt="{{ c.company.name }}"><span>{{ c.company.doc_title }}</span></div>
+  <div class="cv-body">
+    <p class="cv-kick">{{ c.company.positioning }}</p>
+    <h1>{{ c.company.tagline }}</h1>
+    <p class="cv-sum">{{ c.company.summary }}</p>
+    <figure class="cv-ph"><img class="fill" src="{{ img }}peathand.jpg" alt=""></figure>
+    <div class="leaf"><span>{{ c.company.hero }}</span></div>
+  </div>
+  {{ m.showcase(P, img) }}
+</section>
+
+{# 2 About #}
+<section class="page">
+  {{ band(c.story.heading, c.story.title) }}
+  <div class="body">
+    <span class="tag">{{ c.intro.label }}</span>
+    <p class="lead">{{ c.intro.paragraphs[0] }}</p>
+    <p>{{ c.intro.paragraphs[1] }}</p>
+    <div class="boxes">
+      {% for n in c.numbers.points %}<div class="box"><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>{% endfor %}
+    </div>
+    <span class="tag">{{ c.about.title }}</span>
+    <div class="cols2">{% for para in c.about.paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
+    <p class="note">{{ c.intro.narrative }}</p>
+  </div>
+  {{ foot() }}
+</section>
+
+{# 3 Vision & mission #}
+<section class="page">
+  {{ band(c.vision.title ~ " & " ~ c.mission.title|lower, None) }}
+  <div class="body">
+    <div class="vm">
+      <div class="card">{{ m.icon("target", "ico vi") }}<h3>{{ c.vision.title }}</h3><p>{{ c.vision.text }}</p></div>
+      <div class="card">{{ m.icon("compass", "ico vi") }}<h3>{{ c.mission.title }}</h3><p>{{ c.mission.text }}</p></div>
+    </div>
+    <div class="farm"><figure><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure><div><span class="tag">{{ c.about.farmers_title }}</span><p>{{ c.about.farmers }}</p></div></div>
+    <span class="tag">{{ c.principles.intro }}</span>
+    <ol class="principles">{% for pr in c.principles.points %}<li><i>{{ m.icon(pr.icon) }}</i><p>{{ pr.text }}</p></li>{% endfor %}</ol>
+  </div>
+  {{ foot() }}
+</section>
+
+{# 4 Why #}
+<section class="page">
+  {{ band(c.why.title, c.why.intro) }}
+  <div class="body">
+    <div class="why">
+      {% for w in c.why.points %}<div class="why-row"><i>{{ m.icon(w.icon) }}</i><div><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div></div>{% endfor %}
+    </div>
+    <div class="why-foot"><figure><img class="fill" src="{{ img }}plant.jpg" alt=""></figure><p>{{ c.why.utilisation }}</p></div>
+  </div>
+  {{ foot() }}
+</section>
+
+{# 5 Range at a glance #}
+<section class="page">
+  {{ band(c.range.title, c.range.intro) }}
+  <div class="body">
+    <div class="glance">
+      {% for p in P %}
+      <a class="gcard" href="#product-{{ p.id }}">
+        <div class="g-top"><div><h3>{{ p.name }}</h3><span class="pill">{{ p.group }}</span></div><img src="{{ img }}{{ p.image }}" alt=""></div>
+        <p>{{ p.short }}</p>
+        <ul class="mini">{% for a in p.applications[:3] %}<li>{{ a }}</li>{% endfor %}</ul>
+      </a>
+      {% endfor %}
+      <div class="gcard whole">{{ m.icon("coconut", "ico wi") }}<h3>{{ c.why.whole_title }}</h3><p>{{ c.why.whole }}</p></div>
+    </div>
+  </div>
+  {{ foot() }}
+</section>
+
+{# 6-10 Products #}
+{% for p in P %}
+<section id="product-{{ p.id }}" class="page product">
+  <header class="p-band">
+    <figure><img class="fill" src="{{ img }}{{ p.image }}" alt=""></figure>
+    <div class="p-head"><img src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}"><h2>{{ p.name }}</h2><p>{{ p.short }}</p></div>
+  </header>
+  <div class="p-tags">{% for a in p.applications %}<span>{{ a }}</span>{% endfor %}</div>
+  <div class="body p-body">
+    <div class="p-cols">
+      <div><span class="tag">{{ L.overview }}</span>{% for para in p.overview %}<p>{{ para }}</p>{% endfor %}</div>
+      <div><span class="tag">{{ L.benefits }}</span>{{ m.benefits(p) }}{{ m.crops(p) }}</div>
+    </div>
+    <div class="spec-h">{{ L.specs }} &amp; {{ L.variants|lower }}</div>
+    {{ m.tables(p, L) }}
+    <figure class="p-extra"><img class="fill" src="{{ img }}{{ p.image2 }}" alt=""></figure>
+    <div class="cta"><div><b>{{ p.cta_title }}</b><span>{{ p.cta_text }}</span></div></div>
+  </div>
+  {{ foot() }}
+</section>
+{% endfor %}
+
+{# 11 Process #}
+{% set f1 = c.process.flows[0] %}
+<section class="page">
+  {{ band(c.process.title, c.process.intro) }}
+  <div class="body">
+    <span class="tag">1 &middot; {{ f1.title }}</span>
+    {{ m.steps(f1, img, "steps") }}
+  </div>
+  {{ foot() }}
+</section>
+
+{# 12 Process 2 #}
+<section class="page">
+  {{ band(c.process.label, c.process.subtitle) }}
+  <div class="body flows2">
+    {% for f in c.process.flows[1:] %}
+    <div class="card"><span class="tag">{{ loop.index + 1 }} &middot; {{ f.title }}</span><p class="fi">{{ f.intro }}</p>{{ m.steps(f, img, "steps sm") }}</div>
+    {% endfor %}
+  </div>
+  {{ foot() }}
+</section>
+
+{# 13 How to use #}
+<section class="page">
+  {{ band(H.title, H.intro) }}
+  <div class="body">
+    <div class="guides">{% for g in H.guides %}{{ m.guide(g, "guide card") }}{% endfor %}</div>
+    <span class="tag">{{ H.faq_title }}</span>
+    {{ m.faqs(H) }}
+  </div>
+  {{ foot() }}
+</section>
+
+{# 14 Contact #}
+<section class="page back">
+  <figure class="back-ph"><img class="fill" src="{{ img }}seedlings.jpg" alt=""></figure>
+  <div class="back-body">
+    <span class="tag light">{{ c.contact.reach_title }}</span>
+    <h2>{{ c.contact.title }}</h2>
+    <p>{{ c.contact.text }}</p>
+    <div class="pills">{% for p in P %}{{ m.plink(p) }}{% endfor %}</div>
+    <p class="back-cta">{{ c.contact.cta }}</p>
+    {{ m.contact_list(c.contact) }}
+  </div>
+  <div class="back-foot"><img src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}"><span>{{ L.copyright }}</span></div>
+</section>
+
+{{ m.viewer(nav) }}
+</body>
+</html>

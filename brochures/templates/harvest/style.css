@@ -1,0 +1,194 @@
+/* Harvest brochure (matches the confirmed Harvest website template)
+   White pages, charcoal feature pages, coir-brown accents, full-bleed photography,
+   Young Serif headings with Manrope text. */
+.harv {
+  --forest: #2B2A22;
+  --forest-2: #3A382F;
+  --cream: #FFFFFF;
+  --cream-2: #EEF1EC;
+  --ink: #22201B;
+  --muted: #4F4A42;
+  --copper: #A74F15;
+  --copper-soft: #B9C3BD;
+  --hair: rgba(34,32,27,.16);
+  --m: 18mm;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 9pt;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.harv .page { background: var(--cream); }
+.harv .page.dark { background: var(--forest); color: #F1EFEA; }
+.harv h1, .harv h2, .harv h3, .harv .display { font-family: 'Young Serif', Georgia, serif; font-weight: 400; letter-spacing: -.005em; }
+.harv h2 { font-size: 22pt; line-height: 1.12; margin-bottom: 4mm; color: var(--forest); }
+.harv .dark h2 { color: #fff; }
+.harv .display { font-size: 27pt; line-height: 1.1; color: var(--forest); margin-bottom: 7mm; max-width: 165mm; }
+.harv .display.sm { font-size: 19pt; line-height: 1.22; }
+.harv h3 { font-size: 13pt; line-height: 1.22; margin-bottom: 2mm; color: var(--forest); }
+.harv .dark h3 { color: #fff; }
+.harv h4 { font-size: 7.2pt; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; color: var(--copper); margin-bottom: 2.4mm; }
+.harv p + p { margin-top: 2.6mm; }
+.harv .eyebrow { font-size: 7.2pt; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--copper); margin-bottom: 3mm; }
+.harv .dark .eyebrow { color: var(--copper-soft); }
+.harv .lead { font-size: 10.4pt; line-height: 1.55; color: var(--muted); margin-bottom: 6mm; max-width: 160mm; }
+.harv .cols2 { column-count: 2; column-gap: 9mm; }
+
+/* chrome */
+.harv .hd { position: absolute; top: 0; left: var(--m); right: var(--m); height: 18mm; display: flex; align-items: center; justify-content: space-between; z-index: 3; }
+.harv .hd img { height: 5.4mm; width: auto; }
+.harv .hd span { font-size: 6.8pt; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.harv .hd.dark span, .harv .hd.over span { color: rgba(255,255,255,.8); }
+.harv .ft { position: absolute; bottom: 8mm; left: var(--m); right: var(--m); display: flex; align-items: center; gap: 4mm; font-size: 6.8pt; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); z-index: 3; }
+.harv .ft i { flex: 1; height: .25mm; background: var(--hair); }
+.harv .ft .pgno { font-family: 'Young Serif', Georgia, serif; font-size: 10pt; letter-spacing: 0; color: var(--copper); font-weight: 400; }
+.harv .ft.dark { color: rgba(255,255,255,.7); }
+.harv .ft.dark i { background: rgba(255,255,255,.25); }
+.harv .ft.dark .pgno { color: var(--copper-soft); }
+.harv .body { position: absolute; top: 28mm; left: var(--m); right: var(--m); bottom: 20mm; display: flex; flex-direction: column; }
+
+/* 1 cover: white, colour logo, centred serif title, one photograph */
+.harv .cover { background: #fff; }
+.harv .cover-logo { position: absolute; top: 22mm; left: 50%; transform: translateX(-50%); height: 13mm; width: auto; }
+.harv .cover-text { position: absolute; top: 52mm; left: var(--m); right: var(--m); text-align: center; }
+.harv .cover .eyebrow { margin-bottom: 7mm; }
+.harv .cover h1 { font-size: 46pt; line-height: 1.04; color: var(--ink); font-weight: 400; max-width: 150mm; margin: 0 auto; }
+.harv .cover .rule { display: block; width: 18mm; height: .5mm; background: var(--copper); margin: 8mm auto 5mm; }
+.harv .cover-pos { font-size: 12pt; color: var(--muted); }
+.harv .cover-photo { position: absolute; left: var(--m); right: var(--m); top: 128mm; height: 98mm; overflow: hidden; }
+/* product showcase: five round photos, each links to its product page */
+.harv .cover-products { position: absolute; left: var(--m); right: var(--m); top: 236mm; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.harv .cover-products a { display: flex; flex-direction: column; align-items: center; gap: 3mm; text-align: center; }
+.harv .cp-img { width: 25mm; height: 25mm; border-radius: 50%; overflow: hidden; border: .4mm solid var(--copper); padding: 1mm; background: #fff; }
+.harv .cp-img img { border-radius: 50%; }
+.harv .cp-name { font-family: 'Young Serif', Georgia, serif; font-size: 9.6pt; line-height: 1.2; color: var(--ink); }
+
+/* 2 intro */
+.harv .intro-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+.harv .dropcap { font-size: 10.4pt; line-height: 1.6; }
+.harv .dropcap::first-letter { font-family: 'Young Serif', Georgia, serif; float: left; font-size: 46pt; line-height: .82; padding: 1.6mm 2.4mm 0 0; color: var(--copper); }
+.harv .intro-photos { margin-top: auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 4mm; height: 82mm; }
+.harv .intro-photos figure { overflow: hidden; }
+.harv .intro-sum { background: var(--forest); color: #fff; padding: 7mm 6mm; display: flex; align-items: flex-end; }
+.harv .intro-sum p { font-family: 'Young Serif', Georgia, serif;  font-size: 11.6pt; line-height: 1.38; }
+
+/* dividers */
+.harv .divider { background: var(--forest); color: #fff; }
+.harv .divider > .fill { position: absolute; inset: 0; }
+.harv .div-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,32,27,.25) 0%, rgba(34,32,27,.55) 45%, rgba(34,32,27,.96) 78%); }
+.harv .div-mark { position: absolute; top: 16mm; right: var(--m); height: 12mm; width: auto; opacity: .9; }
+.harv .div-text { position: absolute; left: var(--m); right: var(--m); top: 96mm; }
+.harv .div-num { display: block; font-family: 'Young Serif', Georgia, serif; font-size: 84pt; line-height: 1.15; color: var(--copper-soft);  margin-bottom: 4mm; }
+.harv .divider h2 { color: #fff; font-size: 40pt; margin-bottom: 4mm; }
+.harv .div-text p { font-size: 12pt; line-height: 1.45; max-width: 150mm; color: rgba(255,255,255,.88); }
+.harv .div-foot { position: absolute; left: var(--m); right: var(--m); bottom: 24mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; border-top: .25mm solid rgba(255,255,255,.3); padding-top: 6mm; }
+.harv .div-foot p { margin: 0; font-size: 8.6pt; color: rgba(255,255,255,.82); }
+.harv .div-foot.range { grid-template-columns: 1fr 1fr; }
+.harv .div-foot.range li { display: flex; justify-content: space-between; padding: 2.2mm 0; border-bottom: .25mm solid rgba(255,255,255,.18); font-family: 'Young Serif', Georgia, serif; font-size: 13pt; }
+.harv .div-foot.range li b { font-family: 'Manrope', sans-serif; font-weight: 500; font-size: 8pt; color: var(--copper-soft); align-self: center; }
+
+/* 4 about */
+.harv .about-photo { margin-top: 8mm; flex: 1; min-height: 60mm; overflow: hidden; }
+
+/* 5 vision */
+.harv .vm { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.harv .vm-ico { display: inline-grid; place-items: center; width: 12mm; height: 12mm; border: .3mm solid var(--copper-soft); border-radius: 50%; color: var(--copper-soft); margin-bottom: 5mm; }
+.harv .vm-ico .ico { width: 5.6mm; height: 5.6mm; }
+.harv .vm h2 { font-size: 26pt; }
+.harv .vm p { color: rgba(255,255,255,.86); font-size: 9.4pt; }
+.harv .farmers { display: grid; grid-template-columns: 74mm 1fr; gap: 9mm; align-items: center; margin: 12mm 0 10mm; padding: 8mm 0; border-top: .25mm solid rgba(255,255,255,.2); border-bottom: .25mm solid rgba(255,255,255,.2); }
+.harv .farmers figure { height: 48mm; overflow: hidden; }
+.harv .farmers p:last-child { color: rgba(255,255,255,.86); }
+.harv .principles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5mm; }
+.harv .principles span { display: block; font-family: 'Young Serif', Georgia, serif;  font-size: 22pt; color: var(--copper-soft); line-height: 1; margin-bottom: 3mm; }
+.harv .principles p { font-size: 8.4pt; line-height: 1.45; color: #fff; }
+
+/* 6 why */
+.harv .nums { display: grid; grid-template-columns: repeat(4, 1fr); border-top: .25mm solid var(--hair); border-bottom: .25mm solid var(--hair); margin-bottom: 9mm; }
+.harv .nums div { padding: 5mm 4mm 5mm 0; }
+.harv .nums div + div { padding-left: 4mm; border-left: .25mm solid var(--hair); }
+.harv .nums strong { display: block; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 38pt; line-height: 1.2; color: var(--forest); margin-bottom: 2mm; }
+.harv .nums span { display: block; font-size: 7.8pt; line-height: 1.4; color: var(--muted); }
+.harv .why li { display: grid; grid-template-columns: 14mm 1fr 12mm; gap: 4mm; padding: 4.4mm 0; border-top: .25mm solid var(--hair); align-items: start; }
+.harv .why-n { font-family: 'Young Serif', Georgia, serif;  font-size: 16pt; color: var(--copper); line-height: 1.1; }
+.harv .why h3 { font-size: 12pt; margin-bottom: 1mm; }
+.harv .why p { color: var(--muted); font-size: 8.8pt; }
+.harv .why-ico { width: 9mm; height: 9mm; color: var(--forest); justify-self: end; }
+
+/* products */
+.harv .p-photo { position: absolute; inset: 0 0 auto 0; height: 104mm; overflow: hidden; }
+.harv .p-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,32,27,.6) 0%, rgba(34,32,27,0) 28%); }
+.harv .p-title { position: absolute; top: 86mm; left: var(--m); right: 46mm; background: var(--cream); padding: 7mm 8mm 5mm 0; display: flex; gap: 6mm; align-items: flex-start; z-index: 2; }
+.harv .flip .p-title { left: 46mm; right: var(--m); padding: 7mm 0 5mm 8mm; }
+.harv .p-num { font-family: 'Young Serif', Georgia, serif;  font-size: 40pt; line-height: .9; color: var(--copper); }
+.harv .p-title h2 { font-size: 30pt; line-height: 1; margin-bottom: 2.4mm; }
+.harv .p-title p { font-size: 10pt; color: var(--muted);  }
+.harv .p-body { top: 127mm; }
+.harv .ov { font-size: 8.7pt; line-height: 1.55; margin-bottom: 5mm; }
+.harv .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; margin-bottom: 5mm; }
+.harv .lines li { padding: 1mm 0; border-bottom: .25mm solid var(--hair); font-size: 8.4pt; line-height: 1.4; }
+.harv .crops { margin-top: 2mm; font-size: 8pt; color: var(--muted); line-height: 1.45; }
+.harv .crops b { color: var(--ink); font-weight: 600; }
+.harv .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+.harv .tbl { font-size: 8.2pt; }
+.harv .tbl th { text-align: left; font-family: 'Young Serif', Georgia, serif; font-weight: 400;  font-size: 9pt; color: var(--forest); padding: 0 0 1.4mm; border-bottom: .5mm solid var(--forest); }
+.harv .tbl td { padding: 1.3mm 0; border-bottom: .25mm solid var(--hair); }
+.harv .tbl td:first-child { width: 55%; padding-right: 3mm; }
+.harv .tbl td.tbc { color: #9C978C;  }
+.harv .cta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8mm; background: var(--forest); color: #fff; padding: 5mm 7mm; }
+.harv .cta h3 { color: #fff; font-size: 12.5pt;  margin-bottom: .6mm; }
+.harv .cta p { font-size: 8.4pt; color: rgba(255,255,255,.82); }
+.harv .cta span { flex: none; font-size: 7pt; letter-spacing: .18em; text-transform: uppercase; color: var(--copper-soft); }
+.harv .cta span b { font-family: 'Young Serif', Georgia, serif; font-size: 12pt; letter-spacing: 0; color: #fff; margin-left: 2mm; font-weight: 400; }
+
+/* 13 process */
+.harv .flow-t { display: flex; align-items: center; gap: 3mm; font-size: 14pt; margin-bottom: 5mm; }
+.harv .flow-t span {  color: var(--copper); min-width: 8mm; }
+.harv .dark .flow-t span { color: var(--copper-soft); }
+.harv .timeline { position: relative; display: flex; flex-direction: column; gap: 4.2mm; }
+.harv .timeline::before { content: ""; position: absolute; left: 33.4mm; top: 4mm; bottom: 4mm; border-left: .3mm solid var(--copper); }
+.harv .timeline li { display: grid; grid-template-columns: 26mm 15mm 1fr; gap: 0 3mm; align-items: center; }
+.harv .timeline figure { height: 20mm; overflow: hidden; background: var(--cream-2); display: grid; place-items: center; color: var(--forest); }
+.harv .timeline figure .ico { width: 8mm; height: 8mm; }
+.harv .timeline b { position: relative; z-index: 1; justify-self: center; width: 8mm; height: 8mm; border-radius: 50%; background: var(--cream); border: .3mm solid var(--copper); display: grid; place-items: center; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 8pt; color: var(--copper); }
+.harv .timeline h4 { font-family: 'Young Serif', Georgia, serif; text-transform: none; letter-spacing: 0; font-size: 11pt; color: var(--forest); font-weight: 400; margin-bottom: .5mm; }
+.harv .timeline p { font-size: 8.2pt; line-height: 1.45; color: var(--muted); }
+
+/* 14 copra & coconuts */
+.harv .flow-i { color: rgba(255,255,255,.8); margin: -2mm 0 5mm; }
+.harv .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; margin-bottom: 11mm; }
+.harv .trio figure { position: relative; height: 48mm; overflow: hidden; background: var(--forest-2); display: grid; place-items: center; color: var(--copper-soft); margin-bottom: 3.5mm; }
+.harv .trio figure .ico { width: 13mm; height: 13mm; }
+.harv .trio figure b { position: absolute; left: 0; top: 0; background: var(--copper); color: #fff; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 9pt; padding: 1mm 2.6mm; }
+.harv .trio h4 { font-family: 'Young Serif', Georgia, serif; text-transform: none; letter-spacing: 0; font-size: 12pt; color: #fff; font-weight: 400; margin-bottom: 1mm; }
+.harv .trio p { font-size: 8.4pt; color: rgba(255,255,255,.8); line-height: 1.5; }
+
+/* 15 how to */
+.harv .guides { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+.harv .guides figure { height: 34mm; overflow: hidden; margin-bottom: 4mm; }
+.harv .guides h3 { font-size: 12pt; }
+.harv .guides li { display: flex; gap: 2.6mm; padding: .9mm 0; font-size: 8.4pt; line-height: 1.45; }
+.harv .guides li b { flex: none; font-family: 'Young Serif', Georgia, serif;  font-weight: 400; color: var(--copper); font-size: 10pt; width: 4mm; line-height: 1.2; }
+.harv .faq-h { margin-top: 7mm; padding-top: 5mm; border-top: .25mm solid var(--hair); }
+.harv .faqs { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 9mm; margin: 0; }
+.harv .faqs dt { font-family: 'Young Serif', Georgia, serif; font-size: 10.4pt; color: var(--forest); margin-bottom: .6mm; }
+.harv .faqs dd { margin: 0; font-size: 8.2pt; color: var(--muted); line-height: 1.45; }
+
+/* 16 back */
+.harv .back { background: var(--forest); color: #fff; }
+.harv .back > .fill { position: absolute; inset: 0 0 auto 0; height: 120mm; }
+.harv .back-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,32,27,.2) 0%, rgba(34,32,27,.92) 38%, var(--forest) 42%); }
+.harv .back-body { position: absolute; left: var(--m); right: var(--m); top: 104mm; bottom: 14mm; display: flex; flex-direction: column; }
+.harv .back-logo { height: 11mm; width: auto; align-self: flex-start; margin-bottom: 10mm; }
+.harv .back h2 { color: #fff; font-size: 30pt;  max-width: 160mm; }
+.harv .back-body > p { color: rgba(255,255,255,.86); max-width: 155mm; font-size: 10pt; }
+.harv .back-cta { margin: 5mm 0 11mm !important; color: var(--copper-soft) !important; font-family: 'Young Serif', Georgia, serif;  font-size: 13pt !important; }
+.harv .reach { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; border-top: .25mm solid rgba(255,255,255,.25); padding-top: 6mm; }
+.harv .reach li { display: flex; gap: 3mm; font-size: 10pt; }
+.harv .reach .ico { width: 5.6mm; height: 5.6mm; color: var(--copper-soft); }
+.harv .reach small { display: block; font-size: 6.8pt; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 1mm; }
+.harv .back-tag { margin-top: auto !important; display: flex; justify-content: space-between; font-size: 7.6pt; color: rgba(255,255,255,.6); border-top: .25mm solid rgba(255,255,255,.2); padding-top: 3mm; }
+.harv .back-tag em { font-family: 'Young Serif', Georgia, serif; font-size: 10pt; color: rgba(255,255,255,.85); }
+/* products with the most content (coco peat) give the photo less height */
+.harv .long .p-photo { height: 78mm; }
+.harv .long .p-title { top: 60mm; }
+.harv .long .p-body { top: 101mm; }

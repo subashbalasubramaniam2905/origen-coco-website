@@ -1,0 +1,230 @@
+{% import "_shared/macros.html.j2" as m %}
+{% set L = c.labels %}
+{% set P = c.products %}
+{% set H = c.howto %}
+{% set pg = {"intro": 2, "story": 3, "vision": 5, "why": 6, "products": 7, "process": 13, "howto": 15, "contact": 16} %}
+
+{% macro chrome(section, dark=false) -%}
+<header class="hd{{ ' dark' if dark else '' }}"><img src="{{ logo }}{{ 'logo-white.svg' if dark else 'logo.svg' }}" alt="{{ c.company.name }}"><span>{{ section }}</span></header>
+<footer class="ft{{ ' dark' if dark else '' }}"><span>{{ c.company.doc_title }}</span><i></i><b class="pgno"></b></footer>
+{%- endmacro %}
+
+{% macro divider(num, title, sub, image) -%}
+<section class="page divider">
+  <img class="fill" src="{{ img }}{{ image }}" alt="">
+  <div class="div-shade"></div>
+  <img class="div-mark" src="{{ logo }}mark-white.svg" alt="">
+  <div class="div-text">
+    <span class="div-num" data-qc-skip>{{ num }}</span>
+    <h2>{{ title }}</h2>
+    <p>{{ sub }}</p>
+  </div>
+  {{ caller() if caller is defined else '' }}
+  <footer class="ft dark"><span>{{ c.company.doc_title }}</span><i></i><b class="pgno"></b></footer>
+</section>
+{%- endmacro %}
+
+{{ m.head(c, c.company.doc_title, own, shared, tpl) }}
+<body class="harv">
+
+{# ---------- 1 Cover ---------- #}
+<section class="page cover">
+  <img class="cover-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+  <div class="cover-text">
+    <p class="eyebrow">{{ c.company.doc_title }}</p>
+    <h1>{{ c.company.tagline }}</h1>
+    <span class="rule"></span>
+    <p class="cover-pos">{{ c.company.positioning }}</p>
+  </div>
+  <figure class="cover-photo"><img class="fill" src="{{ img }}plant.jpg" alt=""></figure>
+  <ul class="cover-products">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="cp-img"><img class="fill" src="{{ img }}{{ p.image }}" alt=""></span><span class="cp-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
+</section>
+
+{# ---------- 2 Introduction ---------- #}
+<section class="page cream">
+  {{ chrome(c.intro.label) }}
+  <div class="body">
+    <p class="eyebrow">{{ c.intro.label }}</p>
+    <h2 class="display">{{ c.company.positioning }}</h2>
+    <div class="intro-cols">
+      <p class="dropcap">{{ c.intro.narrative }}</p>
+      <div>{% for para in c.intro.paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
+    </div>
+    <div class="intro-photos">
+      <figure><img class="fill" src="{{ img }}peathand.jpg" alt=""></figure>
+      <figure><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure>
+      <div class="intro-sum"><p>{{ c.company.summary }}</p></div>
+    </div>
+  </div>
+</section>
+
+{# ---------- 3 Divider: our story ---------- #}
+{% call divider("01", c.story.label, c.story.heading, "peathand.jpg") %}
+<div class="div-foot">{% for para in c.story.paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
+{% endcall %}
+
+{# ---------- 4 About ---------- #}
+<section class="page cream">
+  {{ chrome(c.story.label) }}
+  <div class="body">
+    <p class="eyebrow">{{ c.story.title }}</p>
+    <h2 class="display">{{ c.about.title }}</h2>
+    <div class="cols2">{% for para in c.about.paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
+    <figure class="about-photo"><img class="fill" src="{{ img }}seedlings.jpg" alt=""></figure>
+  </div>
+</section>
+
+{# ---------- 5 Vision, mission, principles ---------- #}
+<section class="page dark">
+  {{ chrome(c.vision.title ~ " & " ~ c.mission.title|lower, true) }}
+  <div class="body">
+    <div class="vm">
+      <div><span class="vm-ico">{{ m.icon("target") }}</span><h2>{{ c.vision.title }}</h2><p>{{ c.vision.text }}</p></div>
+      <div><span class="vm-ico">{{ m.icon("compass") }}</span><h2>{{ c.mission.title }}</h2><p>{{ c.mission.text }}</p></div>
+    </div>
+    <div class="farmers">
+      <figure><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure>
+      <div><p class="eyebrow">{{ c.about.farmers_title }}</p><p>{{ c.about.farmers }}</p></div>
+    </div>
+    <p class="eyebrow pr-head">{{ c.principles.intro }}</p>
+    <ol class="principles">
+      {% for pr in c.principles.points %}<li><span>{{ ["I","II","III","IV","V"][loop.index0] }}</span><p>{{ pr.text }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# ---------- 6 Why choose + numbers ---------- #}
+<section class="page cream">
+  {{ chrome(c.why.title) }}
+  <div class="body">
+    <div class="nums">
+      {% for n in c.numbers.points %}<div><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>{% endfor %}
+    </div>
+    <p class="eyebrow">{{ c.why.title }}</p>
+    <h2 class="display sm">{{ c.why.intro }}</h2>
+    <ol class="why">
+      {% for w in c.why.points %}
+      <li><span class="why-n">{{ '%02d' % loop.index }}</span><div><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div>{{ m.icon(w.icon, "ico why-ico", "1.3") }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# ---------- 7 Divider: products ---------- #}
+{% call divider("02", c.range.title, c.range.intro, "chips.jpg") %}
+<div class="div-foot range">
+  {% for g in c.range.groups %}
+  <div><p class="eyebrow">{{ g.name }}</p><ul>{% for pid in g.products %}<li><a href="#product-{{ pid }}">{{ c.by_id[pid].name }}</a><b>{{ '%02d' % (pg.products + P.index(c.by_id[pid])) }}</b></li>{% endfor %}</ul></div>
+  {% endfor %}
+</div>
+{% endcall %}
+
+{# ---------- 8-12 Products ---------- #}
+{% for p in P %}
+<section id="product-{{ p.id }}" class="page cream product {{ 'flip' if loop.index is even else '' }} {{ 'long' if p.crops is defined else '' }}">
+  <figure class="p-photo"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
+  <header class="hd over"><img src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}"><span>{{ p.group }}</span></header>
+  <div class="p-title">
+    <span class="p-num">{{ '%02d' % loop.index }}</span>
+    <div><h2>{{ p.name }}</h2><p>{{ p.short }}</p></div>
+  </div>
+  <div class="body p-body">
+    <div class="cols2 ov">{% for para in p.overview %}<p>{{ para }}</p>{% endfor %}</div>
+    <div class="ba">
+      <div><h4>{{ L.benefits }}</h4><ul class="lines">{% for b in p.benefits %}<li>{{ b }}</li>{% endfor %}</ul></div>
+      <div>
+        <h4>{{ L.applications }}</h4><ul class="lines">{% for a in p.applications %}<li>{{ a }}</li>{% endfor %}</ul>
+        {% if p.crops is defined %}<p class="crops"><b>{{ p.crops_label }}:</b> {{ p.crops | join(", ") }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="tables">
+      <div><h4>{{ L.variants }}</h4>{{ m.variants_table(p, L) }}</div>
+      <div><h4>{{ L.specs }}</h4>{{ m.specs_table(p, L) }}</div>
+    </div>
+    <div class="cta">
+      <div><h3>{{ p.cta_title }}</h3><p>{{ p.cta_text }}</p></div>
+      <span>{{ c.contact.reach_title }} <b>{{ '%02d' % pg.contact }}</b></span>
+    </div>
+  </div>
+  <footer class="ft"><span>{{ c.company.doc_title }}</span><i></i><b class="pgno"></b></footer>
+</section>
+{% endfor %}
+
+{# ---------- 13 Process: coco peat ---------- #}
+{% set f1 = c.process.flows[0] %}
+<section class="page cream">
+  {{ chrome(c.process.label) }}
+  <div class="body">
+    <p class="eyebrow">{{ c.process.label }}</p>
+    <h2 class="display">{{ c.process.title }}</h2>
+    <p class="lead">{{ c.process.intro }}</p>
+    <h3 class="flow-t"><span>I</span>{{ f1.title }}</h3>
+    <ol class="timeline">
+      {% for s in f1.steps %}
+      <li>
+        <figure>{% if s.image %}<img class="fill" src="{{ img }}{{ s.image }}" alt="">{% else %}<span>{{ m.icon(s.icon, "ico", "1.3") }}</span>{% endif %}</figure>
+        <b>{{ '%02d' % loop.index }}</b>
+        <div><h4>{{ s.title }}</h4><p>{{ s.text }}</p></div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# ---------- 14 Process: copra & coconuts ---------- #}
+<section class="page dark">
+  {{ chrome(c.process.label, true) }}
+  <div class="body">
+    {% for f in c.process.flows[1:] %}
+    <h3 class="flow-t"><span>{{ ["II","III"][loop.index0] }}</span>{{ f.title }}</h3>
+    <p class="flow-i">{{ f.intro }}</p>
+    <ol class="trio">
+      {% for s in f.steps %}
+      <li>
+        <figure>{% if s.image %}<img class="fill" src="{{ img }}{{ s.image }}" alt="">{% else %}<span>{{ m.icon(s.icon, "ico", "1.3") }}</span>{% endif %}<b>{{ '%02d' % loop.index }}</b></figure>
+        <h4>{{ s.title }}</h4><p>{{ s.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+    {% endfor %}
+  </div>
+</section>
+
+{# ---------- 15 How to use + FAQs ---------- #}
+<section class="page cream">
+  {{ chrome(H.title) }}
+  <div class="body">
+    <h2 class="display sm">{{ H.title }}</h2>
+    <p class="lead">{{ H.intro }}</p>
+    <div class="guides">
+      {% for g in H.guides %}
+      <div>
+        <figure><img class="fill" src="{{ img }}{{ g.image }}" alt=""></figure>
+        <h3>{{ g.title }}</h3>
+        <ol>{% for st in g.steps %}<li><b>{{ loop.index }}</b><span>{{ st }}</span></li>{% endfor %}</ol>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="eyebrow faq-h">{{ H.faq_title }}</p>
+    <dl class="faqs">{% for f in H.faqs %}<div><dt>{{ f.q }}</dt><dd>{{ f.a }}</dd></div>{% endfor %}</dl>
+  </div>
+</section>
+
+{# ---------- 16 Back cover ---------- #}
+<section class="page back">
+  <img class="fill" src="{{ img }}plant.jpg" alt="">
+  <div class="back-shade"></div>
+  <div class="back-body">
+    <img class="back-logo" src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}">
+    <h2>{{ c.contact.title }}</h2>
+    <p>{{ c.contact.text }}</p>
+    <p class="back-cta">{{ c.contact.cta }}</p>
+    <p class="eyebrow">{{ c.contact.reach_title }}</p>
+    {{ m.contact_list(c.contact) }}
+    <p class="back-tag"><em>{{ c.company.tagline }}</em><span>{{ L.copyright }}</span></p>
+  </div>
+</section>
+
+{{ m.viewer(nav) }}
+</body>
+</html>
