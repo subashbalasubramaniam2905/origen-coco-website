@@ -46,10 +46,12 @@
 .flag .cover-head { position: absolute; top: 50mm; left: var(--m); right: var(--m); }
 .flag .cover h1 { font-size: 44pt; line-height: 1; font-weight: 700; letter-spacing: -.025em; color: var(--ink); font-stretch: 88%; max-width: 128mm; margin-bottom: 6mm; }
 .flag .cover-pos { font-size: 12.5pt; font-weight: 500; color: var(--green); padding-top: 5mm; border-top: .5mm solid var(--green); display: inline-block; }
-.flag .cover-photo { position: absolute; top: 118mm; left: 0; right: 0; height: 128mm; }
-.flag .cover-foot { position: absolute; left: var(--m); right: var(--m); bottom: 14mm; display: flex; justify-content: space-between; align-items: flex-end; gap: 12mm; }
-.flag .cover-sum { font-size: 8.6pt; color: var(--muted); max-width: 92mm; line-height: 1.5; }
-.flag .cover-products { display: flex; flex-direction: column; align-items: flex-end; gap: .8mm; font-size: 7.4pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.flag .cover-photo { position: absolute; top: 112mm; left: 0; right: 0; height: 104mm; }
+/* product showcase: five tiles with a green name bar, each links to its product page */
+.flag .cover-products { position: absolute; left: var(--m); right: var(--m); top: 228mm; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; }
+.flag .cover-products a { display: block; }
+.flag .cp-img { display: block; height: 38mm; overflow: hidden; }
+.flag .cp-name { display: block; background: var(--green); color: #fff; font-size: 7.6pt; font-weight: 600; line-height: 1.25; padding: 2mm 2.4mm; min-height: 11mm; }
 
 /* 2 contents + intro */
 .flag .intro-grid { position: absolute; top: 17mm; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: 62mm 1fr; }

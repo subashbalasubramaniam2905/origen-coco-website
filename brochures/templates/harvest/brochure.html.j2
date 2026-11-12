@@ -37,7 +37,7 @@
     <p class="cover-pos">{{ c.company.positioning }}</p>
   </div>
   <figure class="cover-photo"><img class="fill" src="{{ img }}plant.jpg" alt=""></figure>
-  <ul class="cover-products">{% for p in P %}<li>{{ p.name }}</li>{% endfor %}</ul>
+  <ul class="cover-products">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="cp-img"><img class="fill" src="{{ img }}{{ p.image }}" alt=""></span><span class="cp-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
 </section>
 
 {# ---------- 2 Introduction ---------- #}
@@ -114,14 +114,14 @@
 {% call divider("02", c.range.title, c.range.intro, "chips.jpg") %}
 <div class="div-foot range">
   {% for g in c.range.groups %}
-  <div><p class="eyebrow">{{ g.name }}</p><ul>{% for pid in g.products %}<li><span>{{ c.by_id[pid].name }}</span><b>{{ '%02d' % (pg.products + P.index(c.by_id[pid])) }}</b></li>{% endfor %}</ul></div>
+  <div><p class="eyebrow">{{ g.name }}</p><ul>{% for pid in g.products %}<li><a href="#product-{{ pid }}">{{ c.by_id[pid].name }}</a><b>{{ '%02d' % (pg.products + P.index(c.by_id[pid])) }}</b></li>{% endfor %}</ul></div>
   {% endfor %}
 </div>
 {% endcall %}
 
 {# ---------- 8-12 Products ---------- #}
 {% for p in P %}
-<section class="page cream product {{ 'flip' if loop.index is even else '' }} {{ 'long' if p.crops is defined else '' }}">
+<section id="product-{{ p.id }}" class="page cream product {{ 'flip' if loop.index is even else '' }} {{ 'long' if p.crops is defined else '' }}">
   <figure class="p-photo"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
   <header class="hd over"><img src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}"><span>{{ p.group }}</span></header>
   <div class="p-title">

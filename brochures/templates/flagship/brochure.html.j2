@@ -22,10 +22,7 @@
     <p class="cover-pos">{{ c.company.positioning }}</p>
   </div>
   <figure class="cover-photo"><img class="fill" src="{{ img }}coconuts.jpg" alt=""></figure>
-  <div class="cover-foot">
-    <p class="cover-sum">{{ c.company.summary }}</p>
-    <ul class="cover-products">{% for p in P %}<li>{{ p.name }}</li>{% endfor %}</ul>
-  </div>
+  <ul class="cover-products">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="cp-img"><img class="fill" src="{{ img }}{{ p.image }}" alt=""></span><span class="cp-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
 </section>
 
 {# ---------- 2 Contents + who we are ---------- #}
@@ -40,7 +37,7 @@
         <li><span>{{ c.vision.title }} &amp; {{ c.mission.title | lower }}</span><b>{{ '%02d' % pages.vision }}</b></li>
         <li><span>{{ c.why.title }}</span><b>{{ '%02d' % pages.why }}</b></li>
         <li><span>{{ c.range.title }}</span><b>{{ '%02d' % pages.range }}</b></li>
-        {% for p in P %}<li class="sub"><span>{{ p.name }}</span><b>{{ '%02d' % (pages.products + loop.index0) }}</b></li>{% endfor %}
+        {% for p in P %}<li class="sub"><a href="#product-{{ p.id }}">{{ p.name }}</a><b>{{ '%02d' % (pages.products + loop.index0) }}</b></li>{% endfor %}
         <li><span>{{ c.process.label }}</span><b>{{ '%02d' % pages.process }}</b></li>
         <li><span>{{ c.howto.title }}</span><b>{{ '%02d' % pages.howto }}</b></li>
         <li><span>{{ c.contact.reach_title }}</span><b>{{ '%02d' % pages.contact }}</b></li>
@@ -148,7 +145,7 @@
       <div class="group">
         <h3>{{ g.name }}</h3>
         <p>{{ g.text }}</p>
-        <ul>{% for pid in g.products %}<li>{{ m.icon("arrow") }}{{ c.by_id[pid].name }}<b>{{ '%02d' % (pages.products + P.index(c.by_id[pid])) }}</b></li>{% endfor %}</ul>
+        <ul>{% for pid in g.products %}<li>{{ m.icon("arrow") }}<a href="#product-{{ pid }}">{{ c.by_id[pid].name }}</a><b>{{ '%02d' % (pages.products + P.index(c.by_id[pid])) }}</b></li>{% endfor %}</ul>
       </div>
       {% endfor %}
     </div>
@@ -160,7 +157,7 @@
 
 {# ---------- 7-11 Products ---------- #}
 {% for p in P %}
-<section class="page product {{ 'long' if p.crops is defined else '' }}">
+<section id="product-{{ p.id }}" class="page product {{ 'long' if p.crops is defined else '' }}">
   {{ chrome(p.group) }}
   <div class="body">
     <div class="prod-top">

@@ -54,8 +54,13 @@
 .harv .cover h1 { font-size: 46pt; line-height: 1.04; color: var(--ink); font-weight: 400; max-width: 150mm; margin: 0 auto; }
 .harv .cover .rule { display: block; width: 18mm; height: .5mm; background: var(--copper); margin: 8mm auto 5mm; }
 .harv .cover-pos { font-size: 12pt; color: var(--muted); }
-.harv .cover-photo { position: absolute; left: var(--m); right: var(--m); top: 132mm; bottom: 30mm; overflow: hidden; }
-.harv .cover-products { position: absolute; left: var(--m); right: var(--m); bottom: 14mm; display: flex; justify-content: space-between; font-size: 7pt; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+.harv .cover-photo { position: absolute; left: var(--m); right: var(--m); top: 128mm; height: 98mm; overflow: hidden; }
+/* product showcase: five round photos, each links to its product page */
+.harv .cover-products { position: absolute; left: var(--m); right: var(--m); top: 236mm; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; }
+.harv .cover-products a { display: flex; flex-direction: column; align-items: center; gap: 3mm; text-align: center; }
+.harv .cp-img { width: 25mm; height: 25mm; border-radius: 50%; overflow: hidden; border: .4mm solid var(--copper); padding: 1mm; background: #fff; }
+.harv .cp-img img { border-radius: 50%; }
+.harv .cp-name { font-family: 'Young Serif', Georgia, serif; font-size: 9.6pt; line-height: 1.2; color: var(--ink); }
 
 /* 2 intro */
 .harv .intro-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }

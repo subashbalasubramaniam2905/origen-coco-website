@@ -44,3 +44,6 @@ table { border-collapse: collapse; width: 100%; }
 @media screen and (max-width: 560px) { .page { zoom: .42; } }
 @media screen and (max-width: 380px) { .page { zoom: .38; } }
 @media print { body { background: none; } }
+
+/* in-document links (cover products, contents) stay clickable in the PDF */
+a { color: inherit; text-decoration: none; }

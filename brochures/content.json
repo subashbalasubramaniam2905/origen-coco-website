@@ -102,7 +102,7 @@
 
   "products": [
     {
-      "id": "peat", "name": "Coco Peat Blocks", "group": "Growing media", "image": "peat.jpg", "image2": "plant.jpg", "icon": "layers",
+      "id": "peat", "name": "Coco Peat Blocks", "group": "Growing media", "image": "peathand.jpg", "image2": "plant.jpg", "icon": "layers",
       "short": "Washed, dried, and compressed coir pith that expands into a light, moisture-holding growing medium.",
       "overview": [
         "Coco peat is the fine, spongy pith left when coconut husk is separated into fibre. It is a natural, renewable alternative to peat moss that holds plenty of water without turning heavy or waterlogged.",
@@ -290,7 +290,7 @@
           {"title": "Sourcing from local farmers", "icon": "sprout", "image": "coconuts.jpg", "text": "We buy coconuts and husks directly from local growers. Each lot is checked for quality when it arrives, and anything that does not meet our standards is set aside."},
           {"title": "Separating and sieving", "icon": "filter", "image": "husked.jpg", "text": "The husk is separated into fibre, pith, and chips. The pith and chips are then sieved to the required size, while oversized pieces and unwanted material are removed."},
           {"title": "Washing", "icon": "drop", "image": "peathand.jpg", "text": "The pith is washed with clean water to reduce its salt content. We check the EC and pH before it moves on to make sure it is suitable for growing applications."},
-          {"title": "Drying", "icon": "sun", "image": "peat.jpg", "text": "The washed material is dried to the required moisture level and turned during the process so it dries evenly. Moisture is checked before the material moves to the next stage."},
+          {"title": "Drying", "icon": "sun", "image": null, "text": "The washed material is dried to the required moisture level and turned during the process so it dries evenly. Moisture is checked before the material moves to the next stage."},
           {"title": "Compressing and packing", "icon": "compress", "image": "chips.jpg", "text": "The dried peat is pressed into blocks according to the required size and weight. The blocks are then packed, stacked, and secured on pallets for storage and transport."},
           {"title": "Quality check", "icon": "clipboard", "image": "plant.jpg", "text": "Samples are checked against the product specifications, including EC, pH, moisture, and block weight. Only batches that meet the requirements are cleared for dispatch, with records kept for traceability."},
           {"title": "Shipping", "icon": "ship", "image": null, "text": "The finished pallets are loaded into containers and secured for transport. Shipments travel by road and sea, and customers are kept informed about dispatch and delivery."}
