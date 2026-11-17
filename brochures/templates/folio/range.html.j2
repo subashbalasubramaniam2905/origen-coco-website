@@ -38,15 +38,18 @@
 
 {# 3-5 Products #}
 {% for p in ready %}
-<section id="product-{{ p.id }}" class="page">
-  <figure class="half-ph"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
-  <div class="half-txt rp">
-    <p class="eyebrow">{{ '%02d' % loop.index }} &middot; {{ p.group }}</p>
-    <h2>{{ p.name }}</h2>
-    <p class="short">{{ p.short }}</p>
-    <p class="ov">{{ p.overview[0] }}</p>
-    <h4>{{ L.benefits }}</h4>{{ m.benefits(p) }}
-    <h4>{{ L.applications }}</h4><p class="apps-line">{{ p.applications|join(" · ") }}</p>
+{% set long = (p.specs|length + p.variants|length) > 10 %}
+<section id="product-{{ p.id }}" class="page fp">
+  <div class="body fp-grid">
+    <div class="fp-l">
+      <p class="eyebrow">{{ '%02d' % loop.index }} &middot; {{ p.group }}</p><h2 class="fp-h">{{ p.name }}</h2>
+      <p class="short">{{ p.short }}</p>
+      {% if not long %}<p class="fp-ov">{{ p.overview[0] }}</p>{% endif %}
+      <h4>{{ L.benefits }}</h4>{{ m.benefits(p) }}
+      <h4>{{ L.applications }}</h4><p class="apps-line">{{ p.applications|join(" · ") }}</p>
+      {% if long %}<figure class="fp-ph"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>{% endif %}
+    </div>
+    <div class="fp-r">{{ m.tables(p, L) }}{% if not long %}<figure class="fp-ph"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>{% endif %}</div>
   </div>
   {{ foot() }}
 </section>

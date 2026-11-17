@@ -218,3 +218,22 @@
 .fo .cg-name { left: 0; right: 0; bottom: 0; padding: 2.6mm 4mm 6mm 4.5mm; background: #14532A; }
 .fo .cg .pend-tile .ico { margin-bottom: 12mm; }
 .fo .cg-name { padding-top: 3.4mm; } .pf .cg-name { padding-top: 5mm; }
+/* product page with specifications (range brochures) */
+.fo .fp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.fo .fp-l { display: flex; flex-direction: column; }
+.fo .fp-head { display: grid; grid-template-columns: 1fr 34mm; gap: 4mm; align-items: end; margin-bottom: 2.4mm; }
+.fo .fp-head figure { height: 26mm; border-radius: 1.4mm; overflow: hidden; }
+.fo .fp-head h2 { font-size: 17pt; margin: 0; }
+.fo .fp .short { font-size: 8.4pt; color: var(--muted); }
+.fo .fp h4 { margin: 3mm 0 1.2mm; font-size: 6.8pt; }
+.fo .fp .benefits li { font-size: 7.6pt; padding: .35mm 0; line-height: 1.4; }
+.fo .fp .apps-line { font-size: 7.6pt; color: var(--muted); }
+.fo .fp-r .tables { gap: 4mm; }
+.fo .fp-r .tbl { font-size: 7.4pt; }
+.fo .fp-r .tbl th { font-size: 6pt; }
+.fo .fp-r .tbl td { padding: .9mm 1.6mm; }
+.fo .fp-h { font-size: 18pt !important; margin-bottom: 1.6mm !important; }
+.fo .fp-ov { font-size: 7.6pt; font-weight: 300; margin-top: 2mm; line-height: 1.5; }
+.fo .fp-r { display: flex; flex-direction: column; }
+.fo .fp-ph { flex: 1; min-height: 0; margin-top: 4mm; border-radius: 1.4mm; overflow: hidden; position: relative; }
+.fo .fp-ph img { position: absolute; inset: 0; }
