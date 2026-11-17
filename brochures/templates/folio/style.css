@@ -200,3 +200,17 @@
 .fo .cg-name small { display: block; font-size: 5.2pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #BFE3C6; margin-bottom: .8mm; }
 .fo .cg .pend-tile .ico { margin-bottom: 9mm; }
 .fo .cg-name { padding: 8mm 6mm 6.5mm 4.5mm; }
+/* larger type for the 6-page A5 brochures so they read well printed and zoomed */
+.fo.rx .half-txt p { font-size: 8.2pt; }
+.fo.rx .rp .ov { font-size: 7.9pt !important; }
+.fo.rx .rp .short { font-size: 9.4pt !important; }
+.fo.rx .rp .benefits li { font-size: 7.6pt; }
+.fo.rx .apps-line { font-size: 7.6pt !important; }
+.fo.rx .eyebrow, .fo.rx h4 { font-size: 6.8pt; }
+.fo.rx .nums span { font-size: 6.4pt; }
+.fo.rx .ft { font-size: 6.6pt; }
+.fo.rx .cv-reach li { font-size: 7.8pt; }
+.fo.rx .cv-reach small, .fo.rx .reach small { font-size: 5.8pt; }
+.fo.rx .reach li { font-size: 8.2pt; }
+.fo.rx .cg-name small { font-size: 5.8pt; }
+.fo.rx .pend-note { font-size: 8pt; }
