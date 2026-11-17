@@ -1,0 +1,77 @@
+{% import "_shared/macros.html.j2" as m %}
+{% import "_shared/range_macros.html.j2" as r %}
+{% set L = c.labels %}
+{% set G = c.range.groups[S.group] %}
+{% set ready = P|rejectattr("pending", "defined")|list %}
+{% set pending = P|selectattr("pending", "defined")|list %}
+{% macro foot() -%}
+<footer class="ft"><span class="pgno"></span><span>{{ c.company.name }} &middot; {{ S.title }}</span></footer>
+{%- endmacro %}
+{{ m.head(c, S.title, own, shared, tpl) }}
+<body class="fo rx">
+
+{# 1 Cover #}
+<section class="page cover">
+  <div class="cv-l">
+    <img class="cv-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+    <div class="cv-t">
+      <p class="eyebrow">{{ c.company.tagline }}</p>
+      <h1>{{ S.title }}</h1>
+      <p class="cv-pos">{{ G.text }}</p>
+    </div>
+    {{ r.showcase(P, img) }}
+  </div>
+  <figure class="cv-ph"><img class="fill" src="{{ img }}{{ S.cover }}" alt=""></figure>
+</section>
+
+{# 2 About #}
+<section class="page">
+  <div class="half-txt left">
+    <p class="eyebrow">{{ c.intro.label }}</p>
+    <h2>{{ c.company.positioning }}</h2>
+    {% for para in c.intro.paragraphs %}<p>{{ para }}</p>{% endfor %}
+    <div class="nums">{% for n in c.numbers.points %}<div><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>{% endfor %}</div>
+  </div>
+  <figure class="half-ph right"><img class="fill" src="{{ img }}{{ S.about }}" alt=""></figure>
+  {{ foot() }}
+</section>
+
+{# 3-5 Products #}
+{% for p in ready %}
+<section id="product-{{ p.id }}" class="page">
+  <figure class="half-ph"><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
+  <div class="half-txt rp">
+    <p class="eyebrow">{{ '%02d' % loop.index }} &middot; {{ p.group }}</p>
+    <h2>{{ p.name }}</h2>
+    <p class="short">{{ p.short }}</p>
+    <p class="ov">{{ p.overview[0] }}</p>
+    <h4>{{ L.benefits }}</h4>{{ m.benefits(p) }}
+    <h4>{{ L.applications }}</h4><p class="apps-line">{{ p.applications|join(" · ") }}</p>
+  </div>
+  {{ foot() }}
+</section>
+{% endfor %}
+{% if pending %}
+<section class="page tint">
+  <div class="body pend-page">{% for p in pending %}{{ r.pending_card(p, L) }}{% endfor %}</div>
+  {{ foot() }}
+</section>
+{% endif %}
+
+{# 6 Contact #}
+<section class="page back">
+  <div class="half-txt left">
+    <img class="bk-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+    <h2>{{ c.contact.title }}</h2>
+    <p>{{ c.contact.text }}</p>
+    <p class="bk-cta">{{ c.contact.cta }}</p>
+    {{ m.contact_list(c.contact) }}
+    <div class="bk-prods">{% for p in P %}{{ m.plink(p) }}{% endfor %}</div>
+    <p class="copy">{{ L.copyright }}</p>
+  </div>
+  <figure class="half-ph right"><img class="fill" src="{{ img }}{{ S.back }}" alt=""></figure>
+</section>
+
+{{ m.viewer(nav) }}
+</body>
+</html>

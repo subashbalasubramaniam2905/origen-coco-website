@@ -1,0 +1,19 @@
+{# Helpers for the 6-page product-group brochures. Pending products (named by the
+   client but not yet in the content document) have no photo or copy: they show an
+   icon tile and the "to be confirmed" note instead. #}
+{% import "_shared/macros.html.j2" as m %}
+
+{% macro tile(p, img, cls="fill") -%}
+{% if p.pending is defined %}<span class="pend-tile">{{ m.icon(p.icon, "ico", "1.3") }}</span>{% else %}<img class="{{ cls }}" src="{{ img }}{{ p.image }}" alt="">{% endif %}
+{%- endmacro %}
+
+{% macro showcase(P, img) -%}
+<ul class="showcase n{{ P|length }}">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="sc-img">{{ tile(p, img) }}</span><span class="sc-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro pending_card(p, L) -%}
+<div id="product-{{ p.id }}" class="pend">
+  <span class="pend-tile">{{ m.icon(p.icon, "ico", "1.3") }}</span>
+  <div><p class="eyebrow">{{ p.group }}</p><h2>{{ p.name }}</h2><p class="pend-note">{{ L.pending }}</p></div>
+</div>
+{%- endmacro %}

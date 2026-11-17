@@ -170,3 +170,32 @@
 .pf .back .ft { right: auto; width: calc(1.15 / 2.15 * 297mm - 2 * var(--m)); color: rgba(255,255,255,.6); }
 .pf .strip { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; height: 44mm; }
 .pf .strip figure { overflow: hidden; border-radius: 2mm; }
+
+/* ---- 6-page product-group brochures (range.html.j2) ---- */
+.pf.rx .showcase.n3, .pf.rx .showcase.n4 { grid-template-columns: repeat(4, 1fr); }
+.pf.rx .showcase.n3 { grid-template-columns: repeat(3, 1fr); }
+.pf.rx .sc-img { height: 22mm; }
+.pf.rx .sc-name { font-size: 7.6pt; }
+.pf .pend-tile { display: grid; place-items: center; width: 100%; height: 100%; background: #E3EEE5; color: var(--green); }
+.pf .pend-tile .ico { width: 45%; height: 45%; max-width: 40mm; max-height: 40mm; }
+.pf .ab-p { font-size: 9.2pt; color: rgba(255,255,255,.88); }
+.pf .ab-stats { margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+.pf .ab-stats div { border-top: .4mm solid #9FD0A9; padding-top: 2.4mm; }
+.pf .ab-stats strong { display: block; font-size: 22pt; font-weight: 800; line-height: 1; color: #fff; margin-bottom: 1.4mm; }
+.pf .ab-stats span { display: block; font-size: 6.8pt; line-height: 1.3; color: rgba(255,255,255,.72); }
+.pf .ab-l { display: flex; flex-direction: column; }
+.pf .ab-vm { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.pf .ab-vm h3 { font-size: 10pt; color: #9FD0A9 !important; margin-bottom: 1mm; }
+.pf .ab-vm p { font-size: 7.6pt; line-height: 1.45; color: rgba(255,255,255,.85); }
+.pf .pend-page { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.pf .pend { display: flex; flex-direction: column; background: #fff; border-radius: 2mm; overflow: hidden; }
+.pf .pend > .pend-tile { flex: 1; height: auto; }
+.pf .pend > div { padding: 6mm 7mm 7mm; }
+.pf .pend h2 { font-size: 22pt; margin-bottom: 2mm; }
+.pf .pend-note { font-size: 9pt; color: var(--muted); border-left: 1mm solid var(--brown); padding-left: 3mm; }
+.pf .back-prods { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 7mm; }
+.pf .back-prods a { font-size: 8pt; font-weight: 600; border: .3mm solid rgba(255,255,255,.4); padding: 1mm 3.4mm; border-radius: 4mm; }
+.pf .ab-why { font-size: 10.5pt; color: #9FD0A9 !important; margin: 6mm 0 2mm; }
+.pf .ab-wl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5mm; margin-bottom: 6mm; }
+.pf .ab-wl li { display: flex; gap: 2.4mm; align-items: center; padding: 1.6mm 0; border-top: .25mm solid rgba(255,255,255,.16); font-size: 8.2pt; font-weight: 600; color: #fff; }
+.pf .ab-wl .ico { width: 4.6mm; height: 4.6mm; color: #9FD0A9; }
