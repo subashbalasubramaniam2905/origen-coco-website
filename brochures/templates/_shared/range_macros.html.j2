@@ -19,5 +19,5 @@
 {%- endmacro %}
 
 {% macro cover_grid(P, img) -%}
-<div class="cv-grid n{{ P|length }}">{% for p in P %}<a class="cg cg{{ loop.index }}" href="#product-{{ p.id }}">{{ tile(p, img) }}<span class="cg-name"><small>{{ p.group }}</small>{{ p.name }}</span></a>{% endfor %}</div>
+<div class="cv-grid n{{ P|length }}">{% for p in P %}<a class="cg cg{{ loop.index }}" href="#product-{{ p.id }}">{{ tile(p, img) }}<span class="cg-name">{{ p.name }}</span></a>{% endfor %}</div>
 {%- endmacro %}

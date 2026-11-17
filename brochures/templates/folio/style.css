@@ -217,3 +217,4 @@
 /* solid label band: semi-transparent gradients print with a pink cast in some PDF viewers */
 .fo .cg-name { left: 0; right: 0; bottom: 0; padding: 2.6mm 4mm 6mm 4.5mm; background: #14532A; }
 .fo .cg .pend-tile .ico { margin-bottom: 12mm; }
+.fo .cg-name { padding-top: 3.4mm; } .pf .cg-name { padding-top: 5mm; }
