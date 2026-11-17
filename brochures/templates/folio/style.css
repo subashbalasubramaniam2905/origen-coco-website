@@ -214,3 +214,6 @@
 .fo.rx .reach li { font-size: 8.2pt; }
 .fo.rx .cg-name small { font-size: 5.8pt; }
 .fo.rx .pend-note { font-size: 8pt; }
+/* solid label band: semi-transparent gradients print with a pink cast in some PDF viewers */
+.fo .cg-name { left: 0; right: 0; bottom: 0; padding: 2.6mm 4mm 6mm 4.5mm; background: #14532A; }
+.fo .cg .pend-tile .ico { margin-bottom: 12mm; }

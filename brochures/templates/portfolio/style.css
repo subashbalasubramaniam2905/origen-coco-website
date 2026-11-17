@@ -218,3 +218,6 @@
 .pf .cg-name small { display: block; font-size: 6.6pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #9FD0A9; margin-bottom: 1.4mm; }
 .pf .cg .pend-tile .ico { margin-bottom: 14mm; }
 .pf .cg-name { padding: 12mm 8mm 8mm 6mm; }
+/* solid label band: semi-transparent gradients print with a pink cast in some PDF viewers */
+.pf .cg-name { padding: 4mm 8mm 8mm 6mm; background: #0E4D24; }
+.pf .cg .pend-tile .ico { margin-bottom: 20mm; }
