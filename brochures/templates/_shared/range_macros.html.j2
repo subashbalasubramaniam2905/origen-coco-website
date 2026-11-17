@@ -15,6 +15,9 @@
 <div id="product-{{ p.id }}" class="pend">
   <span class="pend-tile">{{ m.icon(p.icon, "ico", "1.3") }}</span>
   <div><p class="eyebrow">{{ p.group }}</p><h2>{{ p.name }}</h2>
+    {% if p.short is defined %}<p class="pend-short">{{ p.short }}</p>
+    <p class="pend-ov">{{ p.overview[0] }}</p>
+    <div class="pend-cols"><div><h4>{{ L.benefits }}</h4>{{ m.benefits(p) }}</div><div><h4>{{ L.applications }}</h4>{{ m.apps(p) }}</div></div>{% endif %}
     {% if p.variants %}{{ m.data_table(p.variants, "item", "details", L.item, L.details, L.tbc) }}{% endif %}
     {% if p.specs %}{{ m.data_table(p.specs, "parameter", "value", L.parameter, L.value, L.tbc) }}{% endif %}
     <p class="pend-note">{{ L.pending_photo }}</p></div>

@@ -224,3 +224,25 @@
 .pf .pend .tbl { margin: 3mm 0 3mm; font-size: 8pt; }
 .pf .pend > .pend-tile { flex: 0 0 52mm; }
 .pf .pend > .pend-tile .ico { margin: 0; width: 22mm; height: 22mm; }
+.pf .pend > .pend-tile { flex: 0 0 34mm; }
+.pf .pend > .pend-tile .ico { width: 16mm; height: 16mm; }
+.pf .pend > div { padding: 5mm 6mm 5mm; }
+.pf .pend h2 { font-size: 19pt; margin-bottom: 1.4mm; }
+.pf .pend-short { font-size: 9pt; font-weight: 500; color: var(--deep); margin-bottom: 1.6mm; }
+.pf .pend-ov { font-size: 8pt; color: var(--muted); }
+.pf .pend-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.pf .pend-cols h4 { margin: 3mm 0 1.2mm; }
+.pf .pend-cols li { font-size: 7.8pt; }
+.pf .pend .tbl { margin: 3mm 0 2.4mm; font-size: 7.6pt; }
+.pf .pend .tbl td { padding: .8mm 2.4mm; }
+.pf .pend > .pend-tile { flex: 0 0 22mm; }
+.pf .pend > .pend-tile .ico { width: 11mm; height: 11mm; }
+.pf .pend h2 { font-size: 17pt; }
+.pf .pend-ov { font-size: 7.6pt; line-height: 1.45; }
+.pf .pend-cols li { font-size: 7.4pt; padding: .3mm 0; }
+.pf .pend-cols .apps li::before { top: 1.8mm; }
+.pf .pend .tbl { font-size: 7.2pt; }
+.pf .pend .tbl td, .pf .pend .tbl th { padding: .6mm 2.2mm; }
+.pf .pend-cols li { padding: .3mm 0 .3mm 0; }
+.pf .pend-cols .apps li { padding-left: 3.6mm; }
+.pf .pend > .pend-tile { flex: 1 1 22mm; }

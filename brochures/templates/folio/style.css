@@ -241,3 +241,18 @@
 .fo .pend .tbl td { padding: .7mm 1.6mm; }
 .fo .pend > .pend-tile { flex: 0 0 26mm; }
 .fo .pend > .pend-tile .ico { margin: 0; width: 12mm; height: 12mm; }
+.fo .pend > .pend-tile { flex: 0 0 13mm; }
+.fo .pend > .pend-tile .ico { width: 7mm; height: 7mm; }
+.fo .pend > div { padding: 3mm 4mm 3mm; }
+.fo .pend h2 { font-size: 13pt; margin-bottom: 1mm; }
+.fo .pend-short { font-size: 7.2pt; color: var(--muted); margin-bottom: 1mm; }
+.fo .pend-ov { display: none; }
+.fo .pend-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+.fo .pend-cols h4 { margin: 1.6mm 0 .8mm; font-size: 5.8pt; }
+.fo .pend-cols li { font-size: 6.4pt; line-height: 1.35; padding: .2mm 0; }
+.fo .pend-cols .benefits .ico { width: 2.6mm; height: 2.6mm; }
+.fo .pend .tbl { margin: 1.6mm 0 1.4mm; font-size: 6.4pt; }
+.fo .pend .tbl td, .fo .pend .tbl th { padding: .4mm 1.2mm; }
+.fo .pend .pend-note { font-size: 6.4pt; }
+.fo .pend-page { top: 9mm; bottom: 12mm; }
+.fo .pend > .pend-tile { flex: 1 1 13mm; }

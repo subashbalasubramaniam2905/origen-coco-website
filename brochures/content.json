@@ -687,7 +687,7 @@
     "contents": "Contents",
     "copyright": "© 2026 Origen Coco",
     "pending": "Product details, photographs and specifications to be confirmed",
-    "pending_photo": "Product description and photographs to be confirmed"
+    "pending_photo": "Photographs to be confirmed"
   },
   "pending_products": [
     {
@@ -714,7 +714,22 @@
           "details": "UV-stabilised poly bags, or naked slabs"
         }
       ],
-      "specs": []
+      "specs": [],
+      "short": "Coco peat, or coco peat and husk chip blends, in UV-stabilised bags that are ready to plant.",
+      "overview": [
+        "Grow bags are compressed slabs of coco peat, or blends of coco peat and husk chips, sealed in UV-stabilised poly bags. Add water, cut planting holes and plant: the slab expands to fill the bag and keeps water and air around the roots."
+      ],
+      "benefits": [
+        "Ready to plant once water is added",
+        "Choice of peat and chip mixes for more water holding or faster drainage",
+        "UV-stabilised bags for greenhouse growing",
+        "Compact and light to ship before expansion"
+      ],
+      "applications": [
+        "Tomatoes, cucumbers and peppers in greenhouses",
+        "Strawberries and other soft fruit",
+        "Hydroponic and soilless growing"
+      ]
     },
     {
       "id": "discs",
@@ -752,7 +767,22 @@
           "value": "Individually shrink-wrapped with labels, or in woven bags / cartons"
         }
       ],
-      "variants": []
+      "variants": [],
+      "short": "Small pressed discs of coco peat that expand into a ready potting medium.",
+      "overview": [
+        "Coco peat discs are compressed rounds of selected coco peat. Soak a disc in water and it expands into an airy, free-draining medium for a small pot. They are easy to stock and handle, for nurseries, flower growers and home gardens."
+      ],
+      "benefits": [
+        "Expands quickly when soaked",
+        "Clean and easy to handle",
+        "Good drainage and aeration",
+        "Convenient for retail packs"
+      ],
+      "applications": [
+        "Gerbera and other cut flowers",
+        "Potted plants and nurseries",
+        "Home and terrace gardening"
+      ]
     }
   ],
   "sets": [
@@ -796,5 +826,5 @@
       "cover": "seedlings.jpg"
     }
   ],
-  "spec_source_note": "17 Nov 2026: values filled at Subash's request from the reference brochures he supplied (mainly Aarha Export; washed EC < 0.5 mS/cm from Rise Substrates). They are industry reference values, not Origen Coco's own test results: confirm with Origen Coco before sending to buyers. Copra and coconut specs and container loading for peat/chips were not in any reference and stay null."
+  "spec_source_note": "17 Nov 2026: values filled at Subash's request from the reference brochures he supplied (mainly Aarha Export; washed EC < 0.5 mS/cm from Rise Substrates). They are industry reference values, not Origen Coco's own test results: confirm with Origen Coco before sending to buyers. Copra and coconut specs and container loading for peat/chips were not in any reference and stay null. Grow bag and coco peat disc descriptions were written 17 Nov 2026 from the same reference brochures (not in the content document); confirm with Origen Coco."
 }
