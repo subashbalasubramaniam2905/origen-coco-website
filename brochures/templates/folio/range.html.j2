@@ -56,7 +56,7 @@
 {% endfor %}
 {% if pending %}
 <section class="page tint">
-  <div class="body pend-page">{% for p in pending %}{{ r.pending_card(p, L) }}{% endfor %}</div>
+  <div class="body pend-page">{% for p in pending %}{{ r.pending_card(p, L, img) }}{% endfor %}</div>
   {{ foot() }}
 </section>
 {% endif %}

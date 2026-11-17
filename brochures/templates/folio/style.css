@@ -256,3 +256,5 @@
 .fo .pend .pend-note { font-size: 6.4pt; }
 .fo .pend-page { top: 9mm; bottom: 12mm; }
 .fo .pend > .pend-tile { flex: 1 1 13mm; }
+
+.fo .pend > img.pend-img { display: block; width: 100%; min-height: 0; object-fit: cover; background: none; }

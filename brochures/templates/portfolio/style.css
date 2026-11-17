@@ -246,3 +246,5 @@
 .pf .pend-cols li { padding: .3mm 0 .3mm 0; }
 .pf .pend-cols .apps li { padding-left: 3.6mm; }
 .pf .pend > .pend-tile { flex: 1 1 22mm; }
+
+.pf .pend > img.pend-img { display: block; width: 100%; min-height: 0; object-fit: cover; background: none; }

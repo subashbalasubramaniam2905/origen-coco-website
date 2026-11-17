@@ -687,7 +687,7 @@
     "contents": "Contents",
     "copyright": "© 2026 Origen Coco",
     "pending": "Product details, photographs and specifications to be confirmed",
-    "pending_photo": "Photographs to be confirmed"
+    "pending_photo": "Illustrative image. Product photographs to be confirmed."
   },
   "pending_products": [
     {
@@ -695,6 +695,7 @@
       "name": "Grow Bags",
       "group": "Growing media",
       "icon": "package",
+      "image": "growbag.jpg",
       "pending": true,
       "variants": [
         {
@@ -736,6 +737,7 @@
       "name": "Coco Peat Discs",
       "group": "Growing media",
       "icon": "layers",
+      "image": "discs.jpg",
       "pending": true,
       "specs": [
         {

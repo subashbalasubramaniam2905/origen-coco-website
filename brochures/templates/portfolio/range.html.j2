@@ -73,7 +73,7 @@
 <section class="page stone">
   {{ chrome(G.name) }}
   <div class="body pend-page">
-    {% for p in pending %}{{ r.pending_card(p, L) }}{% endfor %}
+    {% for p in pending %}{{ r.pending_card(p, L, img) }}{% endfor %}
   </div>
 </section>
 {% endif %}
