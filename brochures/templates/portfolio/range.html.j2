@@ -12,20 +12,15 @@
 <body class="pf rx">
 
 {# 1 Cover #}
-<section class="page cover">
+<section class="page cover cover-x">
   <div class="cv-left">
     <img class="cv-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
     <p class="eyebrow">{{ c.company.tagline }}</p>
     <h1>{{ S.title }}</h1>
     <p class="cv-pos">{{ G.text }}</p>
-    {{ r.showcase(P, img) }}
+    {{ m.contact_list(c.contact, "reach cv-reach") }}
   </div>
-  <div class="cv-mosaic">
-    <figure class="a"><img class="fill" src="{{ img }}{{ S.images[0] }}" alt=""></figure>
-    <figure class="b"><img class="fill" src="{{ img }}{{ S.images[1] }}" alt=""></figure>
-    <figure class="c"><img class="fill" src="{{ img }}{{ S.images[2] }}" alt=""></figure>
-    <figure class="d"><img class="fill" src="{{ img }}{{ S.images[3] }}" alt=""></figure>
-  </div>
+  {{ r.cover_grid(P, img) }}
 </section>
 
 {# 2 About #}

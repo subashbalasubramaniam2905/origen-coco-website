@@ -11,7 +11,7 @@
 <body class="fo rx">
 
 {# 1 Cover #}
-<section class="page cover">
+<section class="page cover cover-x">
   <div class="cv-l">
     <img class="cv-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
     <div class="cv-t">
@@ -19,9 +19,9 @@
       <h1>{{ S.title }}</h1>
       <p class="cv-pos">{{ G.text }}</p>
     </div>
-    {{ r.showcase(P, img) }}
+    {{ m.contact_list(c.contact, "reach cv-reach") }}
   </div>
-  <figure class="cv-ph"><img class="fill" src="{{ img }}{{ S.cover }}" alt=""></figure>
+  {{ r.cover_grid(P, img) }}
 </section>
 
 {# 2 About #}
