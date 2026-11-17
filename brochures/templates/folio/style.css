@@ -237,3 +237,7 @@
 .fo .fp-r { display: flex; flex-direction: column; }
 .fo .fp-ph { flex: 1; min-height: 0; margin-top: 4mm; border-radius: 1.4mm; overflow: hidden; position: relative; }
 .fo .fp-ph img { position: absolute; inset: 0; }
+.fo .pend .tbl { margin: 2mm 0 2.4mm; font-size: 7.2pt; }
+.fo .pend .tbl td { padding: .7mm 1.6mm; }
+.fo .pend > .pend-tile { flex: 0 0 26mm; }
+.fo .pend > .pend-tile .ico { margin: 0; width: 12mm; height: 12mm; }

@@ -211,15 +211,15 @@
       "variants": [
         {
           "item": "Block types",
-          "details": null
+          "details": "5 kg blocks; 650 g briquettes"
         },
         {
           "item": "Grades",
-          "details": null
+          "details": "Washed, buffered or unwashed"
         },
         {
           "item": "Packing",
-          "details": null
+          "details": "Palletised, shrink-wrapped or loose"
         },
         {
           "item": "Container loading",
@@ -227,33 +227,33 @@
         },
         {
           "item": "Custom options",
-          "details": null
+          "details": "Peat/chip blends; 6 or 8 mm sieve"
         }
       ],
       "specs": [
         {
           "parameter": "Electrical conductivity (EC)",
-          "value": null
+          "value": "Low (< 0.5 mS/cm washed) or high"
         },
         {
           "parameter": "pH",
-          "value": null
+          "value": "5.5 to 6.5"
         },
         {
           "parameter": "Moisture content",
-          "value": null
+          "value": "Less than 18%"
         },
         {
           "parameter": "Block weight",
-          "value": null
+          "value": "5 kg; 650 g briquette"
         },
         {
           "parameter": "Compressed dimensions",
-          "value": null
+          "value": "30 × 30 × 12 cm; 20 × 10 × 5 cm"
         },
         {
           "parameter": "Expansion volume",
-          "value": null
+          "value": "75+ L (5 kg); 9–10.5 L (650 g)"
         },
         {
           "parameter": "Sand/fibre/impurities",
@@ -291,15 +291,15 @@
       "variants": [
         {
           "item": "Chip sizes",
-          "details": null
+          "details": "0–12 mm; 0–24 mm"
         },
         {
           "item": "Forms",
-          "details": null
+          "details": "5 kg blocks; peat blends"
         },
         {
           "item": "Packing",
-          "details": null
+          "details": "Palletised or shrink-wrapped"
         },
         {
           "item": "Container loading",
@@ -309,23 +309,23 @@
       "specs": [
         {
           "parameter": "Chip size",
-          "value": null
+          "value": "0–12 mm or 0–24 mm"
         },
         {
           "parameter": "EC",
-          "value": null
+          "value": "Low (washed) or high"
         },
         {
           "parameter": "pH",
-          "value": null
+          "value": "5.5 to 6.5"
         },
         {
           "parameter": "Moisture content",
-          "value": null
+          "value": "Less than 18%"
         },
         {
           "parameter": "Weight per unit",
-          "value": null
+          "value": "5 kg block"
         }
       ],
       "cta_title": "Looking for Coco Husk Chips?",
@@ -357,29 +357,29 @@
       "variants": [
         {
           "item": "Grades",
-          "details": null
+          "details": "Brown / White"
         },
         {
           "item": "Packing",
-          "details": null
+          "details": "120–150 kg strapped bales"
         },
         {
           "item": "Container loading",
-          "details": null
+          "details": "150–180 bales per 40 ft"
         }
       ],
       "specs": [
         {
           "parameter": "Fibre length",
-          "value": null
+          "value": "5–20 cm"
         },
         {
           "parameter": "Moisture content",
-          "value": null
+          "value": "15% max"
         },
         {
           "parameter": "Impurities",
-          "value": null
+          "value": "3% max; dust 3% max"
         }
       ],
       "cta_title": "Discuss Your Fibre Requirements",
@@ -686,7 +686,8 @@
     "tbc": "To be confirmed",
     "contents": "Contents",
     "copyright": "© 2026 Origen Coco",
-    "pending": "Product details, photographs and specifications to be confirmed"
+    "pending": "Product details, photographs and specifications to be confirmed",
+    "pending_photo": "Product description and photographs to be confirmed"
   },
   "pending_products": [
     {
@@ -694,14 +695,64 @@
       "name": "Grow Bags",
       "group": "Growing media",
       "icon": "package",
-      "pending": true
+      "pending": true,
+      "variants": [
+        {
+          "item": "Sizes",
+          "details": "100 × 15, 100 × 17, 100 × 18, 100 × 20 cm; other sizes on request"
+        },
+        {
+          "item": "Mixes (peat / chips)",
+          "details": "100/0, 80/20, 70/30, 60/40, 50/50, 0/100"
+        },
+        {
+          "item": "Chip size (100% chip bags)",
+          "details": "0 to 12 mm or 0 to 24 mm"
+        },
+        {
+          "item": "Bag",
+          "details": "UV-stabilised poly bags, or naked slabs"
+        }
+      ],
+      "specs": []
     },
     {
       "id": "discs",
       "name": "Coco Peat Discs",
       "group": "Growing media",
       "icon": "layers",
-      "pending": true
+      "pending": true,
+      "specs": [
+        {
+          "parameter": "Size",
+          "value": "10 × 2.5 cm"
+        },
+        {
+          "parameter": "Weight",
+          "value": "65 to 135 g"
+        },
+        {
+          "parameter": "EC",
+          "value": "Low EC or high EC"
+        },
+        {
+          "parameter": "pH",
+          "value": "5.5 to 6.5"
+        },
+        {
+          "parameter": "Expansion",
+          "value": "1 L and 1.5 L after soaking"
+        },
+        {
+          "parameter": "Particle size",
+          "value": "1 to 6 mm"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Individually shrink-wrapped with labels, or in woven bags / cartons"
+        }
+      ],
+      "variants": []
     }
   ],
   "sets": [
@@ -744,5 +795,6 @@
       "about": "plant.jpg",
       "cover": "seedlings.jpg"
     }
-  ]
+  ],
+  "spec_source_note": "17 Nov 2026: values filled at Subash's request from the reference brochures he supplied (mainly Aarha Export; washed EC < 0.5 mS/cm from Rise Substrates). They are industry reference values, not Origen Coco's own test results: confirm with Origen Coco before sending to buyers. Copra and coconut specs and container loading for peat/chips were not in any reference and stay null."
 }
