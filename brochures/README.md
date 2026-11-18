@@ -1,6 +1,6 @@
 # Origen Coco brochures
 
-Eight company profile and product brochure designs, built from the same content. Open
+Eight full company profile and product brochure designs, built from the same content. Open
 `brochures/index.html` to browse them like the homepage templates: each card opens the
 brochure in the browser (with previous/next and a PDF download link at the bottom) or
 downloads the print-ready PDF. Products on every cover, and in the range pages, link to
@@ -16,6 +16,15 @@ their product pages, in the browser and in the PDF.
 | 06 | Orbit | A4 portrait, 14 pages | DM Serif Display, DM Sans | Round photo frames, green arcs and bars |
 | 07 | Harvest | A4 portrait, 16 pages | Young Serif, Manrope | Earlier design on the Harvest website template |
 | 08 | Flagship | A4 portrait, 15 pages | Archivo | Earlier design on the Flagship website template |
+
+### Product brochures (6 pages each)
+
+Two short brochures, one per product group, each on the Portfolio (A4 landscape) and Folio
+(A5 landscape) styles: `09-portfolio-coconut`, `10-portfolio-growing`, `11-folio-coconut`,
+`12-folio-growing`. They use `templates/<style>/range.html.j2` and the `sets` list in
+`content.json` (which products, cover and page photos). Grow bags and coco peat discs are in
+`pending_products`: they show a name and "to be confirmed" until copy, photos and specs are
+added. To add one properly, move it into `products` with the same fields as the others.
 
 Files are `html/<nn>-<design>.html` and `pdf/<nn>-<design>.pdf`; `thumbs/` holds the cover
 images used by the gallery.

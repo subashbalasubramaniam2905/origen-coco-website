@@ -159,3 +159,102 @@
 .fo .flows { align-content: center; }
 .fo .why h3 { font-size: 8.8pt; }
 .fo .why p { font-size: 7.4pt; }
+
+/* ---- 6-page product-group brochures (range.html.j2) ---- */
+.fo.rx .showcase.n3 { grid-template-columns: repeat(3, 1fr); }
+.fo.rx .showcase.n4 { grid-template-columns: repeat(4, 1fr); }
+.fo.rx .sc-img { height: 19mm; }
+.fo.rx .sc-name { font-size: 6.6pt; }
+.fo .pend-tile { display: grid; place-items: center; width: 100%; height: 100%; background: #E7EBE3; color: var(--green); }
+.fo .pend-tile .ico { width: 40%; height: 40%; max-width: 22mm; max-height: 22mm; }
+.fo.rx .half-txt h2 { font-size: 17pt; }
+.fo .rp h2 { font-size: 20pt !important; margin-bottom: 1.6mm; }
+.fo .rp .short { margin-bottom: 2mm; }
+.fo .rp .ov { font-size: 7.2pt !important; line-height: 1.5; }
+.fo .rp h4 { margin: 3mm 0 1.2mm; }
+.fo .rp .benefits { columns: 2; column-gap: 4mm; }
+.fo .rp .benefits li { font-size: 6.9pt; break-inside: avoid; padding: .3mm 0; line-height: 1.4; }
+.fo .apps-line { font-size: 7pt !important; color: var(--muted); }
+.fo .pend-page { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.fo .pend { display: flex; flex-direction: column; background: #fff; border-radius: 1.4mm; overflow: hidden; }
+.fo .pend > .pend-tile { flex: 1; height: auto; }
+.fo .pend > div { padding: 4mm 5mm 5mm; }
+.fo .pend h2 { font-size: 16pt; margin-bottom: 1.4mm; }
+.fo .pend-note { font-size: 7.2pt; color: var(--muted); font-weight: 300; }
+.fo .bk-prods { display: flex; flex-wrap: wrap; gap: 1.4mm; margin-top: 4mm; }
+.fo .bk-prods a { font-size: 6.6pt; font-weight: 500; color: var(--deep); border: .25mm solid var(--green); padding: .2mm 2.2mm; border-radius: 3mm; }
+/* product cover (range brochures) */
+.fo .cover-x .cv-l { width: 46%; }
+.fo .cover-x .cv-t { margin: auto 0 0; }
+.fo .cv-reach { display: flex; flex-direction: column; gap: 1.6mm; margin-top: 5mm; padding-top: 3.4mm; border-top: .25mm solid var(--line); }
+.fo .cv-reach li { display: flex; gap: 2mm; align-items: center; font-size: 7pt; font-weight: 500; color: var(--deep); }
+.fo .cv-reach .ico { width: 5mm; height: 5mm; padding: 1mm; border-radius: 50%; background: var(--green); color: #fff; }
+.fo .cv-reach small { display: block; font-size: 5.2pt; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.fo .cv-grid { position: absolute; top: 0; bottom: 0; right: 0; width: 54%; display: grid; gap: 1.4mm; }
+.fo .cv-grid.n3 { grid-template-columns: 1.15fr 1fr; grid-template-rows: 1fr 1fr; }
+.fo .cv-grid.n3 .cg1 { grid-row: 1 / 3; }
+.fo .cv-grid.n4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+.fo .cg { position: relative; overflow: hidden; min-height: 0; }
+.fo .cg > img, .fo .cg > .pend-tile { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fo .cg-name { position: absolute; left: 0; right: 0; bottom: 0; padding: 8mm 4mm 3.4mm; background: linear-gradient(0deg, rgba(8,40,20,.82), rgba(8,40,20,0)); color: #fff; font-size: 11pt; font-weight: 400; line-height: 1.1; }
+.fo .cg-name small { display: block; font-size: 5.2pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #BFE3C6; margin-bottom: .8mm; }
+.fo .cg .pend-tile .ico { margin-bottom: 9mm; }
+.fo .cg-name { padding: 8mm 6mm 6.5mm 4.5mm; }
+/* larger type for the 6-page A5 brochures so they read well printed and zoomed */
+.fo.rx .half-txt p { font-size: 8.2pt; }
+.fo.rx .rp .ov { font-size: 7.9pt !important; }
+.fo.rx .rp .short { font-size: 9.4pt !important; }
+.fo.rx .rp .benefits li { font-size: 7.6pt; }
+.fo.rx .apps-line { font-size: 7.6pt !important; }
+.fo.rx .eyebrow, .fo.rx h4 { font-size: 6.8pt; }
+.fo.rx .nums span { font-size: 6.4pt; }
+.fo.rx .ft { font-size: 6.6pt; }
+.fo.rx .cv-reach li { font-size: 7.8pt; }
+.fo.rx .cv-reach small, .fo.rx .reach small { font-size: 5.8pt; }
+.fo.rx .reach li { font-size: 8.2pt; }
+.fo.rx .cg-name small { font-size: 5.8pt; }
+.fo.rx .pend-note { font-size: 8pt; }
+/* solid label band: semi-transparent gradients print with a pink cast in some PDF viewers */
+.fo .cg-name { left: 0; right: 0; bottom: 0; padding: 2.6mm 4mm 6mm 4.5mm; background: #14532A; }
+.fo .cg .pend-tile .ico { margin-bottom: 12mm; }
+.fo .cg-name { padding-top: 3.4mm; } .pf .cg-name { padding-top: 5mm; }
+/* product page with specifications (range brochures) */
+.fo .fp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.fo .fp-l { display: flex; flex-direction: column; }
+.fo .fp-head { display: grid; grid-template-columns: 1fr 34mm; gap: 4mm; align-items: end; margin-bottom: 2.4mm; }
+.fo .fp-head figure { height: 26mm; border-radius: 1.4mm; overflow: hidden; }
+.fo .fp-head h2 { font-size: 17pt; margin: 0; }
+.fo .fp .short { font-size: 8.4pt; color: var(--muted); }
+.fo .fp h4 { margin: 3mm 0 1.2mm; font-size: 6.8pt; }
+.fo .fp .benefits li { font-size: 7.6pt; padding: .35mm 0; line-height: 1.4; }
+.fo .fp .apps-line { font-size: 7.6pt; color: var(--muted); }
+.fo .fp-r .tables { gap: 4mm; }
+.fo .fp-r .tbl { font-size: 7.4pt; }
+.fo .fp-r .tbl th { font-size: 6pt; }
+.fo .fp-r .tbl td { padding: .9mm 1.6mm; }
+.fo .fp-h { font-size: 18pt !important; margin-bottom: 1.6mm !important; }
+.fo .fp-ov { font-size: 7.6pt; font-weight: 300; margin-top: 2mm; line-height: 1.5; }
+.fo .fp-r { display: flex; flex-direction: column; }
+.fo .fp-ph { flex: 1; min-height: 0; margin-top: 4mm; border-radius: 1.4mm; overflow: hidden; position: relative; }
+.fo .fp-ph img { position: absolute; inset: 0; }
+.fo .pend .tbl { margin: 2mm 0 2.4mm; font-size: 7.2pt; }
+.fo .pend .tbl td { padding: .7mm 1.6mm; }
+.fo .pend > .pend-tile { flex: 0 0 26mm; }
+.fo .pend > .pend-tile .ico { margin: 0; width: 12mm; height: 12mm; }
+.fo .pend > .pend-tile { flex: 0 0 13mm; }
+.fo .pend > .pend-tile .ico { width: 7mm; height: 7mm; }
+.fo .pend > div { padding: 3mm 4mm 3mm; }
+.fo .pend h2 { font-size: 13pt; margin-bottom: 1mm; }
+.fo .pend-short { font-size: 7.2pt; color: var(--muted); margin-bottom: 1mm; }
+.fo .pend-ov { display: none; }
+.fo .pend-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+.fo .pend-cols h4 { margin: 1.6mm 0 .8mm; font-size: 5.8pt; }
+.fo .pend-cols li { font-size: 6.4pt; line-height: 1.35; padding: .2mm 0; }
+.fo .pend-cols .benefits .ico { width: 2.6mm; height: 2.6mm; }
+.fo .pend .tbl { margin: 1.6mm 0 1.4mm; font-size: 6.4pt; }
+.fo .pend .tbl td, .fo .pend .tbl th { padding: .4mm 1.2mm; }
+.fo .pend .pend-note { font-size: 6.4pt; }
+.fo .pend-page { top: 9mm; bottom: 12mm; }
+.fo .pend > .pend-tile { flex: 1 1 13mm; }
+
+.fo .pend > img.pend-img { display: block; width: 100%; min-height: 0; object-fit: cover; background: none; }

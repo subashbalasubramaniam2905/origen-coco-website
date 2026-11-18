@@ -1,0 +1,97 @@
+{% import "_shared/macros.html.j2" as m %}
+{% import "_shared/range_macros.html.j2" as r %}
+{% set L = c.labels %}
+{% set G = c.range.groups[S.group] %}
+{% set ready = P|rejectattr("pending", "defined")|list %}
+{% set pending = P|selectattr("pending", "defined")|list %}
+{% macro chrome(label, dark=false) -%}
+<header class="hd"><span class="lbl">{{ label }}</span><img src="{{ logo }}{{ 'logo-white.svg' if dark else 'logo.svg' }}" alt="{{ c.company.name }}"></header>
+<footer class="ft"><span>{{ c.company.name }} &middot; {{ S.title }}</span><span class="pgno"></span></footer>
+{%- endmacro %}
+{{ m.head(c, S.title, own, shared, tpl) }}
+<body class="pf rx">
+
+{# 1 Cover #}
+<section class="page cover cover-x">
+  <div class="cv-left">
+    <img class="cv-logo" src="{{ logo }}logo.svg" alt="{{ c.company.name }}">
+    <p class="eyebrow">{{ c.company.tagline }}</p>
+    <h1>{{ S.title }}</h1>
+    <p class="cv-pos">{{ G.text }}</p>
+    {{ m.contact_list(c.contact, "reach cv-reach") }}
+  </div>
+  {{ r.cover_grid(P, img) }}
+</section>
+
+{# 2 About #}
+<section class="page green">
+  {{ chrome(S.title, true) }}
+  <div class="body two-col">
+    <div class="ab-l">
+      <p class="eyebrow">{{ c.intro.label }}</p>
+      <h2>{{ c.company.positioning }}</h2>
+      {% for para in c.intro.paragraphs %}<p class="ab-p">{{ para }}</p>{% endfor %}
+      <h3 class="ab-why">{{ c.why.title }}</h3>
+      <ul class="ab-wl">{% for w in c.why.points %}<li>{{ m.icon(w.icon) }}<span>{{ w.title }}</span></li>{% endfor %}</ul>
+      <div class="ab-stats">{% for n in c.numbers.points %}<div><strong>{{ n.value }}</strong><span>{{ n.label }}</span></div>{% endfor %}</div>
+    </div>
+    <div class="col-right">
+      <figure class="ph tall"><img class="fill" src="{{ img }}{{ S.about }}" alt=""></figure>
+      <div class="ab-vm">
+        <div><h3>{{ c.vision.title }}</h3><p>{{ c.vision.text }}</p></div>
+        <div><h3>{{ c.mission.title }}</h3><p>{{ c.mission.text }}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 3-5 Products #}
+{% for p in ready %}
+<section id="product-{{ p.id }}" class="page stone product">
+  {{ chrome(p.group) }}
+  <div class="body prod">
+    <div class="p-left">
+      <p class="eyebrow">{{ p.group }} &middot; {{ '%02d' % loop.index }}</p>
+      <h2>{{ p.name }}</h2>
+      <p class="p-short">{{ p.short }}</p>
+      {% for para in p.overview %}<p>{{ para }}</p>{% endfor %}
+      <h4>{{ L.benefits }}</h4>
+      {{ m.benefits(p) }}
+    </div>
+    <div class="p-right">
+      <div class="p-media">
+        <figure><img class="fill" src="{{ img }}{{ p.image }}" alt="{{ p.name }}"></figure>
+        <div class="p-apps"><h4>{{ L.applications }}</h4>{{ m.apps(p) }}{{ m.crops(p) }}</div>
+      </div>
+      {{ m.tables(p, L) }}
+      <div class="cta"><b>{{ p.cta_title }}</b><span>{{ p.cta_text }}</span></div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+{% if pending %}
+<section class="page stone">
+  {{ chrome(G.name) }}
+  <div class="body pend-page">
+    {% for p in pending %}{{ r.pending_card(p, L, img) }}{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# 6 Contact #}
+<section class="page green back">
+  <div class="back-l">
+    <img class="back-logo" src="{{ logo }}logo-white.svg" alt="{{ c.company.name }}">
+    <h2>{{ c.contact.title }}</h2>
+    <p>{{ c.contact.text }}</p>
+    <p class="back-cta">{{ c.contact.cta }}</p>
+    {{ m.contact_list(c.contact) }}
+    <div class="back-prods">{% for p in P %}{{ m.plink(p) }}{% endfor %}</div>
+  </div>
+  <figure class="back-ph"><img class="fill" src="{{ img }}{{ S.back }}" alt=""></figure>
+  <footer class="ft"><span>{{ c.company.tagline }}</span><span>{{ L.copyright }}</span></footer>
+</section>
+
+{{ m.viewer(nav) }}
+</body>
+</html>

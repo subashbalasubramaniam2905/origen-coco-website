@@ -1,0 +1,29 @@
+{# Helpers for the 6-page product-group brochures. Pending products (named by the
+   client but not yet in the content document) have no photo or copy: they show an
+   icon tile and the "to be confirmed" note instead. #}
+{% import "_shared/macros.html.j2" as m %}
+
+{% macro tile(p, img, cls="fill") -%}
+{% if p.pending is defined and p.image is not defined %}<span class="pend-tile">{{ m.icon(p.icon, "ico", "1.3") }}</span>{% else %}<img class="{{ cls }}" src="{{ img }}{{ p.image }}" alt="">{% endif %}
+{%- endmacro %}
+
+{% macro showcase(P, img) -%}
+<ul class="showcase n{{ P|length }}">{% for p in P %}<li><a href="#product-{{ p.id }}"><span class="sc-img">{{ tile(p, img) }}</span><span class="sc-name">{{ p.name }}</span></a></li>{% endfor %}</ul>
+{%- endmacro %}
+
+{% macro pending_card(p, L, img) -%}
+<div id="product-{{ p.id }}" class="pend">
+  {% if p.image is defined %}<img class="pend-tile pend-img" src="{{ img }}{{ p.image }}" alt="">{% else %}<span class="pend-tile">{{ m.icon(p.icon, "ico", "1.3") }}</span>{% endif %}
+  <div><p class="eyebrow">{{ p.group }}</p><h2>{{ p.name }}</h2>
+    {% if p.short is defined %}<p class="pend-short">{{ p.short }}</p>
+    <p class="pend-ov">{{ p.overview[0] }}</p>
+    <div class="pend-cols"><div><h4>{{ L.benefits }}</h4>{{ m.benefits(p) }}</div><div><h4>{{ L.applications }}</h4>{{ m.apps(p) }}</div></div>{% endif %}
+    {% if p.variants %}{{ m.data_table(p.variants, "item", "details", L.item, L.details, L.tbc) }}{% endif %}
+    {% if p.specs %}{{ m.data_table(p.specs, "parameter", "value", L.parameter, L.value, L.tbc) }}{% endif %}
+    <p class="pend-note">{{ L.pending_photo }}</p></div>
+</div>
+{%- endmacro %}
+
+{% macro cover_grid(P, img) -%}
+<div class="cv-grid n{{ P|length }}">{% for p in P %}<a class="cg cg{{ loop.index }}" href="#product-{{ p.id }}">{{ tile(p, img) }}<span class="cg-name">{{ p.name }}</span></a>{% endfor %}</div>
+{%- endmacro %}

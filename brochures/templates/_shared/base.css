@@ -55,3 +55,7 @@ a { color: inherit; text-decoration: none; }
 .viewer a.dl { background: #1D7B33; }
 @media print { .viewer { display: none; } }
 @media screen and (max-width: 560px) { .viewer { left: 8px; right: 8px; bottom: 8px; justify-content: space-between; font-size: 12px; } .viewer a { padding: 8px; } }
+
+/* Coco peat has the longest spec tables: tighten its rows in every design */
+#product-peat .tbl td, #product-peat .tbl th { padding-top: .5mm !important; padding-bottom: .5mm !important; line-height: 1.3; }
+#product-growbags > img.pend-img { object-position: center 70%; }
