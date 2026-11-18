@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Origen Coco email signature</title>
+<link rel="icon" href="../assets/logo/logo.svg">
+<style>
+:root{--bg:#FFFFFF;--ink:#1F2A23;--muted:#5C665F;--green:#1D7B33;--green-deep:#165F28;--brown:#A74F15;--line:#DCE3DE;--tint:#F3F8F4;--warn:#8A4511;--disabled:#A9B8AD;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:880px;margin:0 auto;padding:48px 24px 80px;display:grid;gap:32px}
+@media (max-width:520px){.wrap{padding:32px 16px 64px}}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
+h1{margin:0;font-size:28px;line-height:1.2}
+header p{margin:0;color:var(--muted);max-width:62ch}
+.nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:8px}
+.nav a{color:var(--green);font-weight:600;text-decoration:none}
+.nav a:hover{text-decoration:underline}
+section{min-width:0;display:grid;gap:12px}
+.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sheet{background:#FFFFFF;border:1px solid var(--line);padding:32px;overflow-x:auto}
+@media (max-width:520px){.sheet{padding:20px 16px}}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+.fields .wide{grid-column:1/-1}
+@media (max-width:560px){.fields{grid-template-columns:1fr}}
+label{display:block;margin-bottom:4px;font-size:14px;font-weight:600}
+input[type=text],input[type=tel],input[type=email]{width:100%;min-height:44px;padding:8px 12px;font:inherit;color:var(--ink);background:#FFFFFF;border:1px solid #B9C2BB;border-radius:4px}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.check{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin:0;font-weight:400;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;border:0;min-width:0}
+.seg legend{padding:0;margin-bottom:12px}
+.seg label{margin:0;position:relative}
+.seg input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.seg span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;font-size:15px;font-weight:600;color:var(--ink);background:#FFFFFF;border:1px solid var(--line);border-radius:999px}
+.seg input:checked+span{color:#FFFFFF;background:var(--green);border-color:var(--green)}
+.seg input:focus-visible+span{outline:2px solid var(--green);outline-offset:2px}
+.panel{border:1px solid var(--line);padding:20px;display:grid;gap:14px}
+ol.steps{margin:0;padding-left:22px;display:grid;gap:14px}
+ol.steps li{padding-left:4px}
+ol.steps li::marker{color:var(--green);font-weight:700}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+button,.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;font:inherit;font-size:15px;font-weight:600;color:#FFFFFF;background:var(--green);border:1px solid var(--green);border-radius:4px;cursor:pointer;text-decoration:none}
+button:hover,.btn:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.ghost{color:var(--green);background:#FFFFFF}
+.ghost:hover{background:var(--tint);color:var(--green-deep)}
+.status{font-size:14px;color:var(--green)}
+.status.warn{color:var(--warn)}
+.status:empty{display:none}
+.path{font-weight:600}
+.note{margin:0;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<img src="../assets/logo/logo.svg" alt="Origen Coco" style="height:36px">
+<div>
+<h1>Email signature</h1>
+<p>Copy the Origen Coco signature with its HD logo and paste it into your email settings. The logo is stored on this website, so it shows in Gmail, Outlook, Zoho Mail and Apple Mail.</p>
+<nav class="nav" aria-label="Other pages"><a href="../index.html">&larr; Homepage templates</a><a href="../brochures/index.html">Brochure templates</a></nav>
+</div>
+</header>
+
+<section aria-labelledby="sig-h">
+<h2 class="eyebrow" id="sig-h">Your signature</h2>
+<div class="sheet"><div id="sig-full"></div></div>
+</section>
+
+<section aria-labelledby="det-h">
+<h2 class="eyebrow" id="det-h">Details</h2>
+<div class="fields">
+<div><label for="f-name">Name</label><input id="f-name" type="text" value="C DINESH BABU" autocomplete="name"></div>
+<div><label for="f-title">Designation</label><input id="f-title" type="text" value="" placeholder="Your title"></div>
+<div><label for="f-phone">Phone</label><input id="f-phone" type="tel" value="+91 80724 38128" autocomplete="tel"></div>
+<div><label for="f-email">Email</label><input id="f-email" type="email" value="dinesh@origencoco.com" autocomplete="email"></div>
+<div class="wide"><label class="check" for="f-products"><input id="f-products" type="checkbox" checked> Show the Our Products line</label></div>
+</div>
+<p class="note">Colleagues can make their own here too: change the details, then copy.</p>
+</section>
+
+<section>
+<fieldset class="seg">
+<legend class="eyebrow">Add it to your email</legend>
+<label><input type="radio" name="app" id="app-gmail" value="gmail" checked><span>Gmail</span></label>
+<label><input type="radio" name="app" id="app-outlook" value="outlook"><span>Outlook</span></label>
+<label><input type="radio" name="app" id="app-zoho" value="zoho"><span>Zoho Mail</span></label>
+<label><input type="radio" name="app" id="app-apple" value="apple"><span>Apple Mail</span></label>
+</fieldset>
+<div class="panel">
+<ol class="steps">
+<li><div class="row"><button type="button" id="copy-full">Copy signature</button><span class="status" id="full-status" role="status" aria-live="polite"></span></div></li>
+<li id="step-open"></li>
+<li id="step-save"></li>
+<li>Send yourself a test email and check that the logo shows.</li>
+</ol>
+<p class="note" id="app-note"></p>
+</div>
+</section>
+
+<section aria-labelledby="short-h">
+<h2 class="eyebrow" id="short-h">Short signature for replies</h2>
+<div class="sheet"><div id="sig-short"></div></div>
+<div class="row">
+<button type="button" id="copy-short">Copy short signature</button>
+<button type="button" class="ghost" id="copy-plain">Copy plain text for phone apps</button>
+<span class="status" id="short-status" role="status" aria-live="polite"></span>
+</div>
+<p class="note">Phone apps keep their own text-only signature, so paste the plain text there.</p>
+</section>
+
+<section aria-labelledby="logo-h">
+<h2 class="eyebrow" id="logo-h">Logo file</h2>
+<div class="row"><a class="btn ghost" href="origen-coco-signature-logo-hd.png" download>Download HD logo (PNG)</a></div>
+<p class="note">432 &times; 288 px on white, shown at 126 &times; 84 px in the signature so it stays sharp on phones and high-resolution screens.</p>
+</section>
+</div>
+
+<script>
+(function () {
+  // Public address of the logo. On the live site it is worked out from the page's own address;
+  // opened from a local copy it falls back to the GitHub Pages address.
+  var PAGES_LOGO = 'https://subashbalasubramaniam2905.github.io/origen-coco-website/signature/origen-coco-signature-logo-hd.png';
+  var LOGO = location.protocol === 'https:' ? new URL('origen-coco-signature-logo-hd.png', location.href).href : PAGES_LOGO;
+  var F = "font-family:'Century Gothic',Arial,sans-serif;";
+  var W = 'bgcolor="#FFFFFF"';
+  var $ = function (id) { return document.getElementById(id); };
+  var FIELDS = ['f-name', 'f-title', 'f-phone', 'f-email'];
+  var APPS = {
+    gmail: {
+      open: 'In Gmail, open <span class="path">Settings › See all settings › General › Signature › Create new</span>, give it a name and paste it into the box.',
+      save: 'Choose it under Signature defaults for new emails, then click <b>Save Changes</b> at the bottom of the page.',
+      note: 'Make a second signature from the short version below and choose it for replies and forwards.'
+    },
+    outlook: {
+      open: 'In Outlook, open <span class="path">Settings › Accounts › Signatures › Add signature</span>, give it a name and paste it into the box.',
+      save: 'Choose it for new messages, then click <b>Save</b>. In classic Outlook for Windows, signatures are under <span class="path">File › Options › Mail › Signatures</span>.',
+      note: 'Some Outlook users see a logo only after they click Download pictures in an email. That is normal for logos in signatures.'
+    },
+    zoho: {
+      open: 'In Zoho Mail, open <span class="path">Settings › Signatures</span>, click <b>+</b>, give it a name and paste it into the box.',
+      save: 'Link it to your email address under Associated From address, then click <b>Save</b>.',
+      note: 'For replies, turn on Add signature to all my email replies in the same settings.'
+    },
+    apple: {
+      open: 'In Apple Mail, open <span class="path">Mail › Settings › Signatures</span>, choose your account and click <b>+</b>. Untick <b>Always match my default message font</b>.',
+      save: 'Paste into the signature box. Mail saves it as you go.',
+      note: 'Choose the signature in the Choose Signature menu under the list.'
+    }
+  };
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function val(id) { return $(id).value.trim(); }
+  function store(k, v) { try { localStorage.setItem('oc-sig-' + k, v); } catch (e) {} }
+  function recall(k) { try { return localStorage.getItem('oc-sig-' + k); } catch (e) { return null; } }
+
+  function data() {
+    var phone = val('f-phone');
+    return {
+      name: (val('f-name') || 'Name').toUpperCase(),
+      title: (val('f-title') || 'Designation').toUpperCase(),
+      phone: phone, tel: phone.replace(/[^+\d]/g, ''),
+      email: val('f-email'),
+      products: $('f-products').checked
+    };
+  }
+  function link(href, text) { return '<a href="' + esc(href) + '" style="color:#1F2A23;text-decoration:none">' + esc(text) + '</a>'; }
+  function row(label, inner) {
+    return '<tr><td style="width:20px;padding:0;font-size:10px;font-weight:bold;color:#1D7B33;vertical-align:baseline">' + label + '</td>' +
+      '<td style="padding:0;vertical-align:baseline">' + inner + '</td></tr>';
+  }
+  function details(d) {
+    var rows = '';
+    if (d.phone) rows += row('T', link('tel:' + d.tel, d.phone));
+    if (d.email) rows += row('E', link('mailto:' + d.email, d.email));
+    rows += row('W', link('https://www.origencoco.com', 'www.origencoco.com'));
+    rows += row('A', 'Pollachi, Tamil Nadu, India');
+    return '<table cellpadding="0" cellspacing="0" border="0" ' + W + ' style="border-collapse:collapse;background-color:#FFFFFF;' + F + 'color:#1F2A23">' +
+      '<tr><td style="padding:0;font-size:18px;line-height:22px;font-weight:bold;letter-spacing:0.5px;color:#1D7B33">' + esc(d.name) + '</td></tr>' +
+      '<tr><td style="padding:5px 0 12px;font-size:11px;line-height:14px;letter-spacing:2px;color:#A74F15">' + esc(d.title) + '</td></tr>' +
+      '<tr><td style="padding:0"><table cellpadding="0" cellspacing="0" border="0" ' + W + ' style="border-collapse:collapse;background-color:#FFFFFF;' + F + 'font-size:13px;line-height:20px;color:#1F2A23">' + rows + '</table></td></tr>' +
+      '</table>';
+  }
+  function productsRow() {
+    return '<tr><td colspan="2" ' + W + ' style="padding:16px 0 0;background-color:#FFFFFF">' +
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" ' + W + ' style="border-collapse:collapse;background-color:#FFFFFF">' +
+      '<tr><td ' + W + ' style="padding:12px 0 0;border-top:1px solid #DCE5DE;background-color:#FFFFFF;' + F + '">' +
+      '<div style="font-size:10px;line-height:14px;letter-spacing:2px;color:#A74F15">OUR PRODUCTS</div>' +
+      '<div style="padding-top:3px;font-size:12px;line-height:18px;color:#5C665F">Coco Peat Blocks · Coco Husk Chips · Coconut Fibre<br>Copra · Coconut · Other Related Products</div>' +
+      '</td></tr></table></td></tr>';
+  }
+  function fullHtml(d, logoSrc) {
+    return '<table cellpadding="0" cellspacing="0" border="0" ' + W + ' style="border-collapse:collapse;background-color:#FFFFFF;' + F + 'color:#1F2A23">' +
+      '<tr>' +
+      '<td valign="middle" ' + W + ' style="padding:0 22px 0 0;vertical-align:middle;background-color:#FFFFFF">' +
+      '<img src="' + esc(logoSrc) + '" width="126" height="84" alt="Origen Coco" style="display:block;width:126px;height:84px;border:0">' +
+      '</td>' +
+      '<td valign="middle" ' + W + ' style="padding:0 0 0 22px;border-left:1px solid #1F9737;vertical-align:middle;background-color:#FFFFFF">' + details(d) + '</td>' +
+      '</tr>' + (d.products ? productsRow() : '') +
+      '</table>';
+  }
+  function fullText(d) {
+    var lines = [d.name, d.title];
+    if (d.phone) lines.push('T  ' + d.phone);
+    if (d.email) lines.push('E  ' + d.email);
+    lines.push('W  www.origencoco.com', 'A  Pollachi, Tamil Nadu, India');
+    if (d.products) lines.push('', 'OUR PRODUCTS', 'Coco Peat Blocks · Coco Husk Chips · Coconut Fibre', 'Copra · Coconut · Other Related Products');
+    return lines.join('\n');
+  }
+  function shortHtml(d) {
+    var second = [];
+    if (d.phone) second.push(link('tel:' + d.tel, d.phone));
+    second.push(link('https://www.origencoco.com', 'www.origencoco.com'));
+    return '<table cellpadding="0" cellspacing="0" border="0" ' + W + ' style="border-collapse:collapse;background-color:#FFFFFF;' + F + 'color:#1F2A23">' +
+      '<tr><td style="padding:0;font-size:14px;line-height:20px"><span style="font-weight:bold;letter-spacing:0.5px;color:#1D7B33">' + esc(d.name) + '</span>&nbsp;&nbsp;' +
+      '<span style="font-size:10px;letter-spacing:2px;color:#A74F15">' + esc(d.title) + '</span></td></tr>' +
+      '<tr><td style="padding:0;font-size:13px;line-height:20px;color:#1F2A23">' + second.join(' · ') + '</td></tr></table>';
+  }
+  function shortText(d) { return d.name + ' · ' + d.title + '\nOrigen Coco · ' + (d.phone ? d.phone + ' · ' : '') + 'www.origencoco.com'; }
+
+  function say(el, msg, warn) { el.textContent = msg; el.classList.toggle('warn', !!warn); }
+  function selectNode(node) { var r = document.createRange(); r.selectNodeContents(node); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); return s; }
+  function execCopyHtml(html) {
+    var box = document.createElement('div');
+    box.setAttribute('aria-hidden', 'true');
+    box.style.cssText = 'position:fixed;left:-10000px;top:0;background:#FFFFFF;color:#1F2A23';
+    box.innerHTML = html;
+    document.body.appendChild(box);
+    var s = selectNode(box), ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    s.removeAllRanges(); box.remove();
+    return ok;
+  }
+  function copyRich(html, text, statusEl, doneMsg, previewNode) {
+    var done = function () { say(statusEl, doneMsg); };
+    var manual = function () { selectNode(previewNode); say(statusEl, 'Copying is blocked in this browser. The signature is highlighted: press Ctrl+C (⌘C on a Mac), then paste.', true); };
+    try {
+      if (navigator.clipboard && window.ClipboardItem) {
+        navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([text], { type: 'text/plain' })
+        })]).then(done, function () { (execCopyHtml(html) ? done : manual)(); });
+        return;
+      }
+    } catch (e) {}
+    (execCopyHtml(html) ? done : manual)();
+  }
+  function copyPlain(text, statusEl) {
+    var done = function () { say(statusEl, 'Copied. Paste it into your phone app’s signature setting.'); };
+    var fallback = function () {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;left:-10000px;top:0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      ta.remove();
+      if (ok) done(); else say(statusEl, 'Copying is blocked in this browser. Select the short signature above and copy it.', true);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, fallback); return; }
+    } catch (e) {}
+    fallback();
+  }
+
+  function render() {
+    var d = data();
+    $('sig-full').innerHTML = fullHtml(d, 'origen-coco-signature-logo-hd.png');
+    $('sig-short').innerHTML = shortHtml(d);
+    FIELDS.forEach(function (id) { store(id, $(id).value); });
+    store('products', d.products ? '1' : '0');
+  }
+  function renderApp() {
+    var app = (document.querySelector('input[name="app"]:checked') || {}).value || 'gmail';
+    var a = APPS[app] || APPS.gmail;
+    store('app', app);
+    $('step-open').innerHTML = a.open;
+    $('step-save').innerHTML = a.save;
+    $('app-note').textContent = a.note;
+  }
+
+  FIELDS.forEach(function (id) { var v = recall(id); if (v !== null) $(id).value = v; });
+  if (recall('products') === '0') $('f-products').checked = false;
+  var savedApp = recall('app'); if (savedApp && $('app-' + savedApp)) $('app-' + savedApp).checked = true;
+
+  FIELDS.forEach(function (id) { $(id).addEventListener('input', render); });
+  $('f-products').addEventListener('change', render);
+  document.querySelectorAll('input[name="app"]').forEach(function (r) { r.addEventListener('change', renderApp); });
+
+  $('copy-full').addEventListener('click', function () {
+    var d = data();
+    copyRich(fullHtml(d, LOGO), fullText(d), $('full-status'), 'Copied with the HD logo. Now paste it into your signature box.', $('sig-full'));
+  });
+  $('copy-short').addEventListener('click', function () {
+    var d = data();
+    copyRich(shortHtml(d), shortText(d), $('short-status'), 'Copied. Paste it into a second signature for replies.', $('sig-short'));
+  });
+  $('copy-plain').addEventListener('click', function () { copyPlain(shortText(data()), $('short-status')); });
+
+  render();
+  renderApp();
+})();
+</script>
+</body>
+</html>
