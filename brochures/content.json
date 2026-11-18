@@ -222,10 +222,6 @@
           "details": "Palletised, shrink-wrapped or loose"
         },
         {
-          "item": "Container loading",
-          "details": null
-        },
-        {
           "item": "Custom options",
           "details": "Peat/chip blends; 6 or 8 mm sieve"
         }
@@ -233,7 +229,7 @@
       "specs": [
         {
           "parameter": "Electrical conductivity (EC)",
-          "value": "Low (< 0.5 mS/cm washed) or high"
+          "value": "Washed: below 0.5 mS/cm; unwashed: high"
         },
         {
           "parameter": "pH",
@@ -244,16 +240,12 @@
           "value": "Less than 18%"
         },
         {
-          "parameter": "Block weight",
-          "value": "5 kg; 650 g briquette"
-        },
-        {
           "parameter": "Compressed dimensions",
           "value": "30 × 30 × 12 cm; 20 × 10 × 5 cm"
         },
         {
           "parameter": "Expansion volume",
-          "value": "75+ L (5 kg); 9–10.5 L (650 g)"
+          "value": "Up to 75 L (5 kg); 9 to 10.5 L (650 g)"
         },
         {
           "parameter": "Sand/fibre/impurities",
@@ -291,7 +283,7 @@
       "variants": [
         {
           "item": "Chip sizes",
-          "details": "0–12 mm; 0–24 mm"
+          "details": "0 to 12 mm; 0 to 24 mm"
         },
         {
           "item": "Forms",
@@ -300,20 +292,12 @@
         {
           "item": "Packing",
           "details": "Palletised or shrink-wrapped"
-        },
-        {
-          "item": "Container loading",
-          "details": null
         }
       ],
       "specs": [
         {
-          "parameter": "Chip size",
-          "value": "0–12 mm or 0–24 mm"
-        },
-        {
           "parameter": "EC",
-          "value": "Low (washed) or high"
+          "value": "Washed: below 0.5 mS/cm; unwashed: high"
         },
         {
           "parameter": "pH",
@@ -322,10 +306,6 @@
         {
           "parameter": "Moisture content",
           "value": "Less than 18%"
-        },
-        {
-          "parameter": "Weight per unit",
-          "value": "5 kg block"
         }
       ],
       "cta_title": "Looking for Coco Husk Chips?",
@@ -361,17 +341,13 @@
         },
         {
           "item": "Packing",
-          "details": "120–150 kg strapped bales"
-        },
-        {
-          "item": "Container loading",
-          "details": "150–180 bales per 40 ft"
+          "details": "120 to 150 kg strapped bales"
         }
       ],
       "specs": [
         {
           "parameter": "Fibre length",
-          "value": "5–20 cm"
+          "value": "5 to 20 cm"
         },
         {
           "parameter": "Moisture content",
@@ -411,33 +387,29 @@
       "variants": [
         {
           "item": "Grades",
-          "details": null
+          "details": "Milling copra (for oil); edible ball and cup copra"
         },
         {
           "item": "Packing",
-          "details": null
-        },
-        {
-          "item": "Container loading",
-          "details": null
+          "details": "50 kg jute or PP bags"
         }
       ],
       "specs": [
         {
           "parameter": "Moisture content",
-          "value": null
+          "value": "6% max"
         },
         {
           "parameter": "Oil content",
-          "value": null
+          "value": "65% min"
         },
         {
           "parameter": "Free fatty acid",
-          "value": null
+          "value": "1% max"
         },
         {
           "parameter": "Impurities",
-          "value": null
+          "value": "1% max"
         }
       ],
       "cta_title": "Plan Your Copra Supply",
@@ -470,33 +442,29 @@
       "variants": [
         {
           "item": "Types",
-          "details": null
+          "details": "Semi-husked or fully husked mature coconuts"
         },
         {
           "item": "Sizes",
-          "details": null
+          "details": "Medium and large; graded by weight"
         },
         {
           "item": "Packing",
-          "details": null
-        },
-        {
-          "item": "Container loading",
-          "details": null
+          "details": "PP mesh or jute bags, 25 to 30 nuts per bag"
         }
       ],
       "specs": [
         {
           "parameter": "Size grading",
-          "value": null
+          "value": "By weight and circumference"
         },
         {
           "parameter": "Average weight",
-          "value": null
+          "value": "450 to 700 g per nut (semi-husked)"
         },
         {
           "parameter": "Shelf life",
-          "value": null
+          "value": "4 to 6 weeks; up to 2 months in cool storage"
         }
       ],
       "cta_title": "Order Coconuts in Bulk",
@@ -700,7 +668,7 @@
       "variants": [
         {
           "item": "Sizes",
-          "details": "100 × 15, 100 × 17, 100 × 18, 100 × 20 cm; other sizes on request"
+          "details": "100 × 15/18/20 × 8/10/12 cm; custom sizes"
         },
         {
           "item": "Mixes (peat / chips)",
@@ -712,7 +680,15 @@
         },
         {
           "item": "Bag",
-          "details": "UV-stabilised poly bags, or naked slabs"
+          "details": "UV-stabilised bags or naked slabs"
+        },
+        {
+          "item": "EC",
+          "details": "Below 0.5 mS/cm (washed)"
+        },
+        {
+          "item": "pH",
+          "details": "5.5 to 6.5"
         }
       ],
       "specs": [],
@@ -750,7 +726,7 @@
         },
         {
           "parameter": "EC",
-          "value": "Low EC or high EC"
+          "value": "Washed: below 0.5 mS/cm; unwashed: high"
         },
         {
           "parameter": "pH",
@@ -828,5 +804,5 @@
       "cover": "seedlings.jpg"
     }
   ],
-  "spec_source_note": "17 Nov 2026: values filled at Subash's request from the reference brochures he supplied (mainly Aarha Export; washed EC < 0.5 mS/cm from Rise Substrates). They are industry reference values, not Origen Coco's own test results: confirm with Origen Coco before sending to buyers. Copra and coconut specs and container loading for peat/chips were not in any reference and stay null. Grow bag and coco peat disc descriptions were written 17 Nov 2026 from the same reference brochures (not in the content document); confirm with Origen Coco."
+  "spec_source_note": "17 Nov 2026: values filled at Subash's request from the reference brochures he supplied (mainly Aarha Export; washed EC < 0.5 mS/cm from Rise Substrates). They are industry reference values, not Origen Coco's own test results: confirm with Origen Coco before sending to buyers. Copra and coconut specs and container loading for peat/chips were not in any reference and stay null. Grow bag and coco peat disc descriptions were written 17 Nov 2026 from the same reference brochures (not in the content document); confirm with Origen Coco. 18 Nov 2026: container loading removed; copra and coconut values added at Subash's request as typical Indian trade values (not from the reference brochures); confirm with Origen Coco."
 }
