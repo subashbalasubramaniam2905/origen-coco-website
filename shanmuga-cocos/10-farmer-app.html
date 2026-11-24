@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farmer App | Shanmuga Cocos homepage template</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a gallery of four homepage directions, each shown as a desktop frame with a phone frame beside it. */
+:root{
+  --forest:#16452C; --leaf:#75A94C; --gold:#E7B94D; --cream:#F7F8F2; --char:#202B23; --husk:#8A5A34;
+  --page:#EEF0E8; --ink:#202B23; --muted:#5C6B60; --card:#FFFFFF; --line:#D9DFD3;
+  --sans:Poppins,"Noto Sans Tamil",system-ui,sans-serif; --ta:"Noto Sans Tamil",Poppins,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#121A15;--ink:#E8EEE6;--muted:#9DAEA2;--card:#1B251F;--line:#2C3A31;color-scheme:dark}}
+:root[data-theme="dark"]{--page:#121A15;--ink:#E8EEE6;--muted:#9DAEA2;--card:#1B251F;--line:#2C3A31;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.ta{font-family:var(--ta)}
+.num{font-variant-numeric:tabular-nums}
+header.intro h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:0;letter-spacing:-.02em;text-wrap:balance}
+header.intro p{max-width:66ch;color:var(--muted);line-height:1.6}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+nav.jump a{color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--card);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600}
+nav.jump a:hover{border-color:var(--leaf)}
+section.opt{margin-top:56px}
+.opt-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-bottom:14px}
+.opt-head .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.opt-head h2{margin:0;font-size:1.6rem;letter-spacing:-.01em}
+.opt-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+@media (max-width:900px){.opt-body{grid-template-columns:minmax(0,1fr)}}
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+@media (max-width:700px){.notes{grid-template-columns:minmax(0,1fr)}}
+.notes div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--muted)}
+.notes b{display:block;color:var(--ink);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.frame{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 50px -30px rgba(0,0,0,.35);min-width:0}
+.bar{height:30px;background:#E6E9E2;display:flex;align-items:center;gap:6px;padding:0 12px}
+.bar i{width:9px;height:9px;border-radius:50%;background:#C9CEC4;display:block}
+.phone{width:100%;max-width:300px;margin:0 auto;border-radius:34px;border:8px solid #1d241f;overflow:hidden;background:#fff;box-shadow:0 20px 50px -25px rgba(0,0,0,.45)}
+.phone .scr{height:600px;overflow:hidden;position:relative}
+.mk{color:var(--char);font-family:var(--sans)}
+.mk *{box-sizing:border-box}
+.sample{display:inline-block;border:1px dashed #C99A2E;background:#FDF7E7;color:#7A5810;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:999px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;font-weight:600;font-size:13px;padding:11px 18px;white-space:nowrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.logo svg{width:28px;height:28px;flex:none}
+
+/* ---------- A: Market Board ---------- */
+.A{background:var(--cream)}
+.A .top{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:1px solid #E1E5DA}
+.A .top .links{display:flex;gap:18px;font-size:12px;color:#55625A}
+.A .hero{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;padding:34px 28px 30px;align-items:center}
+.A h3{font-size:34px;line-height:1.05;margin:0;color:var(--forest);letter-spacing:-.02em}
+.A .tline{color:var(--husk);font-weight:600;margin-top:10px;font-size:16px}
+.A p{font-size:13px;color:#4C5A51;line-height:1.6}
+.A .board{background:#0F2F1E;border-radius:18px;padding:18px 20px;color:#fff;position:relative;box-shadow:inset 0 0 0 6px #1C4A31, 0 20px 40px -20px rgba(0,0,0,.5)}
+.A .board .bh{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.A .row{display:grid;grid-template-columns:1.4fr 1fr .8fr;align-items:center;padding:12px 0;border-top:1px dashed rgba(255,255,255,.18)}
+.A .row:first-of-type{border-top:0}
+.A .row .n{font-weight:600}
+.A .row .n small{display:block;font-family:var(--ta);color:#BFD5C4;font-weight:400;font-size:11px}
+.A .digits{font-family:"Courier New",monospace;font-weight:700;font-size:30px;color:var(--gold);text-shadow:0 0 12px rgba(231,185,77,.45);letter-spacing:.02em}
+.A .chg{font-size:12px;font-weight:600;text-align:right}
+.A .up{color:#9BD46D}.A .dn{color:#F08C7A}.A .eq{color:#9AB0A1}
+.A .ticker{margin-top:10px;background:#0A2215;border-radius:10px;padding:8px 12px;font-size:11px;color:#BFD5C4;display:flex;justify-content:space-between;gap:10px}
+.A .cta{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.A .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #E1E5DA;background:#fff}
+.A .strip div{padding:14px 18px;font-size:12px;color:#4C5A51;border-left:1px solid #E1E5DA}
+.A .strip div:first-child{border-left:0}
+.A .strip b{display:block;color:var(--forest);font-size:13px}
+
+/* ---------- B: Estate Editorial ---------- */
+.B{background:#fff}
+.B .top{display:flex;justify-content:space-between;align-items:center;padding:18px 34px}
+.B .top .links{display:flex;gap:22px;font-size:12px;color:#55625A}
+.B .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;padding:16px 34px 0;align-items:end}
+.B .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--leaf);font-weight:700}
+.B h3{font-family:var(--ta);font-size:44px;line-height:1.2;color:var(--forest);margin:12px 0 6px;font-weight:800;letter-spacing:-.01em}
+.B .en{font-size:20px;font-weight:600;color:var(--char)}
+.B p{font-size:13px;color:#56635A;line-height:1.7;max-width:42ch}
+.B .arch{height:330px;border-radius:200px 200px 0 0;overflow:hidden;position:relative;background:linear-gradient(180deg,#F3D58A 0%,#E7B94D 30%,#9CC170 62%,#16452C 100%)}
+.B .seal{position:absolute;left:-26px;bottom:30px;width:96px;height:96px;border-radius:50%;background:var(--gold);color:var(--forest);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;font-weight:700;text-align:center;line-height:1.2;box-shadow:0 0 0 6px #fff}
+.B .rates{margin:0 34px;display:grid;grid-template-columns:auto repeat(3,1fr);border-top:2px solid var(--forest);border-bottom:1px solid #E3E7DF}
+.B .rates > div{padding:18px 18px;border-left:1px solid #E3E7DF}
+.B .rates > div:first-child{border-left:0;padding-left:0;display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:150px}
+.B .rates .lbl{font-size:12px;color:#56635A}
+.B .rates .p{font-size:36px;font-weight:700;color:var(--forest);letter-spacing:-.02em;line-height:1.1}
+.B .rates .p span{font-size:16px;font-weight:600;color:#7C8A80;margin-right:2px}
+.B .rates .u{font-size:11px;color:#7C8A80}
+.B .foot{display:flex;justify-content:space-between;align-items:center;padding:16px 34px 26px;font-size:12px;color:#56635A;gap:10px;flex-wrap:wrap}
+
+/* ---------- C: Sunlit Grove ---------- */
+.C{background:#F6F1E4}
+.C .hero{position:relative;padding:18px 28px 120px;color:#fff;background:linear-gradient(180deg,#F5C76A 0%,#E9A54A 22%,#8FAE58 52%,#1E5434 78%,#16452C 100%);overflow:hidden}
+.C .top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.C .top .links{display:flex;gap:18px;font-size:12px}
+.C .sun{position:absolute;right:18%;top:34px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#FFF4C9 0%,#FFE08A 45%,rgba(255,224,138,0) 70%)}
+.C .palms{position:absolute;inset:auto 0 0 0;height:75%;z-index:1}
+.C .txt{position:relative;z-index:2;max-width:480px;margin-top:40px}
+.C h3{font-size:38px;line-height:1.08;margin:0;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+.C .tline{font-family:var(--ta);color:#FFE7A6;font-weight:700;font-size:18px;margin-top:8px}
+.C .cards{position:relative;z-index:3;margin:-96px 28px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.C .card{background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-radius:22px;padding:16px 18px;box-shadow:0 20px 40px -24px rgba(22,69,44,.6);border:1px solid rgba(255,255,255,.9)}
+.C .card .nm{font-weight:600;font-size:14px}
+.C .card .ta{font-size:11px;color:var(--husk)}
+.C .card .p{font-size:38px;font-weight:800;color:var(--forest);letter-spacing:-.03em;line-height:1;margin-top:12px}
+.C .card .p span{font-size:18px;color:#6E7F72;font-weight:600}
+.C .card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:11px;color:#5C6B60}
+.C .pill{background:#EAF3E2;color:#4D7A2C;border-radius:999px;padding:3px 8px;font-weight:600;font-size:10.5px}
+.C .below{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 28px 24px;flex-wrap:wrap;font-size:12px;color:#5C6B60}
+
+/* ---------- D: Farmer App ---------- */
+.D{background:#F1F6EC}
+.D .top{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--forest);color:#fff}
+.D .lang{display:flex;background:rgba(255,255,255,.14);border-radius:999px;padding:3px;font-size:11px;font-weight:700}
+.D .lang span{padding:4px 10px;border-radius:999px}
+.D .lang .on{background:var(--gold);color:var(--char)}
+.D .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;padding:20px 24px 24px}
+.D .big{background:var(--forest);border-radius:26px;color:#fff;padding:20px;position:relative;overflow:hidden}
+.D .big h3{font-family:var(--ta);font-size:24px;line-height:1.35;margin:0}
+.D .big .en{font-size:13px;color:#C6DCCB;margin-top:4px}
+.D .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.D .tile{background:#fff;color:var(--char);border-radius:18px;padding:12px 10px;text-align:center}
+.D .tile svg{width:44px;height:44px;display:block;margin:0 auto 6px}
+.D .tile .nm{font-family:var(--ta);font-size:12px;font-weight:700}
+.D .tile .p{font-size:26px;font-weight:800;color:var(--forest);letter-spacing:-.02em;margin-top:2px}
+.D .tile .u{font-size:10px;color:#6E7F72}
+.D .upd{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:11px;color:#C6DCCB}
+.D .dot{width:8px;height:8px;border-radius:50%;background:#9BD46D;box-shadow:0 0 0 4px rgba(155,212,109,.25)}
+.D .actions{display:grid;gap:10px}
+.D .act{display:flex;align-items:center;gap:14px;border-radius:22px;padding:16px 18px;font-weight:700;font-size:15px}
+.D .act svg{width:30px;height:30px;flex:none}
+.D .act small{display:block;font-family:var(--ta);font-weight:600;font-size:11.5px;opacity:.85}
+.D .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 24px 24px}
+.D .steps div{background:#fff;border-radius:16px;padding:12px;font-size:11px;color:#4C5A51;display:flex;gap:8px;align-items:center}
+.D .steps b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--char);display:flex;align-items:center;justify-content:center;font-size:12px}
+
+/* phone variants */
+.pm{font-size:12px}
+.pm .ph{padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
+.pm h4{margin:0}
+.navbtm{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px;background:#fff;border-top:1px solid #E3E7DF}
+.navbtm span{border-radius:12px;text-align:center;padding:9px 0;font-weight:700;font-size:11px}
+.choose{margin-top:56px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.choose h2{margin:0 0 8px;font-size:1.3rem}
+.choose p{margin:0;color:var(--muted);line-height:1.6;max-width:70ch}
+@media (max-width:760px){
+  .A .hero,.B .hero,.D .grid{grid-template-columns:minmax(0,1fr)}
+  .A .strip{grid-template-columns:repeat(2,1fr)}
+  .B .rates{grid-template-columns:repeat(3,1fr)} .B .rates > div:first-child{grid-column:1/-1;border-bottom:1px solid #E3E7DF;padding:12px 0}
+  .B .rates > div:nth-child(2){border-left:0}
+  .C .cards{grid-template-columns:minmax(0,1fr)}
+  .D .steps{grid-template-columns:repeat(2,1fr)}
+  .A .top .links,.B .top .links,.C .top .links{display:none}
+  .B .seal{left:12px}
+}
+
+html,body{margin:0;background:#fff} body{font-family:Poppins,"Noto Sans Tamil",system-ui,sans-serif}
+.mk{min-height:100vh}
+</style><style>.pg{padding:40px clamp(16px,4vw,44px) 96px}.pg .ph-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:6px 20px;margin-bottom:18px}.pg h4{margin:0;font-size:clamp(20px,2.4vw,28px);line-height:1.2}.pg .ph-h small{display:block;font-family:"Noto Sans Tamil",sans-serif;font-size:14px;opacity:.75;margin-top:4px}.pg .ph-h span{font-size:12px;opacity:.6}.pg .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.pg figure{margin:0}.pg .im{aspect-ratio:4/3;background-size:cover;background-position:center;border-radius:10px}.pg figure:first-child{grid-column:span 2;grid-row:span 2}.pg figure:first-child .im{aspect-ratio:auto;height:calc(100% - 44px);min-height:220px}.pg figcaption{font-size:13px;font-weight:600;margin-top:8px;line-height:1.35}.pg figcaption em{display:block;font-style:normal;font-weight:400;font-family:"Noto Sans Tamil",sans-serif;font-size:11.5px;opacity:.7}.pg figure:last-child{grid-column:span 2}.pg figure:last-child .im{aspect-ratio:auto;height:calc(100% - 44px);min-height:160px}@media(max-width:720px){.pg .pgrid{grid-template-columns:1fr 1fr}.pg figure:first-child{grid-row:auto}.pg figure:first-child .im,.pg figure:last-child .im{height:auto;min-height:0;aspect-ratio:16/9}}</style><style>.logo svg{width:38px!important;height:38px!important}.logo svg{--mk:#F7F8F2;--mk2:#E7B94D}</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="10 0 180 200"><path fill-rule="evenodd" d="M16 110H184A84 84 0 0 1 16 110ZM32 110H168A68 68 0 0 1 32 110Z" fill="var(--mk,#16452C)"/><path fill-rule="evenodd" d="M44 110H156A56 56 0 0 1 44 110ZM56 110H144A44 44 0 0 1 56 110Z" fill="var(--mk2,#8A5A34)"/><path d="M92 98C85.93 70.31 59.99 41.65 40 30C39.65 57.21 60.51 89.75 92 98Z" fill="#75A94C"/><path d="M100 96C115.00 69.00 112.00 28.50 100 6C88.00 28.50 85.00 69.00 100 96Z" fill="var(--mk,#16452C)"/><path d="M108 98C139.49 89.75 160.35 57.21 160 30C140.01 41.65 114.07 70.31 108 98Z" fill="#E7B94D"/></symbol>
+    <symbol id="palm" viewBox="0 0 120 300"><path d="M58 300c-2-70 2-140 10-200" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M68 100c-20-14-46-12-62 2 20-4 38 0 58 8M68 100c-10-22-30-34-52-34 18 8 32 20 46 36M68 100c6-24 24-40 46-44-16 12-28 26-38 46M68 100c22-8 42-4 52 8-18-4-34-2-48 4M68 100c-4 18-16 34-32 44 12-14 20-28 26-46" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="66" cy="108" r="5" fill="currentColor"/><circle cx="72" cy="110" r="5" fill="currentColor"/></symbol>
+    <symbol id="nut" viewBox="0 0 64 64"><ellipse cx="32" cy="34" rx="24" ry="22" fill="#8A5A34"/><circle cx="26" cy="29" r="3" fill="#4A2F1A"/><circle cx="38" cy="29" r="3" fill="#4A2F1A"/><circle cx="32" cy="39" r="3" fill="#4A2F1A"/></symbol>
+  </defs>
+</svg>
+<div class="mk D">
+          <div class="top"><span class="logo"><svg><use href="#mark"/></svg>Shanmuga Cocos</span><span class="lang"><span class="on ta">தமிழ்</span><span>EN</span></span></div>
+          <div class="grid">
+            <div class="big">
+              <h3>இன்றைய தேங்காய் விலை</h3>
+              <div class="en">Today's coconut rate · Tue 24 Nov <span class="sample" style="margin-left:6px">Sample</span></div>
+              <div class="tiles">
+                <div class="tile"><svg><use href="#nut"/></svg><div class="nm">பெரியது</div><div class="p num">₹17.5</div><div class="u">Large · per nut</div></div>
+                <div class="tile"><svg style="transform:scale(.82)"><use href="#nut"/></svg><div class="nm">நடுத்தரம்</div><div class="p num">₹14</div><div class="u">Medium · per nut</div></div>
+                <div class="tile"><svg style="transform:scale(.66)"><use href="#nut"/></svg><div class="nm">சிறியது</div><div class="p num">₹10.5</div><div class="u">Small · per nut</div></div>
+              </div>
+              <div class="upd"><span class="dot"></span>Updated 9:10 AM · buying today</div>
+            </div>
+            <div class="actions">
+              <div class="act" style="background:var(--gold);color:var(--char)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>Call now<small>இப்போது அழைக்கவும்</small></span></div>
+              <div class="act" style="background:#1F9D55;color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg><span>WhatsApp<small>வாட்ஸ்அப் செய்யுங்கள்</small></span></div>
+              <div class="act" style="background:#fff;color:var(--forest)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg><span>We call you back<small>திரும்ப அழைக்கிறோம்</small></span></div>
+            </div>
+          </div>
+          <div class="steps"><div><b>1</b>See today's rate</div><div><b>2</b>Call or WhatsApp</div><div><b>3</b>Share village &amp; quantity</div><div><b>4</b>We come to you</div></div>
+        <section class="pg"><div class="ph-h"><div><h4>From farm to our yard</h4><small>தோட்டத்திலிருந்து எங்கள் களம் வரை</small></div><span>Photos: Unsplash (placeholder until your own photos)</span></div><div class="pgrid"><figure><div class="im" role="img" aria-label="Farms we buy from" style="background-image:url(assets/photos/fields.jpg)"></div><figcaption>Farms we buy from<em>விவசாயிகளின் தோப்புகள்</em></figcaption></figure><figure><div class="im" role="img" aria-label="Harvest with farmers" style="background-image:url(assets/photos/farmer.jpg)"></div><figcaption>Harvest with farmers<em>விவசாயிகளுடன் அறுவடை</em></figcaption></figure><figure><div class="im" role="img" aria-label="Farm-gate collection" style="background-image:url(assets/photos/collection.jpg)"></div><figcaption>Farm-gate collection<em>தோட்டத்திலேயே சேகரிப்பு</em></figcaption></figure><figure><div class="im" role="img" aria-label="Sorting by size" style="background-image:url(assets/photos/sorting.jpg)"></div><figcaption>Sorting by size<em>அளவு வாரியாக பிரித்தல்</em></figcaption></figure><figure><div class="im" role="img" aria-label="Husking & processing" style="background-image:url(assets/photos/processing.jpg)"></div><figcaption>Husking & processing<em>உரித்தல் & பதப்படுத்துதல்</em></figcaption></figure><figure><div class="im" role="img" aria-label="Dry, clean storage" style="background-image:url(assets/photos/storage.jpg)"></div><figcaption>Dry, clean storage<em>சுத்தமான சேமிப்பு</em></figcaption></figure><figure><div class="im" role="img" aria-label="Copra & coconut products" style="background-image:url(assets/photos/products.jpg)"></div><figcaption>Copra & coconut products<em>கொப்பரை & தேங்காய் பொருட்கள்</em></figcaption></figure><figure><div class="im" role="img" aria-label="Our coconut groves" style="background-image:url(assets/photos/hero.jpg)"></div><figcaption>Our coconut groves<em>எங்கள் தென்னந்தோப்பு</em></figcaption></figure></div></section></div>
+<nav aria-label="Templates" style="position:fixed;left:16px;bottom:16px;z-index:9999;display:flex;gap:6px;align-items:center;background:#1F2A23;color:#fff;font:600 13px/1 system-ui,sans-serif;padding:8px 10px;border-radius:4px;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)"><a href="index.html" style="color:#fff;text-decoration:none;padding:6px 8px">All templates</a><a href="demo/index.html" style="color:#fff;text-decoration:none;padding:6px 8px">Working prototype ›</a></nav>
+</body></html>
